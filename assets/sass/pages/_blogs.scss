@@ -1,0 +1,22 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+@use "../abstracts/functions" as *;
+
+.asms-blogs-segment{
+  .cards-list{
+    margin-left: -12px!important;
+    margin-right: -12px!important;
+  }
+}
+
+.filters-button-group{
+  button{
+    &.is-checked{
+      background: color("primary");
+      color: color("white")!important;
+      border-color: color("primary")!important;
+    }
+  }
+}
