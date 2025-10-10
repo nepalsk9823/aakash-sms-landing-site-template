@@ -23,7 +23,8 @@ $z-index-navbar-toggler: 1010;
 
   .asms {
     &-navbar-menu {
-      .menu-link-text{
+      .menu-link-text,
+      .menu-link-icon{
         color: color("night");
       }
     }

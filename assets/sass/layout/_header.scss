@@ -4,14 +4,44 @@
 
 $z-index-header: 1000;
 
-.asms-header{
+.asms-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: $z-index-header;
 
-  &-fixed{
+  &-fixed {
     background: color("white");
+  }
+}
+
+.asms-inverted-header {
+  &:not(.asms-header-fixed) {
+    .logo-default {
+      display: none;
+    }
+
+    .logo-white {
+      display: inline-flex !important;
+    }
+
+    .asms-navbar {
+      &-menu {
+        .asms-menu {
+          &-link {
+            .menu-link {
+              &-text {
+                color: color("white");
+              }
+
+              &-icon {
+                color: color("white");
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

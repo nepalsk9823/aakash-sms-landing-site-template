@@ -1,4 +1,16 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .asms-banner {
+  &.asms-inverted-banner{
+    background: color("dark-cyprus");
+
+    *[class*="text-"]{
+      color: color("white");
+    }
+  }
+
   // service bulk sms page
   &.asms-svc-bulksms-banner {
     .svc-bulksms-banner-split {
@@ -9,4 +21,15 @@
       }
     }
   }
+
+  // neb result
+  &.asms-res-neb-banner {
+    .res-neb-split-img {
+      img {
+        max-height: 450px;
+      }
+    }
+  }
+
+ 
 }

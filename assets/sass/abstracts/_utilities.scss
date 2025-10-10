@@ -367,6 +367,18 @@ $gap-count: 12;
   column-gap: 2px;
 }
 
+.gap-20{
+  gap: 80px;
+}
+
+.gap-x-20{
+  column-gap: 80px;
+}
+
+.gap-y-20{
+  row-gap: 80px;
+}
+
 // Mixin for responsive gap classes
 @mixin responsive-gaps($count) {
   @for $i from 1 through $count {
