@@ -1,0 +1,53 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.checkbox {
+  position: relative;
+  overflow: hidden;
+  @include box(24px);
+  @include flex-center;
+
+  &:hover {
+    .icon {
+      background: color("primary") !important;
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include box(100%);
+    cursor: pointer;
+  }
+
+  input:checked + .icon::after {
+    opacity: 1;
+  }
+
+  .icon {
+    position: relative;
+    @include box(24px);
+    background-color: color("white");
+    border: none;
+    border-radius: 4px;
+    display: inline-flex;
+    transition: $default-transition;
+
+    &::after {
+      position: absolute;
+      // content: "✓";
+      content: "";
+      @include box(100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url($icon-path + "tick_primary.svg") center/cover no-repeat;
+      opacity: 0;
+    }
+  }
+}

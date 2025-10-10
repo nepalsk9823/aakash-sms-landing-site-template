@@ -1,0 +1,156 @@
+@use "sass:map";
+@use "sass:color";
+@use "colors" as *;
+
+// FONT STACK
+$font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+$font-family-default: $font-family-system;
+$font-family-karla: "Karla", sans-serif;
+
+// FONT CONFIGURATION
+$font-sizes: (
+  "3xs": 8px,
+  "2xs": 10px,
+  "xs": 12px,
+  "sm": 14px,
+  "base": 16px,
+  "lg": 18px,
+  "xl": 20px,
+  "2xl": 24px,
+  "3xl": 28px,
+  "4xl": 32px,
+  "5xl": 36px,
+  "6xl": 40px,
+  "7xl": 44px,
+  "7xl-mid": 48px,
+  "8xl": 56px,
+  "9xl": 60px
+);
+
+// FONT WEIGHTS
+$font-weights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900
+);
+
+// BASE FONT
+$font-family-base: $font-family-karla;
+$font-weight-base: map.get($font-weights, "semibold");
+$font-size-base: map.get($font-sizes, "base");
+// LEADING & TRACKING
+$leading-base: 1.4;
+$tracking-base: -0.03em;
+
+// MEDIA BREAKPOINTS
+$breakpoints-up: (
+  "xxxs": "360px",
+  "xxs": "420px",
+  "xs": "480px",
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+  "xxl": "1400px",
+  "xxxl": "1536px"
+);
+
+$breakpoints-down: (
+  "xxxs": "359.98px",
+  "xxs": "419.98px",
+  "xs": "479.98px",
+  "sm": "575.98px",
+  "md": "767.98px",
+  "lg": "991.98px",
+  "xl": "1199.98px",
+  "xxl": "1399.98px",
+  "xxxl": "1535.98px"
+);
+
+// COLOR CONFIGURATION
+$body-bg: $white !default;
+$text-color: $gray !default;
+$link-color: $gray;
+$link-visited-color: $gray;
+$link-decoration: none;
+$link-hover-color: color.adjust($link-color, $lightness: 10%);
+$link-active-color: color.adjust($link-color, $lightness: 10%);
+$line-hover-decoration: underline;
+
+@mixin font-settings($weight, $size, $line-height: $leading-base, $tracking: $tracking-base) {
+  font-weight: map.get($font-weights, $weight);
+  font-size: map.get($font-sizes, $size);
+  line-height: $line-height;
+  letter-spacing: $tracking;
+}
+
+/* #### TYPOGRAPHY VARIABLES #### */
+$paragraph-margin-bottom: 0;
+
+// HEADINGS CONFIGURATION MAP
+$headings-config: (
+  "margin-bottom": 0,
+  "font-family": $font-family-karla,
+  "font-weight": map.get($font-weights, "bold"),
+  "line-height": 1.2,
+  "color": $night,
+  "letter-spacing": -0.06em,
+  "font-sizes": (
+    "h1": 2.5 * $font-size-base,
+    // Main post/page title
+    "h2": 2 * $font-size-base,
+    // Section title
+    "h3": 1.75 * $font-size-base,
+    // Subsection title
+    "h4": 1.5 * $font-size-base,
+    // Smaller heading
+    "h5": 1.25 * $font-size-base,
+    // Minor heading
+    "h6": 1.1 * $font-size-base // Smallest heading
+  )
+);
+
+// MIXIN TO APPLY HEADING STYLES
+@mixin heading-styles($level) {
+  margin-bottom: map.get($headings-config, "margin-bottom");
+  font-family: map.get($headings-config, "font-family");
+  font-weight: map.get($headings-config, "font-weight");
+  line-height: map.get($headings-config, "line-height");
+  color: map.get($headings-config, "color");
+  font-size: map.get(map.get($headings-config, "font-sizes"), $level);
+  letter-spacing: map.get($headings-config, "letter-spacing");
+}
+
+// ADVANCED Z-INDEX CONFIGURATION
+$z-index: (
+  "1": 1,
+  // Basic stacking level 1
+  "2": 2,
+  // Basic stacking level 1
+  "5": 5,
+  // Basic stacking level 1
+  "10": 10,
+  // Basic stacking level 1
+);
+
+// UTILITY CLASSES FOR Z-INDEX
+@each $name, $value in $z-index {
+  .z-#{$name} {
+    z-index: $value;
+  }
+}
+// TRANSITIONS AND EASING
+$default-transition-timing: ease-in-out;
+$default-transition-duration: 300ms;
+$default-transition: all $default-transition-timing $default-transition-duration;
+
+$img-path: "../../../assets/images/" !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$icon-path: "../../../assets/icons/" !default;
+$max-width: 1400px;

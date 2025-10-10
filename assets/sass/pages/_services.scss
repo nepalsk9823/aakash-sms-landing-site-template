@@ -1,0 +1,77 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+@use "../abstracts/functions" as *;
+
+// SERVICE - BULK SMS
+.asms-svc-bulksms-segment-01 {
+  .svc-bulksms-segment {
+    &-split {
+      &-content {
+        padding-left: 75px;
+      }
+    }
+  }
+}
+
+// NUMBERED LIST STYLINGS
+.numbered-content-list {
+  .numbered-content-item {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 52px;
+      left: 26px;
+      height: 100%;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-repeat: round;
+      border-image-source: url("data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200%20H%205%20V%201%20H%201%20V%205%20H%200%20V%200%22%20fill%3D%22rgb(129%2C212%2C250)%22%20%2F%3E%3Cpath%20d%3D%22M14%200%20V%205%20H%2013%20V%201%20H%209%20V%200%20H%2014%22%20fill%3D%22rgb(129%2C212%2C250)%22%20%2F%3E%3Cpath%20d%3D%22M14%2014%20H%209%20V%2013%20H%2013%20V%209%20H%2014%20V%2014%22%20fill%3D%22rgb(129%2C212%2C250)%22%20%2F%3E%3Cpath%20d%3D%22M0%2014%20V%209%20H%201%20V%2013%20H%205%20V%2014%20H%200%22%20fill%3D%22rgb(129%2C212%2C250)%22%20%2F%3E%3C%2Fsvg%3E");
+      /* Creates a custom dashed border
+         https://codepen.io/eHtmlu/full/rNMVBGa?l=8&s=4&w=1&c=81d4fa&t=1
+      */
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+// STEPS BLOCK STYLINGS
+.steps-block {
+  &-group {
+    max-width: 870px;
+  }
+
+  &-item {
+    grid-template-columns: auto 455px;
+
+    &-img {
+      img {
+        max-height: 380px;
+        width: auto;
+      }
+    }
+
+    &:nth-child(even) {
+      grid-template-columns: 455px auto;
+
+      .steps-block-item-img {
+        order: 2;
+      }
+      .steps-block-item-content {
+        order: 1;
+      }
+    }
+  }
+}
+
+.asms-svc-vote-segment-04 {
+  .svc-vote-segment-04-split {
+    grid-template-columns: auto 33%;
+  }
+}

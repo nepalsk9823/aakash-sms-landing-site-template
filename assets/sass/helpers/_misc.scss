@@ -1,0 +1,130 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+::selection {
+  background: color("primary") !important;
+  color: color("white");
+  text-shadow: none;
+}
+::-moz-selection {
+  background: color("primary");
+  color: color("white");
+  text-shadow: none;
+}
+::-webkit-selection {
+  background: color("primary");
+  color: color("white");
+  text-shadow: none;
+}
+
+// SHAPES STYLINGS
+.dotted-box-shape {
+  width: 140px;
+}
+
+.spiral-arrow-shape {
+  width: 60px;
+
+  @include breakpoint-down(lg) {
+    width: 48px;
+  }
+
+  @include breakpoint-down(sm) {
+    width: 32px;
+  }
+}
+
+.floating-element-1 {
+  right: 96px;
+  top: -48px;
+
+  @include breakpoint-down(lg) {
+    display: none !important;
+  }
+}
+
+.floating-element-2 {
+  max-width: 204px;
+  width: 100%;
+  top: 40px;
+  right: calc(100% + 120px);
+
+  @include breakpoint-down(xxxl) {
+    right: calc(100% + 60px);
+  }
+
+  @include breakpoint-down(xxl) {
+    right: calc(100% + 40px);
+  }
+
+  @include breakpoint-down(xl) {
+    display: none !important;
+  }
+}
+
+.mx-w-640 {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mx-w-725 {
+  max-width: 725px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mx-w-900 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mx-w-850 {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mx-w-390 {
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mx-w-400{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.grid-cols-36-auto{
+  grid-template-columns: 36% auto;
+}
+
+.grid-cols-40-auto{
+  grid-template-columns: 40% auto;
+}
+
+.grid-cols-45-auto{
+  grid-template-columns: 45% auto;
+}
+
+.grid-cols-50-auto{
+  grid-template-columns: 50% auto;
+}
+
+.grid-cols-55-auto{
+  grid-template-columns: 55% auto;
+}
+
+.grid-cols-60-auto{
+  grid-template-columns: 60% auto;
+}

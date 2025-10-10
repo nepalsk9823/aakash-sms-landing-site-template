@@ -1,0 +1,147 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Reset, normalization of HTML elements */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+ul:not([class]) {
+  > li::marker {
+    display: block;
+    color: $gray; // applying color only to the ul's marker having no any classes
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+img {
+  width: 100%;
+  border-style: none; // Remove the border on images inside links in IE 10-.
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+input,
+button,
+textarea,
+optgroup,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: 0;
+  border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+  margin-bottom: 0;
+}
+textarea {
+  resize: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+// Images, Flash & video
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+}
+
+//* Remove default table spacing.
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden; // Hide the overflow in IE
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* Correct `inline-block` display not defined in IE 8/9. */
+  vertical-align: baseline; /* Normalize vertical alignment of `progress` in Chrome, Firefox and Opera. */
+}
+
+audio:not([controls]) {
+  /* Prevent modern browsers from displaying `audio` without controls */
+  display: none; /* Remove excess height in iOS 5 devices. */
+  height: 0;
+}
+
+[hidden],                               /* Address `[hidden]` styling not present in IE 8/9/10. */
+template {
+  display: none; /* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
+}
+
+// bootstrap resets
+.container {
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+
+  @include breakpoint-up(xxxl) {
+    max-width: $max-width !important;
+    width: 100% !important;
+  }
+
+  @include breakpoint-down(lg) {
+    max-width: calc(100% - 40px) !important;
+  }
+
+  @include breakpoint-down(sm) {
+    max-width: 100% !important;
+  }
+}

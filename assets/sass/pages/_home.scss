@@ -1,0 +1,339 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+@use "../abstracts/functions" as *;
+
+$page-top-spacing-desktop: 100px;
+
+.page-top-spacing {
+  padding-top: $page-top-spacing-desktop;
+}
+
+.asms-home-banner {
+  background: linear-gradient(to bottom, #ffffff 0%, #e9f2ed 89%);
+
+  .home-banner-trust {
+    max-width: 1064px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    .trust-item {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 20px);
+        height: 80px;
+        width: 1px;
+        background: color("grey-3");
+        transform: translateY(-50%);
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.asms-sms-gateway {
+  padding-top: 100px;
+
+  .sms-gateway-split {
+    gap: 60px;
+  }
+}
+
+.asms-request-quote {
+  .request-quote-split {
+    grid-template-columns: 65% 35%;
+
+    &-form {
+      .form-custom {
+        .form-control {
+          &::placeholder {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.asms-sms-features {
+  .sms-features-split {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.asms-textline-workflow {
+  .textline-workflow {
+    padding-top: 60px;
+    max-width: 1312px !important;
+
+    &-line {
+      top: -10px;
+      max-width: 1380px;
+    }
+
+    &-icon {
+      position: relative;
+      width: 86px;
+      height: 86px;
+      border: 2px dashed color("primary");
+      border-radius: 100%;
+    }
+  }
+}
+
+.asms-audience {
+  .audience-split {
+    grid-template-columns: 3fr 2.5fr;
+  }
+}
+
+.asms-dev-resource {
+  .dev-resource-split {
+    grid-template-columns: 40% auto;
+
+    @include breakpoint-down(xxl) {
+      grid-template-columns: 30% auto;
+    }
+
+    @include breakpoint-down(xl) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  .dev-resource-btns {
+    @include breakpoint-down(sm) {
+      gap: 8px !important;
+    }
+
+    .btn {
+      @include breakpoint-down(sm) {
+        flex: 1;
+      }
+    }
+  }
+
+  .dev-resource-split-tabs {
+    border: 1px solid white(0.2);
+
+    .nav-tabs {
+      @include breakpoint-down(sm) {
+        row-gap: 4px;
+      }
+
+      .nav-link {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+
+        @include breakpoint-down(sm) {
+          border-top-left-radius: 8px !important;
+          border-top-right-radius: 8px !important;
+          padding: 8px 10px !important;
+        }
+
+        &.active {
+          background: color("mdt-green-v3") !important;
+          color: color("primary") !important;
+        }
+      }
+    }
+
+    .tab-content {
+      border-top-right-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+
+      @include breakpoint-down(sm) {
+        padding-top: 0 !important;
+      }
+
+      .tab-pane {
+        @include scrollbar("y");
+        max-height: 380px;
+      }
+    }
+  }
+}
+
+.asms-industries {
+  .industries-split {
+    gap: 80px;
+
+    @include breakpoint-down(lg) {
+      gap: 60px;
+    }
+
+    @include breakpoint-down(sm) {
+      gap: 40px;
+    }
+
+    @include breakpoint-down(xs) {
+      gap: 24px;
+    }
+
+    .accordion-item {
+      &:last-child {
+        margin-bottom: 0 !important;
+
+        .accordion-collapse {
+          border-radius: 0 !important;
+        }
+      }
+    }
+
+    .industries-feature {
+      &-item {
+        &:hover {
+          color: color("primary") !important;
+        }
+        p {
+          &:hover {
+            color: color("primary") !important;
+          }
+        }
+      }
+    }
+  }
+
+  .business-companies {
+    gap: 100px;
+
+    @include breakpoint-down(lg) {
+      gap: 12px !important;
+      flex-direction: column;
+    }
+
+    @include breakpoint-down(md) {
+      gap: 16px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      gap: 12px !important;
+    }
+
+    &-text {
+      max-width: 223px;
+      margin-bottom: 0 !important;
+
+      @include breakpoint-down(lg) {
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+    &-logo {
+      max-width: 800px;
+    }
+
+    &-item {
+      img {
+        max-width: 150px;
+        filter: grayscale(1);
+        opacity: 0.7;
+        transition: $default-transition;
+
+        @include breakpoint-down(sm) {
+          max-width: 120px;
+        }
+      }
+
+      &:hover {
+        img {
+          filter: none;
+          opacity: 1;
+        }
+      }
+
+      @include breakpoint-down(md) {
+        width: calc(50% - 12px);
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &-list {
+      @include breakpoint-down(lg) {
+        width: 100%;
+      }
+
+      @include breakpoint-down(md) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.asms-presence {
+  .presence {
+    &-item {
+      min-height: 42px;
+      &-text {
+        margin-left: 20px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: calc(100% + 8px);
+          width: 12px;
+          height: 12px;
+          background: linear-gradient(to right, #b6f600, #01df82);
+          border-radius: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.asms-faq {
+  .segment-heading {
+    &-img {
+      max-width: 80px;
+    }
+  }
+
+  .faq-split {
+    grid-template-columns: 28% auto;
+    max-width: 1200px;
+
+    .accordion-item {
+      margin-bottom: 12px !important;
+
+      .accordion-button {
+        &:hover {
+          color: color("primary") !important;
+        }
+      }
+
+      &:has(.accordion-button[aria-expanded="true"]) {
+        background: color("p-green-50") !important;
+        box-shadow: none !important;
+
+        .accordion-button {
+          color: color("primary") !important;
+        }
+      }
+
+      .content-stylings {
+        max-height: 220px;
+        margin-right: 7px;
+
+        ul {
+          li {
+            &::before {
+              background-color: color("white");
+            }
+          }
+        }
+      }
+    }
+  }
+}

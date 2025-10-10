@@ -1,0 +1,86 @@
+@use "../abstracts/mixins" as *;
+
+// ### HAMBURGER ####
+// Hamburger Settings
+$hamburger-settings-height: 0 !default;
+$hamburger-settings-gutter: 0 !default;
+
+// Hamburger Generator
+@mixin hamburger(
+  $width: 24px,
+  $height: 2px,
+  $gutter: 5px,
+  $color: #232323,
+  $border-radius: 0,
+  $duration: 0.3s,
+  $timing-function: ease
+) {
+  // Set variables
+  $hamburger-settings-height: $height !global;
+  $hamburger-settings-gutter: $gutter !global;
+
+  position: relative;
+  margin-top: $height + $gutter;
+  margin-bottom: $height + $gutter;
+  &,
+  &:before,
+  &:after {
+    display: block;
+    @include box($width, $height);
+    border-radius: 4px;
+    transition:
+      background-color $duration $timing-function,
+      transform $duration $timing-function;
+    @if ($border-radius !=0) {
+      border-radius: $border-radius;
+    }
+    background-color: $color;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+  }
+  &:before {
+    top: -($height + $gutter);
+  }
+  &:after {
+    top: $height + $gutter;
+  }
+
+  &:hover{
+    opacity: 0.85;
+  }
+}
+
+// Hamburger Animation
+@mixin hamburger-animation {
+  background-color: transparent;
+  &:before {
+    transform: translateY($hamburger-settings-gutter + $hamburger-settings-height) rotate(45deg);
+  }
+  &:after {
+    transform: translateY(-($hamburger-settings-gutter + $hamburger-settings-height)) rotate(-45deg);
+  }
+}
+
+//Example
+.menu-bar {
+  @include hamburger(24px, 2px, 5px, #232323, $timing-function: linear);
+}
+.hamburger {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &.is-open {
+    .menu-bar {
+      @include hamburger-animation();
+    }
+  }
+}
+
+//Js
+//$('.hamburger').on('click',function(){
+//  $(this).toggleClass('is-open');
+//})

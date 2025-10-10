@@ -1,0 +1,54 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholder" as *;
+
+// ICONS
+%icon-common {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$icon-sizes: (60, 52, 40, 36, 32, 28, 24, 20, 16, 18, 12);
+
+@each $size in $icon-sizes {
+    .icon-#{$size} {
+        @include box($size + px, $size + px);
+        min-width: $size + px;
+        min-height: $size + px;
+        @extend %icon-common;
+
+        @include breakpoint-down(md) {
+            @if $size >= 36 {
+                width: #{$size - 4}px;
+                height: #{$size - 4}px;
+                min-width: #{$size - 4}px;
+                min-height: #{$size - 4}px;
+            } @else {
+                width: #{$size - 2}px;
+                height: #{$size - 2}px;
+                min-width: #{$size - 2}px;
+                min-height: #{$size - 2}px;
+            }
+        }
+
+        @include breakpoint-down(xs) {
+            @if $size >= 36 {
+                width: #{$size - 8}px;
+                height: #{$size - 8}px;
+                min-width: #{$size - 8}px;
+                min-height: #{$size - 8}px;
+            } @else {
+                width: #{$size - 4}px;
+                height: #{$size - 4}px;
+                min-width: #{$size - 4}px;
+                min-height: #{$size - 4}px;
+            }
+        }
+    }
+}
+
+[class*="icon"] {
+    speak: none;
+}

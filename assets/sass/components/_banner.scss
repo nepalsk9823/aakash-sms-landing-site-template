@@ -1,0 +1,12 @@
+.asms-banner {
+  // service bulk sms page
+  &.asms-svc-bulksms-banner {
+    .svc-bulksms-banner-split {
+      &-img {
+        img {
+          max-width: 440px;
+        }
+      }
+    }
+  }
+}

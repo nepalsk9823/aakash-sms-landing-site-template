@@ -1,0 +1,44 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.asms-footer{
+  .footer-split{
+    gap: 60px;
+    grid-template-columns: 380px auto;
+    border-radius: 40px;
+
+    &::after{
+      content: "";
+      position: absolute;
+      background: url($img-path + "misc/footer_arrow_shape.svg") center/contain no-repeat;
+      width: 105px;
+      height: 104px;
+      top: calc(100% - 6px);
+      left: 148px;
+    }
+
+    .links-block{
+      .links-list{
+        a{
+          transition: $default-transition;
+          &:hover{
+            color: color("primary")!important;
+          }
+        }
+      }
+    }
+  }
+
+  .contacts-social-link{
+    &:hover{
+      scale: 1.1;
+    }
+  }
+
+  .footer-meta{
+    margin-left: 320px;
+    
+    
+  }
+}

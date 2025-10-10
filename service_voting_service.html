@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Aakash SMS - Voting Service Page</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+  <!-- Preconnect to Google Fonts domains for faster DNS lookup and TLS handshake -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload the stylesheet to start fetching it early -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <!-- FOOT AWESOME ICON CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+  <!-- NORMALIZE CSS -->
+  <link rel="stylesheet" href="assets/sass/vendor/normalize.css" />
+  <!-- SWIPER SLIDER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- IMAGE PRELOADING  -->
+  <link rel="preload" as="image" href="assets/images/services/voting_service_banner_img.png" fetchpriority="high" />
+</head>
+
+<body>
+  <div class="asms-page-wrapper">
+    <!-- HEADER -->
+    <header class="asms-header">
+      <div class="asms-navbar container d-flex align-items-center justify-content-between gap-4">
+        <a href="index.html" class="asms-logo d-inline-flex align-items-center">
+          <img src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
+        </a>
+        <ul class="asms-navbar-menu list-unstyled d-flex align-items-center gap-5">
+          <li class="asms-menu-item">
+            <a href="#" class="asms-menu-link active">
+              <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+            </a>
+          </li>
+          <li class="asms-menu-item">
+            <a href="#" class="asms-menu-link">
+              <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
+              <span class="text-sm icon-24">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </a>
+          </li>
+          <li class="asms-menu-item">
+            <a href="#" class="asms-menu-link">
+              <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
+            </a>
+          </li>
+          <li class="asms-menu-item">
+            <a href="#" class="asms-menu-link">
+              <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
+            </a>
+          </li>
+          <li class="asms-menu-item">
+            <a href="#" class="asms-menu-link">
+              <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
+            </a>
+          </li>
+          <li class="asms-menu-item">
+            <a href="#" class="asms-menu-link">
+              <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+        <div class="asms-navbar-btns d-inline-flex gap-2">
+          <a href="#" class="btn btn-base btn-link btn-link-primary">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-icon">
+              <img src="assets/icons/sign_in_primary_icon.svg" alt="sign in icon" loading="lazy" />
+            </span>
+          </a>
+          <a href="#" class="btn btn-base btn-primary">
+            <span class="btn-text">Try for Free</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- EOF HEADER -->
+
+    <!--  API SERVICE SECTION -->
+    <section class="asms-svc-vote-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
+      <div class="container asms-svc-vote-banner-container segment-pt-80 segment-pb-100">
+        <div class="svc-vote-banner-split d-grid gap-12 grid-cols-55-auto">
+          <div class="svc-vote-banner-split-content">
+            <h1 class="svc-vote-banner-split-ttl text-8xl font-bold mb-custom-8 mt-0 leading-extra-tight">
+              Text That Carries Your Success in SMS Voting Campaigns
+            </h1>
+            <div class="svc-vote-banner-split-text content-stylings text-lg font-semibold">
+              <p>In today's fast-paced world, making your voting campaigns stand out requires innovative, efficient, and
+                trustworthy solutions. AakashSMS, Nepal's leading SMS service provider, brings you an integrated
+                platform for SMS voting services that can take your campaigns to the next level. With over 15 years of
+                experience, 1000+ satisfied customers, and trusted by industry leaders, we have earned our reputation
+                for delivering top-quality service that ensures maximum engagement and results.
+              </p>
+            </div>
+            <div class="svc-vote-banner-split-btns d-flex align-items-center justify-content-start gap-3 mt-custom-7">
+              <a href="#" class="btn btn-primary btn-lg">
+                <span class="btn-text">Try for Free</span>
+              </a>
+            </div>
+          </div>
+          <div class="svc-vote-banner-split-img d-flex align-items-center justify-content-end">
+            <img src="assets/images/services/voting_service_banner_img.png"
+              alt="Text That Carries Your Success in SMS Voting Campaigns image" fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EOF VOTING SERVICE SECTION -->
+
+    <section class="asms-hero-text segment-py-80 bg-grey-1">
+      <div class="asms-hero-text-container container">
+        <div class="hero-text-content">
+          <div class="segment-heading d-flex align-items-start justify-content-center gap-3 mb-custom-5 text-center">
+            <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+              What is SMS Voting? 
+            </h2>
+          </div>
+          <div class="content-stylings text-night text-lg text-center">
+            <p>SMS voting is a dynamic and straightforward method of collecting votes, feedback, or opinions via text
+              messages. Using a dedicated short code or keyword, participants can quickly cast their vote by sending a
+              simple SMS. It’s an effective, low-cost, and scalable way to engage with a large audience, making it
+              perfect for events, competitions, polls, and surveys. SMS voting not only simplifies the process but also
+              ensures participation from even those with basic mobile phones</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asms-highlight-card-group-segment segment-py-100">
+      <div class="asms-highlight-card-group-segment-container container">
+        <div
+          class="segment-heading d-flex flex-column align-items-center justify-content-start gap-3 mb-custom-2 text-center">
+          <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+            Reasons to Choose SMS Service in Voting Campaigns
+          </h2>
+        </div>
+        <div class="segment-mt-40 cards-list d-grid grid-cols-3 gap-4 mx-auto w-100">
+          <div
+            class="card-item card border-0 p-custom-7 d-flex flex-column gap-5 align-items-center shadow-default rounded-12">
+            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+              <img class="icon-24" src="assets/icons/signal_filled_white_icon.svg" alt="Instant Reach icon" />
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+              <h3 class="text-2xl text-night font-semibold">Maximized Reach with No Internet Barriers</h3>
+              <div class="content-stylings text-gray text-base">
+                Reach remote areas with limited internet access, ensuring nationwide participation in your campaign.
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-item card border-0 p-custom-7 d-flex flex-column gap-5 align-items-center shadow-default rounded-12">
+            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+              <img class="icon-24" src="assets/icons/users_filled_white_icon.svg" alt="Higher Open Rates icon" />
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+              <h3 class="text-2xl text-night font-semibold">Increased Audience Engagement</h3>
+              <div class="content-stylings text-gray text-base">
+                SMS voting makes participation easy, boosting audience involvement and loyalty in shows, surveys, or
+                competitions.
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-item card border-0 p-custom-7 d-flex flex-column gap-5 align-items-center shadow-default rounded-12">
+            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+              <img class="icon-24" src="assets/icons/chart_bar_filled_white_icon.svg" alt="Cost-Effective icon" />
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+              <h3 class="text-2xl text-night font-semibold">Real-time Results and Transparency</h3>
+              <div class="content-stylings text-gray text-base">
+                Track votes instantly, adjust strategies as needed, and ensure transparency for both organizers and
+                participants.
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-item card border-0 p-custom-7 d-flex flex-column gap-5 align-items-center shadow-default rounded-12">
+            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+              <img class="icon-24" src="assets/icons/hand_holding_dollar_outline_white_icon.svg"
+                alt="Two-Factor Authentication (2FA) icon" />
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+              <h3 class="text-2xl text-night font-semibold">Cost-Effective and Efficient</h3>
+              <div class="content-stylings text-gray text-base">
+                SMS voting is an affordable, scalable solution for large campaigns, cutting costs compared to
+                traditional voting methods.
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-item card border-0 p-custom-7 d-flex flex-column gap-5 align-items-center shadow-default rounded-12">
+            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+              <img class="icon-24" src="assets/icons/bullhorn_outline_white_icon.svg"
+                alt="Multi-Featured Dashboard icon" />
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+              <h3 class="text-2xl text-night font-semibold">Seamless Integration with Marketing Channels</h3>
+              <div class="content-stylings text-gray text-base">
+                Easily integrate SMS voting with TV, social media, and ads, creating a multi-channel experience for
+                participants.
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-item card border-0 p-custom-7 d-flex flex-column gap-5 align-items-center shadow-default rounded-12">
+            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+              <img class="icon-24" src="assets/icons/commen_check_outline_white_icon.svg"
+                alt="Low Latency and High Delivery icon" />
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+              <h3 class="text-2xl text-night font-semibold">Instant Gratification for Participants</h3>
+              <div class="content-stylings text-gray text-base">
+                Provide immediate feedback to participants, increasing satisfaction and encouraging further engagement.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asms-svc-vote-segment-01 segment-py-100 bg-grey-1">
+      <div class="asms-svc-vote-segment-container container">
+        <div
+          class="segment-heading d-flex flex-column align-items-center justify-content-start gap-3 mb-custom-2 text-center mx-w-900">
+          <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+            How Does SMS Voting Work?
+          </h2>
+          <p class="segment-heading-lead text-night text-base font-semibold">SMS voting is simple and efficient. Here's
+            how it works</p>
+        </div>
+
+        <div class="steps-block-group segment-mt-60 w-100 mx-auto d-grid gap-12 align-items-start">
+          <div class="steps-block-item d-grid align-items-center gap-12">
+            <div class="steps-block-item-img">
+              <img src="assets/images/services/sms_voting_step_1.png" alt="Set Up Keywords or Shortcodes img" />
+            </div>
+            <div class="steps-block-item-content segment-py-40">
+              <p class="steps-block-item-count font-semibold text-gray">Step one</p>
+              <h3 class="steps-block-item-ttl text-3xl font-semibold text-night my-custom-2">Set Up Keywords or
+                Shortcodes</h3>
+              <div class="content-stylings text-night text-base">
+                <p>You create a unique keyword (e.g., VOTE1, WINNER2) for each voting option or a dedicated shortcode
+                  number.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps-block-item d-grid align-items-center gap-12">
+            <div class="steps-block-item-img">
+              <img src="assets/images/services/sms_voting_step_2.png" alt="Set Up Keywords or Shortcodes img" />
+            </div>
+            <div class="steps-block-item-content segment-py-40">
+              <p class="steps-block-item-count font-semibold text-gray">Step two</p>
+              <h3 class="steps-block-item-ttl text-3xl font-semibold text-night my-custom-2">Promote the Voting Campaign
+              </h3>
+              <div class="content-stylings text-night text-base">
+                <p>Share your voting options through various marketing channels like social media, TV, radio, or
+                  websites.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps-block-item d-grid align-items-center gap-12">
+            <div class="steps-block-item-img">
+              <img src="assets/images/services/sms_voting_step_3.png" alt="Set Up Keywords or Shortcodes img" />
+            </div>
+            <div class="steps-block-item-content segment-py-40">
+              <p class="steps-block-item-count font-semibold text-gray">Step three</p>
+              <h3 class="steps-block-item-ttl text-3xl font-semibold text-night my-custom-2">Vote via SMS</h3>
+              <div class="content-stylings text-night text-base">
+                <p> Participants send their vote by texting the appropriate keyword or shortcode.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps-block-item d-grid align-items-center gap-12">
+            <div class="steps-block-item-img">
+              <img src="assets/images/services/sms_voting_step_4.png" alt="Set Up Keywords or Shortcodes img" />
+            </div>
+            <div class="steps-block-item-content segment-py-40">
+              <p class="steps-block-item-count font-semibold text-gray">Step four</p>
+              <h3 class="steps-block-item-ttl text-3xl font-semibold text-night my-custom-2">Track and Monitor Results
+              </h3>
+              <div class="content-stylings text-night text-base">
+                <p>AakashSMS provides you with real-time reports and analytics to track vote counts and overall
+                  participation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asms-svc-vote-segment-02 segment-py-100 bg-white">
+      <div class="asms-svc-vote-segment-container container">
+        <div class="svc-vote-segment-split d-grid align-items-center grid-cols-2 gap-12">
+          <div class="svc-vote-segment-split-content">
+            <div class="segment-heading d-flex align-items-start justify-content-center gap-3 mb-custom-5">
+              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                Use Cases for SMS Voting
+              </h2>
+            </div>
+            <div class="segment-mt-40 cards-list d-grid grid-cols-2 gap-4 p-custom-5 mx-auto w-100">
+              <div
+                class="card-item card border-0 p-custom-7 d-flex flex-column gap-4 align-items-start shadow-default rounded-12">
+                <h3 class="text-xl text-night font-semibold card-title mb-0">Reality TV Shows</h3>
+                <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+                  <div class="content-stylings text-night text-base">
+                    Let viewers vote for their favorite contestants with just a simple SMS.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-item card border-0 p-custom-7 d-flex flex-column gap-4 align-items-start shadow-default rounded-12">
+                <h3 class="text-xl text-night font-semibold card-title mb-0">Talent Competitions</h3>
+                <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+                  <div class="content-stylings text-night text-base">
+                    Allow the public to vote for participants in online and offline talent events.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-item card border-0 p-custom-7 d-flex flex-column gap-4 align-items-start shadow-default rounded-12">
+                <h3 class="text-xl text-night font-semibold card-title mb-0">Political Elections& Referendums</h3>
+                <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+                  <div class="content-stylings text-night text-base">
+                    Simplify the voting process in local elections and surveys.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-item card border-0 p-custom-7 d-flex flex-column gap-4 align-items-start shadow-default rounded-12">
+                <h3 class="text-xl text-night font-semibold card-title mb-0">Customer Feedback</h3>
+                <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+                  <div class="content-stylings text-night text-base">
+                    Gather quick opinions or reviews from your customers about your product or service.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="svc-vote-segment-split-img">
+            <img src="assets/images/services/service_05_04_img.png" alt="Industries That Benefit from SMS Campaigns" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asms-cards-segment segment-py-100 bg-grey-1">
+      <div class="asms-cards-segment-container container">
+        <div
+          class="segment-heading d-flex flex-column align-items-center justify-content-start gap-3 mb-custom-2 text-center mx-w-900">
+          <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+            Why AakashSMS Is Renowned as the Best SMS Voting Service Provider
+          </h2>
+        </div>
+        <div class="cards-list segment-mt-60 d-grid align-items-start grid-cols-5 gap-5">
+          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start h-100">
+            <div class="card-head d-flex flex-column gap-3">
+              <div class="card-icon icon-24">
+                <img class="icon-24" src="assets/icons/message_filled_p_green_700.svg"
+                  alt="Personalized Messaging icon" />
+              </div>
+              <h3 class="text-xl text-night font-semibold">Personalized Messaging</h3>
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+              <div class="content-stylings text-gray text-base">
+                Customize each SMS with the recipient's name or other personal details to make your messages stand out.
+              </div>
+            </div>
+          </div>
+          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start h-100">
+            <div class="card-head d-flex flex-column gap-3">
+              <div class="card-icon icon-24">
+                <img class="icon-24" src="assets/icons/timer_outline_p_green_700.svg" alt="Automated Campaigns icon" />
+              </div>
+              <h3 class="text-xl text-night font-semibold">Automated Campaigns</h3>
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+              <div class="content-stylings text-gray text-base">
+                Schedule your SMS campaigns in advance and set up automated triggers based on user actions.
+              </div>
+            </div>
+          </div>
+          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start h-100">
+            <div class="card-head d-flex flex-column gap-3">
+              <div class="card-icon icon-24">
+                <img class="icon-24" src="assets/icons/signal_outline_p_green_700.svg" alt="Advanced Analytics icon" />
+              </div>
+              <h3 class="text-xl text-night font-semibold">Advanced Analytics</h3>
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+              <div class="content-stylings text-gray text-base">
+                Track the success of your campaigns in real-time, with detailed insights on open rates, click-through
+                rates, and other metrics.
+              </div>
+            </div>
+          </div>
+          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start h-100">
+            <div class="card-head d-flex flex-column gap-3">
+              <div class="card-icon icon-24">
+                <img class="icon-24" src="assets/icons/users_outline_p_green_700.svg" alt="Segmented Targeting icon" />
+              </div>
+              <h3 class="text-xl text-night font-semibold">Segmented Targeting</h3>
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+              <div class="content-stylings text-gray text-base">
+                Choose your audience based on location, demographics, or behavior to send highly targeted messages.
+              </div>
+            </div>
+          </div>
+          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start h-100">
+            <div class="card-head d-flex flex-column gap-3">
+              <div class="card-icon icon-24">
+                <img class="icon-24" src="assets/icons/network_wired_outline_p_green_700.svg"
+                  alt="Two-Way SMS Communication icon" />
+              </div>
+              <h3 class="text-xl text-night font-semibold">Two-Way SMS Communication</h3>
+            </div>
+            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center">
+              <div class="content-stylings text-gray text-base">
+                Engage your customers by allowing them to reply to your SMS, providing a more interactive experience.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIAL CTA SECTION -->
+    <section class="asms-cta-trial segment-py-40 bg-light-cyprus">
+      <div class="asms-cta-trial-container container">
+        <div
+          class="segment-heading d-flex flex-column align-items-center justify-content-center gap-3 text-center mx-w-850">
+          <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
+            Want to trial a Bulk SMS Service
+          </h2>
+          <p class="segment-heading-lead text-night text-base font-semibold mx-w-390">Try sending a text to yourself today to experience how bulk SMS works.</p>
+          <a href="#" class="btn btn-primary btn-lg mt-custom-2">
+            <span class="btn-text">Start your trial</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- EOF TRIAL CTA SECTION -->
+
+    <!-- FAQ SECTION -->
+    <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
+      <div class="asms-faq-container container">
+        <div class="faq-split mx-auto w-100 d-grid align-items-start gap-12">
+          <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
+            <div class="segment-heading-img mb-custom-3">
+              <img class="w-100" src="assets/icons/faq_question.svg" alt="" />
+            </div>
+            <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+              FAQs
+            </h2>
+            <p class="segment-heading-lead text-night text-base font-semibold">Get quick answers to your questions about
+              our phone system and
+              services. For more help, contact our support team!</p>
+          </div>
+          <div class="faq-split-accordion accordion" id="accordionAtelFaq" data-aos="fade-left">
+            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="true"
+                  aria-controls="collapseOneFaq">
+                  How do I send bulk text messages in Nepal?
+                  <span class="icon-24 accordion-button-icon rounded-8"></span>
+                </button>
+              </h2>
+              <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAtelFaq">
+                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
+                      designed to help businesses, organizations, and individuals reach thousands of people instantly
+                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
+                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <ol>
+                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
+                        dashboard.</li>
+                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
+                        entering numbers directly.</li>
+                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
+                        ensuring it fits within the character limit.</li>
+                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
+                        represent your brand.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFaq" aria-expanded="false"
+                  aria-controls="collapseTwoFaq">
+                  How long can a SMS be?
+                  <span class="icon-24 accordion-button-icon rounded-8"></span>
+                </button>
+              </h2>
+              <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAtelFaq">
+                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
+                      designed to help businesses, organizations, and individuals reach thousands of people instantly
+                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
+                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <ol>
+                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
+                        dashboard.</li>
+                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
+                        entering numbers directly.</li>
+                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
+                        ensuring it fits within the character limit.</li>
+                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
+                        represent your brand.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFaq" aria-expanded="false"
+                  aria-controls="collapseThreeFaq">
+                  Is Bulk SMS compatible with the Nepalese or foreign language?
+                  <span class="icon-24 accordion-button-icon rounded-8"></span>
+                </button>
+              </h2>
+              <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAtelFaq">
+                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
+                      designed to help businesses, organizations, and individuals reach thousands of people instantly
+                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
+                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <ol>
+                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
+                        dashboard.</li>
+                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
+                        entering numbers directly.</li>
+                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
+                        ensuring it fits within the character limit.</li>
+                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
+                        represent your brand.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFaq" aria-expanded="false"
+                  aria-controls="collapseFourFaq">
+                  What is Dynamic SMS? How to use it?
+                  <span class="icon-24 accordion-button-icon rounded-8"></span>
+                </button>
+              </h2>
+              <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAtelFaq">
+                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
+                      designed to help businesses, organizations, and individuals reach thousands of people instantly
+                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
+                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <ol>
+                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
+                        dashboard.</li>
+                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
+                        entering numbers directly.</li>
+                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
+                        ensuring it fits within the character limit.</li>
+                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
+                        represent your brand.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFaq" aria-expanded="false"
+                  aria-controls="collapseFiveFaq">
+                  Can I have a trial of the services before buying them?
+                  <span class="icon-24 accordion-button-icon rounded-8"></span>
+                </button>
+              </h2>
+              <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAtelFaq">
+                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
+                      designed to help businesses, organizations, and individuals reach thousands of people instantly
+                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
+                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EOF FAQ SECTION -->
+
+    <!-- FOOTER -->
+    <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
+      <div class="asms-footer-container container">
+        <div class="footer-split d-grid align-items-stretch bg-white p-custom-5 position-relative">
+          <div
+            class="footer-split-cta d-flex flex-column align-items-center justify-content-center rounded-20 p-custom-5 bg-p-green-50">
+            <div class="split-cta-icon d-flex align-items-center justify-content-center">
+              <img src="assets/icons/sms_and_cloud.svg" alt="cta sms icon" />
+            </div>
+            <h2 class="text-6xl font-semibold text-primary mt-custom-2 mb-0 text-center">Never Miss an <br> SMS Again!
+              <br>
+              <span class="text-night">Stay Connected</span>
+            </h2>
+            <div class="splits-cta-btns w-100 d-flex justify-content-center gap-2 mt-custom-5">
+              <a href="#" class="btn btn-lg btn-primary flex-1">
+                <span class="btn-text">Try for Free</span>
+              </a>
+              <a href="#" class="btn btn-lg btn-white-night-grey-2 flex-1">
+                <span class="btn-text">See Our Pricing</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-split-main d-flex flex-column justify-content-between">
+            <div class="links-block-group d-grid align-items-start grid-cols-3 segment-mt-40">
+              <div class="links-block">
+                <p class="mb-custom-3 text-night font-semibold text-base">Services</p>
+                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled">
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Bulk SMS Service</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">API Service</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">SMS Software Application</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">SMS Campaign</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">SMS Voting Service</a></li>
+                </ul>
+              </div>
+              <div class="links-block">
+                <p class="mb-custom-3 text-night font-semibold text-base">Services</p>
+                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled">
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Documentation</a></li>
+                </ul>
+                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled mt-custom-7">
+                  <li><a href="#" class="text-night text-base font-semibold -tracking-03">Pricing</a></li>
+                  <li><a href="#" class="text-night text-base font-semibold -tracking-03">About</a></li>
+                  <li><a href="#" class="text-night text-base font-semibold -tracking-03">Contact</a></li>
+                </ul>
+              </div>
+              <div class="links-block">
+                <p class="mb-custom-3 text-night font-semibold text-base">Quick Links</p>
+                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled">
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Home</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Login</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Industries</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">FAQ</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Blog</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Services</a></li>
+                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="contacts-block-group d-flex flex-wrap justify-content-between gap-5 mt-custom-9">
+              <div
+                class="contacts-block-info d-flex flex-wrap gap-x-5 gap-y-3 align-items-center justify-content-start">
+                <div class="contacts-info-item d-inline-flex align-items-center gap-2">
+                  <span class="contacts-info-item-icon icon-24">
+                    <img class="icon-20" src="assets/icons/phone_outline_primary_icon.svg" alt="phone icon" />
+                  </span>
+                  <span class="text-base text-night font-semibold">+977 9808139797</span>
+                </div>
+                <div class="contacts-info-item d-inline-flex align-items-center gap-2">
+                  <span class="contacts-info-item-icon icon-24">
+                    <img class="icon-20" src="assets/icons/envelope_outline_primary_icon.svg" alt="phone icon" />
+                  </span>
+                  <span class="text-base text-night font-semibold">info@aakashtech.com.np</span>
+                </div>
+              </div>
+              <div class="contacts-block-social d-flex flex-wrap align-items-center">
+                <a href="#" class="contacts-social-link default-transition icon-40">
+                  <img class="icon-20" src="assets/icons/facebook_night_icon.svg" alt="facebook icon" />
+                </a>
+                <a href="#" class="contacts-social-link default-transition icon-40">
+                  <img class="icon-18" src="assets/icons/instagram_night_icon.svg" alt="instagram icon" />
+                </a>
+                <a href="#" class="contacts-social-link default-transition icon-40">
+                  <img class="icon-20" src="assets/icons/linkedin_night_icon.svg" alt="linkedin icon" />
+                </a>
+                <a href="#" class="contacts-social-link default-transition icon-40">
+                  <img class="icon-20" src="assets/icons/youtube_night_icon.svg" alt="youtube icon" />
+                </a>
+                <a href="#" class="contacts-social-link default-transition icon-40">
+                  <img class="icon-24" src="assets/icons/pinterest_night_icon.svg" alt="pinterest icon" />
+                </a>
+                <a href="#" class="contacts-social-link default-transition icon-40">
+                  <img class="icon-16" src="assets/icons/x_night_icon.svg" alt="x twitter icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-meta-wrapper container d-flex align-items-center justify-content-end py-custom-10">
+          <div class="footer-meta d-flex align-items-center justify-content-between gap-5 w-100">
+            <div class="footer-meta-copyright text-white text-xs font-semibold opacity-60">Copyright © 2024 Aakashtech.
+            </div>
+            <nav class="footer-meta-legal d-flex flex-wrap align-items-center" aria-label="Legal Links">
+              <p class="text-xs text-white font-semibold my-0 meta-legal-ttl pe-2 me-2 border-r-grey-1-1">Legal</p>
+              <ul class="meta-legal-links flex-wrap align-items-center d-flex gap-x-4 gap-y-2 list-unstyled">
+                <li class="legal-link-item d-inline-flex align-items-center">
+                  <a href="#" class="text-white text-xs font-semibold default-transition">Terms & Conditions</a>
+                </li>
+                <li class="legal-link-item d-inline-flex align-items-center">
+                  <a href="#" class="text-white text-xs font-semibold default-transition">Privacy Policy</a>
+                </li>
+                <li class="legal-link-item d-inline-flex align-items-center">
+                  <a href="#" class="text-white text-xs font-semibold default-transition">Refund Policy</a>
+                </li>
+                <li class="legal-link-item d-inline-flex align-items-center">
+                  <a href="#" class="text-white text-xs font-semibold default-transition">Cookies</a>
+                </li>
+                <li class="legal-link-item d-inline-flex align-items-center">
+                  <a href="#" class="text-white text-xs font-semibold default-transition">Ncell - Terms & Conditions</a>
+                </li>
+                <li class="legal-link-item d-inline-flex align-items-center">
+                  <a href="#" class="text-white text-xs font-semibold default-transition">NTC - Terms & Conditions</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </footer>
+    <!-- EOF FOOTER -->
+  </div>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/all.min.js"
+    integrity="sha512-fxASHhXi6WjjUR9Hr8qt2IxNW2AzyZOpoPi4+UgVU0lTFNKMQ8INkZaQ5ZED2aAldHuHNaLlaHuwQ1oGT+LHhw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- CUSTOM JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

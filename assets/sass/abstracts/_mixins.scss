@@ -1,0 +1,442 @@
+@use "sass:math";
+@use 'sass:map';
+@use 'sass:meta';
+@use "variables" as *;
+
+/* ##### FONT IMPORTS ##### */
+@mixin font-face($font-name, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-path + ".eot");
+    src: url($file-path + ".eot?#iefix") format("embedded-opentype"),
+      url($file-path + ".woff2") format("woff2"),
+      url($file-path + ".woff") format("woff"),
+      url($file-path + ".ttf") format("truetype"),
+      url($file-path + ".svg##{$font-name}") format("svg");
+    font-weight: $weight; // default = normal (400)
+    font-style: $style;
+    font-display: swap;
+    // swap: Instructs the browser to use the fallback font to display the text until the custom font has fully downloaded. This is also known as a “flash of unstyled text” or FOUT.
+  }
+}
+
+/* ##### MEDIA QUERY MIXINS ##### */
+@mixin breakpoint-up($size) {
+  @if (meta.type-of($size) == number) {
+    $size: #{$size}px;
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map.get($breakpoints-up, $size)) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @if (meta.type-of($size) == number) {
+    $size: #{$size}px;
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @media (max-width: map.get($breakpoints-down, $size)) {
+      @content;
+    }
+  }
+}
+
+/* ##### FLEXBOX TOOLKIT ##### */
+@mixin flex {
+  display: flex;
+}
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flex-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+
+/* ##### GRID TOOLKIT ##### */
+@mixin grid-box($columns: 1, $rows: auto, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+@mixin responsive-grid($columns-small, $columns-medium, $columns-large) {
+  display: grid;
+  grid-template-columns: repeat($columns-small, 1fr);
+
+  @include breakpoint-up(md) {
+    grid-template-columns: repeat($columns-medium, 1fr);
+  }
+
+  @include breakpoint-up(lg) {
+    grid-template-columns: repeat($columns-large, 1fr);
+  }
+}
+
+@mixin grid-auto-fit($min-width: 200px, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+@mixin masonry-grid($row-height: 200px, $gap: 10px) {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: $row-height;
+  gap: $gap;
+}
+
+/* ##### MISCELLANEOUS MIXINS ##### */
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Triangle with CSS
+// Usage
+// @include (#fff, 'down', 10px);
+@mixin triangle(
+  $color,
+  $direction,
+  $size: 6px,
+  $position: absolute,
+  $round: false
+) {
+  content: "";
+  display: block;
+  position: $pos;
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - math.round(math.div($size, 2.5));
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - math.round(math.div($size, 2.5));
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+// Hardware - Simple and effective for when you need to trigger hardware acceleration for some animation, keeping everything fast, slick and flicker-free.
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
+}
+
+/**
+ * Clearfix
+ * Usage:
+   @include clearfix;
+ */
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+/**
+ * Overlay
+ * Usage
+   @include overlay();
+ */
+@mixin overlay() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/**
+ * Pseudo elements after / before
+ * Usage
+   @include pseudo;
+ */
+@mixin pseudo($display: block, $position: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
+/**
+ * Set max width for an element and make it centered
+ * Usage
+   @include max-width(600px);
+ */
+@mixin max-width($max-width) {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// * Square Box Style * //
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Placeholders
+// Usage:
+// @include placeholder;
+@mixin placeholder {
+  $placeholders: "::-webkit-input-placeholder", "::-moz-placeholder",
+    ":-ms-input-placeholder";
+
+  @each $placeholder in $placeholders {
+    & #{$placeholder} {
+      @content;
+    }
+  }
+}
+
+// Clamp text with ellipsis at n lines
+// Usage:
+// @include clamp(3);
+@mixin clamp($nb) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: #{$nb};
+  -webkit-line-clamp: #{$nb};
+  -webkit-box-orient: vertical;
+}
+
+// This mixin can be used to set the object-fit:
+// Usage:
+// @include object-fit(contain) ;
+// or object-fit and object-position:
+// @include object-fit(cover, top);
+@mixin object-fit($fit: cover, $position: null) {
+  object-fit: $fit;
+
+  @if $position {
+    object-position: $position;
+    font-family: "object-fit: #{$fit}; object-position: #{$position}";
+  } @else {
+    font-family: "object-fit: #{$fit}";
+  }
+}
+
+// Keep aspect ratio
+// Usage:
+// @include aspect-ratio(16, 9);
+@mixin aspect-ratio($x, $y, $pseudo: false) {
+  $padding: #{($y / $x) * 100 + "%"};
+
+  @if $pseudo {
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    position: relative;
+    padding-top: $padding;
+  }
+}
+
+// Screen reader
+// Usage:
+// @include sr-only;
+@mixin sr-only($focusable: false) {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: none !important;
+
+  @if $focusable {
+    &:focus,
+    &:active {
+      width: auto !important;
+      height: auto !important;
+      margin: auto !important;
+      overflow: visible !important;
+      clip: auto !important;
+      clip-path: none !important;
+      white-space: normal !important;
+    }
+  }
+}
+
+// Hide element scrollbar
+// Usage:
+// @include hideScrollBar;
+@mixin hide-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+
+  &::-webkit-scrollbar {
+    width: 0; /* For Chrome, Safari, and Opera */
+  }
+}
+
+// Center an element with specific position
+// Usage:
+// @include center(absolute);
+@mixin center($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+// Set image (for example) as a cover
+// Usage:
+// @include cover;
+@mixin image-fit-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include object-fit(cover);
+}
+
+@mixin fullscreen-image(
+  $image,
+  $height: 100vh,
+  $grstart: rgba(0, 0, 0, 0.2),
+  $grend: rgba(0, 0, 0, 0.5),
+  $bgPos: center
+) {
+  background: linear-gradient(to bottom, $grstart, $grend), url($image);
+  background-repeat: no-repeat;
+  background-position: $bgPos;
+  background-size: cover;
+  height: 100vh;
+  max-height: $height;
+}
+
+@mixin truncate($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+/// font-smothing
+/// @include font-smoothing(on);
+/// @include font-smoothing(off);
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  }
+}
+
+/* ##### ANIMATION MIXINS ##### */
+@mixin fade-in($duration: 1s, $delay: 0s) {
+  animation: fadeIn $duration $delay forwards;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin slide-in($direction: left, $distance: 100%, $duration: 1s, $delay: 0s) {
+  animation: slideIn $duration $delay forwards;
+  @keyframes slideIn {
+    from {
+      transform: translateX(
+          if($direction == left or $direction == right, $distance, 0)
+        )
+        translateY(if($direction == top or $direction == bottom, $distance, 0));
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}

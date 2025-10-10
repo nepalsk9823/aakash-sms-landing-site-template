@@ -1,0 +1,73 @@
+@use "variables" as *;
+@use "colors" as *;
+
+html {
+  // Font & rendering optimizations
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: $font-family-base; /* Set default font family to sans-serif */
+  font-size: 100%; // Ensures consistent font size across devices
+  line-height: $leading-base;
+
+  // Layout & scrolling
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none; // Prevent pull-to-refresh behavior
+  touch-action: manipulation; // Improve scrolling performance on touch devices
+  overflow-y: auto; // Ensure scrollbars appear as needed
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+
+  // iOS / legacy browser adjustments
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  // Theming support
+  color-scheme: light dark; // Support dark and light themes
+  background-color: color("white");
+
+  // Support prefers-color-scheme
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: color("black");
+  //   color: color("white");
+  // }
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  // Disable scrolling when needed
+  &.no-scroll {
+    overflow: hidden; 
+    touch-action: none; // Prevent touch events for better control
+  }
+}
+
+.asms-page-wrapper {
+  position: relative;
+  min-height: 100vh; 
+}
+
+// ===============================
+// ACCESSIBILITY IMPROVEMENTS
+// ===============================
+// Better focus visibility (keyboard users only)
+:focus-visible {
+  outline: 2px solid color("primary"); // Focus outline for keyboard accessibility
+  outline-offset: 2px;
+}
+
+// Remove default outline for mouse users
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// High contrast mode adjustments
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid CanvasText;
+  }
+}

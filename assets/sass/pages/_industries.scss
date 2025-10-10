@@ -1,0 +1,69 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+@use "../abstracts/functions" as *;
+
+// HEALTH PAGE
+
+// HOSPITALITY PAGE
+
+// MARKETING PAGE
+.asms-ind-mktg-banner {
+  .ind-mktg-split {
+    grid-template-columns: auto 42%;
+  }
+}
+
+// EDUCATION PAGE
+
+.ind-split-block {
+  &-item {
+    grid-template-columns: 45% auto;
+
+    &:nth-child(even) {
+      grid-template-columns: auto 45%;
+
+      .ind-split-block-item-img {
+        order: 2;
+      }
+      .ind-split-block-item-content {
+        order: 1;
+      }
+    }
+  }
+}
+
+.ind-split-block{
+  &-group {
+    gap: 80px;
+  }
+
+  &-item{
+    &-img{
+      img{
+        max-height: 450px;
+      }
+    }
+  }
+}
+
+.ind-segment-split {
+  &-group {
+    max-width: 860px;
+  }
+  &-item {
+    grid-template-columns: 360px auto;
+
+    &:nth-child(even) {
+      grid-template-columns: auto 360px;
+
+      .ind-segment-split-img {
+        order: 2;
+      }
+      .ind-segment-split-content {
+        order: 1;
+      }
+    }
+  }
+}

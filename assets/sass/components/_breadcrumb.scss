@@ -1,0 +1,42 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.breadcrumb {
+  row-gap: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumb-item {
+  position: relative;
+
+  &.active {
+    color: color("primary") !important;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 40px !important;
+
+  @include breakpoint-down(sm) {
+    padding-left: 32px !important;
+  }
+
+  &::before {
+    position: absolute;
+    padding-right: 16px !important;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: color("primary");
+    content: "";
+    padding: 0 !important;
+    top: 50%;
+    transform: translate(-24px, -50%);
+
+    @include breakpoint-down(sm) {
+      transform: translate(-20px, -50%);
+    }
+  }
+}

@@ -1,0 +1,835 @@
+@use "sass:string";
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
+@use "colors" as *;
+@use "variables" as *;
+@use "mixins" as *;
+@use "sizes" as *;
+@use "placeholder" as *;
+
+// ----------------------------------------
+// MIXINS AND GENERATORS
+// ----------------------------------------
+// ----------------------------------------
+// COLOR UTILITIES
+// ----------------------------------------
+@mixin generate-color-classes($color-map, $prefix, $property) {
+  @each $color-name, $color in $color-map {
+    #{$prefix}-#{"" + $color-name} {
+      #{$property}: $color !important;
+    }
+
+    #{$prefix}-#{"" + $color-name} {
+      &.content-stylings {
+        & > * {
+          #{$property}: $color !important;
+        }
+      }
+    }
+  }
+}
+
+@include generate-color-classes($colors, ".text", "color");
+@include generate-color-classes($colors, ".bg", "background-color");
+
+// ----------------------------------------
+// TYPOGRAPHY
+// ----------------------------------------
+@mixin generate-font-weight-classes($prefix, $property) {
+  @each $weight-name, $weight in $font-weights {
+    #{$prefix}-#{$weight-name} {
+      #{$property}: $weight !important;
+    }
+    #{$prefix}-#{$weight-name} {
+      &.content-stylings {
+        & > * {
+          #{$property}: $weight !important;
+        }
+      }
+    }
+  }
+}
+
+@include generate-font-weight-classes(".font", "font-weight");
+
+// Opacity Utilities Generator
+@mixin generate-opacity-classes($prefix, $property, $step: 5) {
+  @for $i from 0 through 20 {
+    #{$prefix}-#{$i * $step} {
+      @if #{$i * $step} == "100" {
+        #{$property}: 1;
+      } @else {
+        #{$property}: string.unquote("0." + #{$i * $step});
+      }
+    }
+  }
+}
+
+@include generate-opacity-classes(".opacity", "opacity");
+
+// ----------------------------------------
+// ADVANCED TYPOGRAPHY
+// ----------------------------------------
+// FONT STACK CLASSES
+$font-families: (
+  karla: $font-family-karla
+);
+
+@mixin font-families($fonts) {
+  @each $font-name, $font-family in $fonts {
+    .font-#{$font-name} {
+      font-family: $font-family !important;
+    }
+  }
+}
+
+@include font-families($font-families);
+// ----------------------------------------
+// MISCELLANEOUS UTILITIES
+// ----------------------------------------
+// Smooth Fading
+.fade-on-hover:hover {
+  opacity: 0.9;
+  transition: $default-transition;
+}
+
+// Remove Transition on Window Resize
+.resize-animation-stopper * {
+  -webkit-animation: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+// Overflow Handling
+$overflow-values: (hidden, scroll);
+@each $value in $overflow-values {
+  .overflow-#{$value} {
+    overflow: #{$value};
+  }
+  .overflow-x-#{$value} {
+    overflow-x: #{$value};
+  }
+  .overflow-y-#{$value} {
+    overflow-y: #{$value};
+  }
+}
+
+// Dimension Utilities
+$dimension-properties: (
+  0: 0,
+  100: 100%,
+  100vh: 100vh
+);
+
+// Mixin to generate max/min width and height classes
+@mixin dimension-classes($prefix, $property, $dimensions) {
+  @each $dimension-name, $dimension-value in $dimensions {
+    .#{$prefix}-#{$dimension-name} {
+      #{$property}: $dimension-value !important;
+    }
+  }
+}
+
+// Generate max/min width and height classes using the mixin
+@include dimension-classes("min-h", "min-height", $dimension-properties);
+
+// Transition Utilities
+.default-transition {
+  transition: $default-transition;
+}
+
+// Cursor Utilities
+$cursor-styles: (
+  pointer: pointer,
+  default: default,
+  none: none
+);
+
+@mixin cursor-classes($styles) {
+  @each $style-name, $style-value in $styles {
+    .cursor-#{$style-name} {
+      cursor: $style-value !important;
+    }
+  }
+}
+
+@include cursor-classes($cursor-styles);
+
+// Object Fitting Utilities
+$object-fits: (contain, cover);
+
+@each $fit in $object-fits {
+  .object-#{$fit} {
+    object-fit: $fit;
+  }
+}
+
+// Object Position Utilities
+$object-positions: (bottom, center, left, right, top);
+
+@each $position in $object-positions {
+  .object-#{$position} {
+    object-position: str-replace($position, "-", " ");
+  }
+}
+
+// Flex Utilities
+$flex-classes: (
+  "flex-1": 1 1 0%,
+  "flex-auto": 1 1 auto,
+  "flex-initial": 0 1 auto,
+  "flex-none": none
+);
+
+@each $class, $value in $flex-classes {
+  .#{$class} {
+    flex: #{$value};
+  }
+}
+
+// Grid Utilities
+@mixin responsive-grid-template($n) {
+  @for $i from 1 through $n {
+    .grid-cols-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+
+    @each $breakpoint, $size in $breakpoints-down {
+      .#{$breakpoint}-grid-cols-#{$i} {
+        @media (min-width: $size) {
+          grid-template-columns: repeat(#{$i}, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@include responsive-grid-template(12);
+
+// Responsive Grid Column Utilities
+$grid-column-classes: (
+  column: (
+    "col-span-1": "span 1 / span 1",
+    "col-span-full": "1 / -1"
+  ),
+  start: (
+    "col-start-1": "1",
+    "col-start-auto": "auto"
+  ),
+  end: (
+    "col-end-1": "1",
+    "col-end-auto": "auto"
+  )
+);
+
+// Generate Grid Column Classes
+@each $type, $classes in $grid-column-classes {
+  @each $class, $value in $classes {
+    .#{$class} {
+      @if $type == "column" {
+        grid-column: #{$value};
+      } @else if $type == "start" {
+        grid-column-start: #{$value};
+      } @else if $type == "end" {
+        grid-column-end: #{$value};
+      }
+    }
+  }
+}
+
+// Grid Row Utilities
+$grid-row-classes: (
+  row: (
+    "row-span-1": "span 1 / span 1",
+    "row-span-full": "1 / -1"
+  ),
+  start: (
+    "row-start-1": "1",
+    "row-start-auto": "auto"
+  ),
+  end: (
+    "row-end-1": "1",
+    "row-end-auto": "auto"
+  )
+);
+
+// Generate Grid Row Classes
+@each $type, $classes in $grid-row-classes {
+  @each $class, $value in $classes {
+    .#{$class} {
+      @if $type == "row" {
+        grid-row: #{$value};
+      } @else if $type == "start" {
+        grid-row-start: #{$value};
+      } @else if $type == "end" {
+        grid-row-end: #{$value};
+      }
+    }
+  }
+}
+
+/* ORDER */
+@mixin grid-and-flexbox-order($min: 1, $max: 2) {
+  @for $i from $min through $max {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+@include grid-and-flexbox-order();
+
+/* TEXT UTILS - CLAMP */
+@for $i from 1 through 4 {
+  .clamp-line-#{$i} {
+    @include clamp(#{$i});
+  }
+}
+
+/* TRANSFORMATION */
+$rotations: (
+  45: 45deg,
+  90: 90deg,
+  180: 180deg
+);
+
+@each $key, $value in $rotations {
+  .rotate-#{$key} {
+    transform: rotate(#{$value});
+  }
+  .-rotate-#{$key} {
+    transform: rotate(-#{$value});
+  }
+}
+
+// Generate Border Radius Utilities for Even Numbers Only
+@mixin generate-border-radius-classes($prefix) {
+  @for $i from 0 through 28 {
+    @if $i % 2 == 0 {
+      .#{$prefix}-#{$i} {
+        border-radius: #{$i}px !important;
+      }
+      .#{$prefix}-tl-#{$i} {
+        border-top-left-radius: #{$i}px !important;
+      }
+      .#{$prefix}-tr-#{$i} {
+        border-top-right-radius: #{$i}px !important;
+      }
+      .#{$prefix}-bl-#{$i} {
+        border-bottom-left-radius: #{$i}px !important;
+      }
+      .#{$prefix}-br-#{$i} {
+        border-bottom-right-radius: #{$i}px !important;
+      }
+      .#{$prefix}-t-#{$i} {
+        border-top-left-radius: #{$i}px !important;
+        border-top-right-radius: #{$i}px !important;
+      }
+      .#{$prefix}-b-#{$i} {
+        border-bottom-left-radius: #{$i}px !important;
+        border-bottom-right-radius: #{$i}px !important;
+      }
+      .#{$prefix}-l-#{$i} {
+        border-top-left-radius: #{$i}px !important;
+        border-bottom-left-radius: #{$i}px !important;
+      }
+      .#{$prefix}-r-#{$i} {
+        border-top-right-radius: #{$i}px !important;
+        border-bottom-right-radius: #{$i}px !important;
+      }
+    }
+  }
+}
+
+@include generate-border-radius-classes("rounded");
+
+.rounded-t-80 {
+  border-top-right-radius: 80px !important;
+  border-top-left-radius: 80px !important;
+}
+.rounded-100 {
+  border-radius: 100px;
+}
+.rounded-100vh {
+  border-radius: 100vh !important;
+}
+.rounded-full {
+  border-radius: 100% !important;
+}
+
+// GAP
+$gap-start: 4px;
+$gap-increment: 4px;
+$gap-count: 12;
+
+.gap-x-05 {
+  column-gap: 2px;
+}
+
+// Mixin for responsive gap classes
+@mixin responsive-gaps($count) {
+  @for $i from 1 through $count {
+    // Base classes
+    .gap-#{$i} {
+      gap: $gap-start + ($i - 1) * $gap-increment !important;
+    }
+    .gap-y-#{$i} {
+      row-gap: $gap-start + ($i - 1) * $gap-increment !important;
+    }
+    .gap-x-#{$i} {
+      column-gap: $gap-start + ($i - 1) * $gap-increment !important;
+    }
+
+    // Responsive variants
+    @each $breakpoint, $size in $breakpoints-down {
+      .#{$breakpoint}-gap-#{$i} {
+        @media (min-width: $size) {
+          gap: $gap-start + ($i - 1) * $gap-increment !important;
+        }
+      }
+      .#{$breakpoint}-gap-y-#{$i} {
+        @media (min-width: $size) {
+          row-gap: $gap-start + ($i - 1) * $gap-increment !important;
+        }
+      }
+      .#{$breakpoint}-gap-x-#{$i} {
+        @media (min-width: $size) {
+          column-gap: $gap-start + ($i - 1) * $gap-increment !important;
+        }
+      }
+    }
+  }
+}
+
+// Generate classes
+@include responsive-gaps($gap-count);
+
+// SECTION PADDINGS & MARGINS
+$spacing-values: (
+  32: 32px,
+  40: 40px,
+  60: 60px,
+  80: 80px,
+  100: 100px,
+  120: 120px,
+  140: 140px,
+  160: 160px,
+  200: 200px
+);
+
+$breakpoints: (
+  xxl: 10px,
+  xl: 12px,
+  lg: 16px,
+  md: 20px,
+  sm: 24px
+);
+
+@each $size, $value in $spacing-values {
+  $adjusted-value: if($size > 60, $value * 0.7, $value); // Adjust value by 30% reduction
+
+  @each $property in (p, m) {
+    $css-property: if($property == p, padding, margin);
+
+    .segment-#{$property}y-#{$size} {
+      #{$css-property}-top: $value;
+      #{$css-property}-bottom: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$css-property}-top: calc(#{$adjusted-value} - #{$offset});
+          #{$css-property}-bottom: calc(#{$adjusted-value} - #{$offset});
+        }
+      }
+    }
+
+    .segment-#{$property}t-#{$size} {
+      #{$css-property}-top: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$css-property}-top: calc(#{$adjusted-value} - #{$offset});
+        }
+      }
+    }
+
+    .segment-#{$property}b-#{$size} {
+      #{$css-property}-bottom: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$css-property}-bottom: calc(#{$adjusted-value} - #{$offset});
+        }
+      }
+    }
+  }
+}
+
+@mixin segment($property, $axis, $size, $breakpoints) {
+  @if $axis == y {
+    #{$property}-top: #{$size}px;
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == t {
+    #{$property}-top: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == b {
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  }
+}
+
+@mixin segment($property, $axis, $size, $breakpoints) {
+  @if $axis == y {
+    #{$property}-top: #{$size}px;
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == t {
+    #{$property}-top: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == b {
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  }
+}
+
+// USAGE EXAMPLE
+// .my-class {
+//   @include segment(padding, y, 80, $breakpoints);
+// }
+
+// .my-class {
+//   @include segment(margin, y, 80, $breakpoints);
+// }
+
+@mixin display-utilities {
+  .show-block {
+    @extend %display-block;
+  }
+  .show-flex {
+    @extend %display-flex;
+  }
+  .hide {
+    @extend %display-none;
+  }
+}
+
+@include display-utilities;
+
+// NEGATIVE MARGINS
+$negative-margin-values: (
+  1: 4px,
+  2: 8px,
+  3: 12px
+);
+
+@each $key, $value in $negative-margin-values {
+  .-mt-#{$key} {
+    margin-top: -#{$value};
+  }
+  .-mb-#{$key} {
+    margin-bottom: -#{$value};
+  }
+  .-ms-#{$key} {
+    margin-left: -#{$value};
+  }
+  .-me-#{$key} {
+    margin-right: -#{$value};
+  }
+}
+
+$font-size-breakpoints: (
+  "xl": "1200px",
+  "lg": "992px",
+  "md": "768px",
+  "sm": "576px",
+  "xs": "440px"
+);
+
+// Mixin to generate margin and padding classes
+@mixin generate-spacing-classes($property, $prefix) {
+  @each $key, $value in $sizes-ascending {
+    .#{$prefix}t-custom-#{$key} {
+      #{$property}-top: #{$value};
+    }
+    .#{$prefix}b-custom-#{$key} {
+      #{$property}-bottom: #{$value};
+    }
+    .#{$prefix}s-custom-#{$key} {
+      #{$property}-left: #{$value};
+    }
+    .#{$prefix}e-custom-#{$key} {
+      #{$property}-right: #{$value};
+    }
+    .#{$prefix}x-custom-#{$key} {
+      #{$property}-left: #{$value};
+      #{$property}-right: #{$value};
+    }
+    .#{$prefix}y-custom-#{$key} {
+      #{$property}-top: #{$value};
+      #{$property}-bottom: #{$value};
+    }
+    .#{$prefix}-custom-#{$key} {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+@mixin generate-spacing-breakpoint-classes($property, $prefix) {
+  @each $key, $value in $sizes-ascending {
+    @each $breakpoint, $breakpoint-width in $font-size-breakpoints {
+      @media (min-width: #{$breakpoint-width}) {
+        .#{$breakpoint}-#{$prefix}t-custom-#{$key} {
+          #{$property}-top: #{$value} !important;
+        }
+        .#{$breakpoint}-#{$prefix}b-custom-#{$key} {
+          #{$property}-bottom: #{$value} !important;
+        }
+        .#{$breakpoint}-#{$prefix}s-custom-#{$key} {
+          #{$property}-left: #{$value} !important;
+        }
+        .#{$breakpoint}-#{$prefix}e-custom-#{$key} {
+          #{$property}-right: #{$value} !important;
+        }
+        .#{$breakpoint}-#{$prefix}x-custom-#{$key} {
+          #{$property}-left: #{$value} !important;
+          #{$property}-right: #{$value} !important;
+        }
+        .#{$breakpoint}-#{$prefix}y-custom-#{$key} {
+          #{$property}-top: #{$value} !important;
+          #{$property}-bottom: #{$value} !important;
+        }
+        .#{$breakpoint}-#{$prefix}-custom-#{$key} {
+          #{$property}: #{$value} !important;
+        }
+      }
+    }
+  }
+}
+
+// Generate padding and margin classes
+@include generate-spacing-classes(padding, p);
+@include generate-spacing-classes(margin, m);
+@include generate-spacing-breakpoint-classes(padding, p);
+@include generate-spacing-breakpoint-classes(margin, m);
+
+$border-colors: (
+  primary: color("primary")
+);
+
+$directions: (
+  "": null,
+  "b-": bottom,
+  "t-": top,
+  "r-": right,
+  "l-": left
+);
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px
+);
+
+@each $color-name, $color-value in $colors {
+  @each $direction-prefix, $direction-name in $directions {
+    @each $width-key, $width-value in $border-widths {
+      .border-#{$direction-prefix}#{$color-name}-#{$width-key} {
+        @if ($direction-name) {
+          border-#{$direction-name}: #{$width-value} solid #{$color-value} !important;
+        } @else {
+          border: #{$width-value} solid #{$color-value} !important;
+        }
+      }
+    }
+  }
+}
+
+// Shadows Configuration
+$shadows: (
+  "sm": 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+  "base": (
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1)
+  ),
+  "md": (
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1)
+  ),
+  "lg": (
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1)
+  ),
+  "xl": (
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1)
+  ),
+  "2xl": 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+  "default": 0px 4px 28px 0px rgba(0, 0, 0, 0.08),
+  "none": none
+);
+
+// Utility Classes for Shadows
+@each $key, $value in $shadows {
+  .shadow-#{$key} {
+    box-shadow: $value;
+  }
+}
+
+// LINE HEIGHTS
+$leading: (
+  "leading-6": 1.5rem,
+  // 24px
+  "leading-tight": 1.25,
+  "leading-snug": 1.375,
+  "leading-extra-tight": 1.1
+);
+
+@each $class, $value in $leading {
+  .#{$class} {
+    line-height: $value;
+  }
+}
+
+$tracking: (
+  "tracking-0": 0em,
+  "tracking-04": 0.04em,
+  "tracking-06": 0.06em,
+  "tracking-03": 0.03em,
+  "tracking-02": 0.02em
+);
+
+@each $class, $value in $tracking {
+  .-#{$class} {
+    letter-spacing: -$value !important;
+  }
+  .#{$class} {
+    letter-spacing: $value !important;
+  }
+}
+
+// After & Before - Utility Classes
+.after-none {
+  &::after {
+    display: none !important;
+  }
+}
+
+.before-none {
+  &::before {
+    display: none !important;
+  }
+}
+
+.btn {
+  &-transparent-white {
+    .btn-icon,
+    img {
+      filter: invert(0) brightness(100);
+    }
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.filter-dark {
+  filter: invert(1) brightness(0);
+}
+
+.code-customized {
+  white-space: pre-wrap;
+  font-family: $font-family-karla;
+  overflow-wrap: break-word;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+// VIDEO
+/* 16:9 Aspect Ratio Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625 * 100) */
+  overflow: hidden;
+  background: #b5ccd0;
+  border-radius: 8px;
+}
+
+/* Responsive Video */
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// invert
+.invert-to-black {
+  filter: invert(1) brightness(0);
+}
+
+.invert-to-white {
+  filter: invert(0) brightness(100);
+}
+
+// gradients
+.gradient-light-brand {
+  background: linear-gradient(45deg, #d5e9f6 0%, #ecf3f9 25%, #eef5f9 74%, #d5e9f6 100%);
+}

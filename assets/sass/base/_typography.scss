@@ -1,0 +1,365 @@
+@use "sass:map";
+@use "sass:color";
+@use "sass:string";
+@use "../abstracts/variables" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholder" as *;
+
+// CONFIGURATION VARIABLES
+$text-config: (
+  "font-family": $font-family-base,
+  "font-weight": map.get($font-weights, "medium"),
+  "color": $gray,
+  "base-font-size": $font-size-base,
+  "base-line-height": $leading-base,
+  "letter-spacing": $tracking-base
+);
+
+// BASE TYPOGRAPHY STYLES
+body {
+  font-family: map.get($text-config, "font-family"), Arial, sans-serif;
+  font-size: map.get($text-config, "base-font-size");
+  line-height: map.get($text-config, "base-line-height");
+  font-weight: $font-weight-base;
+  letter-spacing: normal;
+}
+
+// Placeholder Selector for Text Styles
+%text-base {
+  font-family: map.get($text-config, "font-family");
+  font-weight: map.get($text-config, "font-weight");
+  letter-spacing: map.get($text-config, "letter-spacing");
+}
+
+// Text Size Mappings
+$heading-sizes: (
+  h1: (
+    null: "6xl",
+    xl: "5xl",
+    lg: "4xl",
+    md: "3xl"
+  ),
+  h2: (
+    null: "4xl",
+    xl: "3xl",
+    lg: "2xl"
+  ),
+  h3: (
+    null: "3xl",
+    xl: "2xl",
+    lg: "xl"
+  ),
+  h4: (
+    null: "2xl",
+    xl: "xl",
+    lg: "lg"
+  ),
+  h5: (
+    null: "xl",
+    xl: "lg",
+    lg: "base"
+  ),
+  h6: (
+    null: "lg",
+    xl: "base",
+    lg: "sm"
+  )
+);
+
+$text-sizes: (
+  3xs: (
+    null: "3xs",
+    md: "3xs"
+  ),
+  2xs: (
+    null: "2xs",
+    md: "2xs"
+  ),
+  xs: (
+    null: "xs",
+    md: "2xs"
+  ),
+  sm: (
+    null: "sm",
+    md: "xs"
+  ),
+  base: (
+    null: "base",
+    lg: "sm"
+  ),
+  lg: (
+    null: "lg",
+    xl: "base",
+    lg: "sm"
+  ),
+  xl: (
+    null: "xl",
+    xl: "lg",
+    lg: "base"
+  ),
+  "2xl": (
+    null: "2xl",
+    xl: "xl",
+    lg: "lg",
+    md: "base",
+    sm: "sm"
+  ),
+  "3xl": (
+    null: "3xl",
+    xl: "2xl",
+    lg: "xl",
+    md: "lg",
+    sm: "base"
+  ),
+  "4xl": (
+    null: "4xl",
+    xl: "3xl",
+    lg: "2xl",
+    md: "xl",
+    sm: "lg"
+  ),
+  "5xl": (
+    null: "5xl",
+    xl: "4xl",
+    lg: "3xl",
+    md: "2xl",
+    sm: "xl"
+  ),
+  "6xl": (
+    null: "6xl",
+    xxl: "5xl",
+    xl: "4xl",
+    lg: "3xl",
+    md: "2xl",
+    sm: "xl"
+  ),
+  "7xl": (
+    null: "7xl",
+    xxl: "6xl",
+    xl: "5xl",
+    lg: "4xl",
+    md: "3xl",
+    sm: "2xl"
+  ),
+  "7xl-mid": (
+    null: "7xl-mid",
+    xxl: "6xl",
+    xl: "5xl",
+    lg: "4xl",
+    md: "3xl",
+    sm: "2xl"
+  ),
+  "8xl": (
+    null: "8xl",
+    xxl: "7xl",
+    xl: "6xl",
+    lg: "5xl",
+    md: "4xl",
+    sm: "3xl"
+  ),
+  "9xl": (
+    null: "9xl",
+    xxl: "8xl",
+    xl: "7xl",
+    lg: "6xl",
+    md: "5xl",
+    sm: "4xl"
+  )
+);
+
+// Mixin for Text Font Sizes
+@mixin text-font-sizes($size-map, $breakpoints: $breakpoints-down) {
+  @extend %text-base;
+  @each $breakpoint, $font-size-key in $size-map {
+    $font-size-value: map.get($font-sizes, $font-size-key);
+
+    @if $breakpoint == null {
+      font-size: $font-size-value !important;
+    } @else if map.has-key($breakpoints, $breakpoint) {
+      @media screen and (max-width: map.get($breakpoints, $breakpoint)) {
+        font-size: $font-size-value !important;
+      }
+    }
+  }
+}
+
+// Generate Classes for Text Sizes
+@each $text-class, $size-map in $text-sizes {
+  .text-#{$text-class} {
+    @include text-font-sizes($size-map);
+  }
+
+  h1.text-#{$text-class},
+  h2.text-#{$text-class},
+  h3.text-#{$text-class},
+  h4.text-#{$text-class},
+  h5.text-#{$text-class},
+  h6.text-#{$text-class} {
+    letter-spacing: map.get($headings-config, "letter-spacing") !important;
+  }
+}
+
+/* #### HEADINGS #### */
+@mixin heading-font-sizes($size-map, $breakpoints: $breakpoints-down) {
+  font-family: map.get($headings-config, "font-family");
+  font-weight: map.get($headings-config, "font-weight") !important;
+  line-height: map.get($headings-config, "line-height");
+  color: map.get($headings-config, "color");
+  letter-spacing: map.get($headings-config, "letter-spacing") !important;
+
+  @each $breakpoint, $font-size-key in $size-map {
+    $font-size-value: map.get($font-sizes, $font-size-key);
+
+    @if $breakpoint == null {
+      font-size: $font-size-value !important;
+    } @else if map.has-key($breakpoints, $breakpoint) {
+      @media screen and (max-width: map.get($breakpoints, $breakpoint)) {
+        font-size: $font-size-value !important;
+      }
+    }
+  }
+}
+
+// Paragraph Styles
+p {
+  @extend %text-base;
+}
+
+a {
+  text-decoration: $link-decoration;
+  color: $link-color; // or unset can be used
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $line-hover-decoration;
+  }
+
+  &:visited,
+  &:link {
+    text-decoration: none;
+  }
+}
+
+.content-stylings {
+  @extend %text-base;
+
+  > * {
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &.remove-paragraph-padding {
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  b,
+  strong {
+    // font-weight: 600;
+  }
+
+  a {
+    color: color("primary") !important;
+    transition: $default-transition;
+
+    &:hover {
+      color: color("p-green-700") !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 16px !important;
+    scroll-margin-top: 100px;
+  }
+
+  p,
+  ul,
+  ol,
+  dl {
+    @extend %text-base;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: grid;
+    gap: 16px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+
+    @include breakpoint-down(xl) {
+      gap: 12px;
+    }
+
+    @include breakpoint-down(sm) {
+      gap: 8px;
+    }
+
+    li {
+      position: relative;
+      font-weight: 600;
+      margin-left: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url($icon-path + "check_primary_icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        left: -36px;
+        background-color: color("p-green-50");
+        border-radius: 4px;
+      }
+    }
+  }
+
+  ol {
+    list-style: auto !important;
+    display: grid;
+    align-items: flex-start;
+    gap: 8px;
+    padding-left: 18px !important;
+
+    li {
+      &::marker {
+        font-weight: 600;
+      }
+    }
+  }
+
+  // CONTENT STYLINGS VARIANTS
+  &.content-sm {
+    p,
+    ul,
+    ol {
+      margin-bottom: 12px !important;
+    }
+
+    ol,
+    ul {
+      gap: 4px;
+    }
+  }
+
+  // ELEMENTS SIZES VARIANTS
+  &.list-xl {
+    ul,
+    ol {
+      @include text-font-sizes(map.get($text-sizes, xl));
+
+      & {
+        gap: 12px;
+      }
+    }
+  }
+}

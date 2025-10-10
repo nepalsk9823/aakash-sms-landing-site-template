@@ -1,0 +1,16 @@
+// CARDS SEGMENT
+.asms-cards-segment {
+  &-container {
+  }
+}
+
+// HIGHLIGHT CARDS SEGMENT
+.asms-highlight-card-group-segment {
+  .cards-list {
+    max-width: 1080px;
+
+    .card-item{
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,421 @@
+@use "sass:map";
+@use "sass:color";
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholder" as *;
+
+$btn-bg-color: map.get($colors, "primary");
+$btn-text-color: $white;
+$btn-font-weight: map.get($font-weights, "semibold");
+$btn-font-size: map.get($font-sizes, "base");
+$btn-padding-x: 16px;
+$btn-padding-y: 8px;
+$btn-border-color: map.get($colors, "primary");
+$btn-border-width: 1px;
+$btn-border-radius: 8px;
+
+$btn-hover-bg-color: color.adjust(map.get($colors, "primary"), $lightness: -10%);
+$btn-hover-text-color: $white;
+$btn-hover-border-color: map.get($colors, "primary");
+$btn-height: 46px;
+
+// BUTTON COLOR VARIANTS
+$button-variants: (
+  "primary": (
+    bg-color: color("primary"),
+    text-color: color("white"),
+    border-color: color("primary"),
+    hover-bg-color: color("night"),
+    hover-text-color: color("white"),
+    hover-border-color: color("night")
+  ),
+  "white-night-grey-2": (
+    bg-color: color("white"),
+    text-color: color("night"),
+    border-color: color("grey-2"),
+    hover-bg-color: color("white"),
+    hover-text-color: color("primary"),
+    hover-border-color: color("primary")
+  ),
+  "outline-primary-grey-2": (
+    bg-color: transparent,
+    text-color: color("primary"),
+    border-color: color("grey-2"),
+    hover-bg-color: transparent,
+    hover-text-color: color("primary"),
+    hover-border-color: color("primary")
+  ),
+  "outline-white": (
+    bg-color: transparent,
+    text-color: color("white"),
+    border-color: color("white"),
+    hover-bg-color: color("white"),
+    hover-text-color: color("primary"),
+    hover-border-color: color("white")
+  ),
+  "outline-primary": (
+    bg-color: transparent,
+    text-color: color("primary"),
+    border-color: color("primary"),
+    hover-bg-color: color("primary"),
+    hover-text-color: color("white"),
+    hover-border-color: color("primary")
+  )
+);
+
+// BUTTON LINK VARIANTS
+$button-link-variants: (
+  "white": (
+    text-color: color("white"),
+    icon-color: color("white"),
+    hover-text-color: color.adjust(color("white"), $lightness: -10%),
+    hover-icon-color: color.adjust(color("white"), $lightness: -10%)
+  ),
+  "primary": (
+    text-color: color("primary"),
+    icon-color: color("primary"),
+    hover-text-color: color.adjust(color("primary"), $lightness: -10%),
+    hover-icon-color: color.adjust(color("primary"), $lightness: -10%)
+  )
+);
+
+.btn {
+  @extend %flex-inline-center;
+  text-align: center;
+  font-weight: $btn-font-weight;
+  font-family: $font-family-karla;
+  font-size: $btn-font-size;
+  border-radius: $btn-border-radius;
+  column-gap: 8px;
+  height: $btn-height;
+  white-space: nowrap;
+  padding: $btn-padding-y $btn-padding-x;
+  border: $btn-border-width solid $btn-border-color;
+  background-color: $btn-bg-color;
+  color: $btn-text-color;
+  vertical-align: middle;
+  transition: $default-transition;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  background-image: none;
+  transform-origin: bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  @include breakpoint-down(md) {
+    height: 44px;
+  }
+
+  @include breakpoint-down(md) {
+    font-size: map.get($font-sizes, "sm") !important;
+    height: 40px;
+  }
+
+  // EFFECTS
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background: $btn-hover-bg-color !important;
+    color: $btn-hover-text-color;
+    border-color: $btn-hover-border-color;
+    opacity: 1 !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: no-drop;
+    background: $btn-bg-color;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  // BUTTON INNER ELEMENTS
+  &-text {
+    font-weight: $btn-font-weight;
+    transition: $default-transition;
+  }
+
+  &-icon{
+    transition: $default-transition;
+    font-size: map.get($font-sizes, "sm");
+  }
+
+  &.btn-rounded {
+    border-radius: 100vh;
+    gap: 24px;
+    justify-content: space-between;
+
+    @include breakpoint-down(lg) {
+      gap: 20px;
+    }
+
+    @include breakpoint-down(sm) {
+      gap: 16px;
+    }
+  }
+
+  // BUTTON SIZE VARIANTS
+  &.btn-xl {
+    height: 58px;
+    min-width: 150px;
+    font-size: map.get($font-sizes, "lg") !important;
+    border-width: 1.5px!important;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include breakpoint-down(lg) {
+      height: 52px;
+    }
+
+    @include breakpoint-down(md) {
+      height: 48px;
+      font-size: map.get($font-sizes, "base") !important;
+    }
+
+    @include breakpoint-down(sm) {
+      height: 44px;
+    }
+  }
+
+  &.btn-lg {
+    height: 52px;
+    min-width: 146px;
+    font-size: map.get($font-sizes, "lg") !important;
+    border-width: 1.5px!important;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include breakpoint-down(lg) {
+      height: 48px;
+    }
+
+    @include breakpoint-down(md) {
+      height: 44px;
+      font-size: map.get($font-sizes, "base") !important;
+    }
+
+    @include breakpoint-down(sm) {
+      height: 40px;
+    }
+  }
+
+  &.btn-base {
+    font-size: map.get($font-sizes, "base") !important;
+    height: 40px;
+
+    @include breakpoint-down(md) {
+      height: 36px;
+      font-size: map.get($font-sizes, "sm") !important;
+    }
+
+    @include breakpoint-down(sm) {
+      height: 34px;
+    }
+  }
+
+  &.btn-sm {
+    font-size: map.get($font-sizes, "sm") !important;
+    height: 36px;
+
+    @include breakpoint-down(md) {
+      height: 34px;
+      font-size: map.get($font-sizes, "xs") !important;
+    }
+
+    @include breakpoint-down(sm) {
+      height: 32px;
+    }
+  }
+
+  &.btn-xs {
+    font-size: map.get($font-sizes, "xs");
+    height: 34px;
+
+    @include breakpoint-down(md) {
+      height: 32px;
+      font-size: map.get($font-sizes, "2xs");
+    }
+  }
+
+  // BUTTON WIDTH VARIANTS
+  &.btn-narrow {
+    min-width: 100px;
+  }
+  &.btn-quarter-middle {
+    min-width: 140px;
+  }
+  &.btn-semi-middle {
+    min-width: 160px;
+  }
+  &.btn-middle {
+    min-width: 180px;
+  }
+  &.btn-quarter-wide {
+    min-width: 220px;
+
+    @include breakpoint-down(sm) {
+      min-width: auto;
+    }
+  }
+  &.btn-wide {
+    min-width: 260px;
+  }
+}
+
+@each $variant, $props in $button-variants {
+  .btn-#{$variant} {
+    background: map.get($props, bg-color) !important;
+    color: map.get($props, text-color) !important;
+    border: $btn-border-width solid map.get($props, border-color) !important;
+
+    .btn-text {
+      color: map.get($props, text-color) !important;
+      transition: $default-transition;
+    }
+
+    .btn-icon {
+      transition: $default-transition;
+    }
+
+    &:hover,
+    &:focus,
+    &:disabled,
+    &:active,
+    &.disabled,
+    &.active {
+      background: map.get($props, hover-bg-color) !important;
+      border-color: map.get($props, hover-border-color) !important;
+      color: map.get($props, hover-text-color) !important;
+
+      .btn-text {
+        color: map.get($props, hover-text-color) !important;
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      opacity: 0.8;
+    }
+  }
+}
+
+// BUTTON BLOCK - FULL WIDTH
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 0.5rem;
+}
+
+// BUTTON LINK
+.btn-link {
+  background: transparent !important;
+  transition: $default-transition;
+
+  &:hover {
+    background: transparent !important;
+  }
+}
+
+@each $variant, $props in $button-link-variants {
+  .btn-link-#{$variant} {
+    color: map.get($props, text-color) !important;
+    border: 0;
+
+    .btn-text {
+      color: map.get($props, text-color) !important;
+    }
+
+    .btn-icon {
+      color: map.get($props, icon-color) !important;
+    }
+
+    &:hover {
+      color: map.get($props, hover-text-color) !important;
+
+      .btn-text {
+        color: map.get($props, hover-text-color) !important;
+      }
+
+      .btn-icon {
+        color: map.get($props, hover-icon-color) !important;
+      }
+    }
+  }
+}
+
+// MISC BUTTON STYLINGS
+.icon-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+
+  &:hover {
+    opacity: 0.8;
+
+    img {
+      &:not(.hovered-state) {
+        display: none;
+      }
+      &.hovered-state {
+        display: inline-flex !important;
+      }
+    }
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.whatsapp-btn {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ping 2s infinite;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: rgba(59, 178, 74, 0.1882352941);
+  }
+}
+
+
+.btn-downloads{
+  .btn-download{
+    max-width: 200px;
+  }
+}

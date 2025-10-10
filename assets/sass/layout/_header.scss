@@ -1,0 +1,17 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+$z-index-header: 1000;
+
+.asms-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-header;
+
+  &-fixed{
+    background: color("white");
+  }
+}

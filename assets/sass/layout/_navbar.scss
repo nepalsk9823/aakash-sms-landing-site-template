@@ -1,0 +1,53 @@
+@use "sass:color";
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+
+// NAVBAR
+$navbar-height-desktop: 100px;
+$navbar-height-mobile: 100px;
+$navbar-bg: transparent;
+$navbar-link-color: $night;
+$navbar-hover-link-color: color.adjust($night, $lightness: -10%);
+$z-index-navbar: 1000;
+$z-index-navbar-toggler: 1010;
+
+.asms-navbar {
+  min-height: $navbar-height-desktop;
+  background: $navbar-bg;
+
+  .asms-logo {
+    max-width: 200px;
+  }
+
+  .asms {
+    &-navbar-menu {
+      .menu-link-text{
+        color: color("night");
+      }
+    }
+
+    &-menu-link {
+      &.active {
+        color: color("primary") !important;
+
+        .menu-link-text{
+          color: color("primary") !important;
+        }
+      }
+
+      &:hover{
+        color: $navbar-hover-link-color!important;
+      }
+    }
+  }
+}
+
+.custom-fixed-util {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

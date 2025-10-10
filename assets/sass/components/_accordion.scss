@@ -1,0 +1,74 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.accordion {
+  &-item {
+    margin-bottom: 20px;
+
+    @include breakpoint-down(lg) {
+      margin-bottom: 16px;
+    }
+
+    @include breakpoint-down(md) {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &-button {
+    transition: $default-transition;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint-down(sm) {
+      padding: 8px 12px !important;
+    }
+
+    &[aria-expanded="true"] {
+      border-left-color: color("primary") !important;
+
+      .accordion-button-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      color: color("night") !important;
+      border-color: color("primary") !important;
+    }
+
+    &-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23757575'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: $default-transition;
+
+      @include breakpoint-down(lg) {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        background-size: 20px;
+      }
+
+      @include breakpoint-down(sm) {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        background-size: 16px !important;
+        border-radius: 4px !important;
+      }
+    }
+  }
+}

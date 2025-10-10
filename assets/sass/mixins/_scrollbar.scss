@@ -1,0 +1,48 @@
+@use 'sass:color';
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Define your color variables
+$scrollbar-thumb-color: color("primary");
+$scrollbar-track-color: transparent;
+$scrollbar-hover-color: color.adjust($scrollbar-thumb-color, $lightness: -10%);
+
+// Mixin to generate scrollbar styles
+@mixin scrollbar(
+  $direction,
+  $size: 8px,
+  $thumb-radius: 10px,
+  $track-radius: 10px,
+  $transition-speed: 0.3s
+) {
+  overflow-#{$direction}: scroll;
+
+  &::-webkit-scrollbar {
+    width: if($direction == "y", $size, 0);
+    height: if($direction == "x", $size, 0);
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $track-radius;
+    background-color: $scrollbar-track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $thumb-radius;
+    background-color: $scrollbar-thumb-color;
+    transition: background-color $transition-speed ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $scrollbar-hover-color;
+  }
+}
+
+.scrollbar-x {
+  @include scrollbar("x");
+}
+
+.scrollbar-y {
+  @include scrollbar("y");
+}
