@@ -15,6 +15,7 @@ $page-top-spacing-desktop: 100px;
 
   .home-banner-trust {
     max-width: 1064px;
+    width: calc(100% - 40px)!important;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -51,8 +52,6 @@ $page-top-spacing-desktop: 100px;
 
 .asms-request-quote {
   .request-quote-split {
-    grid-template-columns: 65% 35%;
-
     &-form {
       .form-custom {
         .form-control {
@@ -62,12 +61,6 @@ $page-top-spacing-desktop: 100px;
         }
       }
     }
-  }
-}
-
-.asms-sms-features {
-  .sms-features-split {
-    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -88,12 +81,6 @@ $page-top-spacing-desktop: 100px;
       border: 2px dashed color("primary");
       border-radius: 100%;
     }
-  }
-}
-
-.asms-audience {
-  .audience-split {
-    grid-template-columns: 3fr 2.5fr;
   }
 }
 

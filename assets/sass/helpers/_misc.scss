@@ -98,42 +98,89 @@
   width: 100%;
 }
 
-.mx-w-400{
+.mx-w-400 {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-.grid-cols-28-auto{
+.grid-cols-28-auto {
   grid-template-columns: 28% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-36-auto{
+.grid-cols-33-auto {
+  grid-template-columns: 33% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
+}
+
+.grid-cols-36-auto {
   grid-template-columns: 36% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-40-auto{
+.grid-cols-40-auto {
   grid-template-columns: 40% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-45-auto{
+.grid-cols-45-auto {
   grid-template-columns: 45% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-50-auto{
+.grid-cols-50-auto {
   grid-template-columns: 50% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-52-auto{
+.grid-cols-52-auto {
   grid-template-columns: 52% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-55-auto{
+.grid-cols-55-auto {
   grid-template-columns: 55% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
-.grid-cols-60-auto{
+.grid-cols-60-auto {
   grid-template-columns: 60% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
 }
 
+.grid-cols-65-auto {
+  grid-template-columns: 65% auto;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 100%;
+  }
+}

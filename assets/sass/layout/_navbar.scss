@@ -17,6 +17,12 @@ $z-index-navbar-toggler: 1010;
   min-height: $navbar-height-desktop;
   background: $navbar-bg;
 
+  &-menu{
+    @include breakpoint-down(xl){
+      display: none!important;
+    }
+  }
+
   .asms-logo {
     max-width: 200px;
   }

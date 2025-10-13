@@ -137,6 +137,10 @@ template {
     width: 100% !important;
   }
 
+  @include breakpoint-down(xl) {
+    max-width: 1120px !important;
+  }
+
   @include breakpoint-down(lg) {
     max-width: calc(100% - 40px) !important;
   }
