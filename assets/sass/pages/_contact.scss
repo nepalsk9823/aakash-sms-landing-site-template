@@ -1,0 +1,22 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+@use "../abstracts/functions" as *;
+
+.asms-contact-segment {
+  .contact-segment-split {
+    background: #e6f7ff;
+    border-radius: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 134px;
+      height: 131px;
+      bottom: -69px;
+      left: -58px;
+      background: url($img-path + "misc/contact_arrow_shape.svg");
+    }
+  }
+}

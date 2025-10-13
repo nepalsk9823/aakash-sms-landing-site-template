@@ -9,8 +9,36 @@
   .cards-list {
     max-width: 1080px;
 
-    .card-item{
+    .card-item {
       height: 100%;
     }
+  }
+}
+
+// DOUBLE COL SEGMETN
+.asms-double-col-segment {
+  .double-col-segment-split {
+    &-img {
+      img {
+        max-height: 520px !important;
+        width: auto !important;
+        margin-right: auto;
+      }
+    }
+
+    &-content{
+      + .double-col-segment-split-img{
+        img{
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+
+.segment-steps-list{
+  .steps-item{
+    grid-template-columns: 60px auto;
   }
 }

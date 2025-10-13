@@ -3,10 +3,10 @@
 @use "../abstracts/mixins" as *;
 
 .asms-banner {
-  &.asms-inverted-banner{
+  &.asms-inverted-banner {
     background: color("dark-cyprus");
 
-    *[class*="text-"]{
+    *[class*="text-"] {
       color: color("white");
     }
   }
@@ -24,12 +24,35 @@
 
   // neb result
   &.asms-res-neb-banner {
-    .res-neb-split-img {
+    .res-neb-banner-split-img {
       img {
         max-height: 450px;
       }
     }
   }
 
- 
+  &.asms-res-see-banner {
+    .res-see-banner-split-img {
+      img {
+        max-height: 450px;
+      }
+    }
+  }
+}
+
+.asms-sms-calc-banner {
+  .calc-tool-split {
+    grid-template-columns: auto 343px;
+  }
+  .sms-calc-banner-tool {
+    max-width: 1280px;
+  }
+  .calc-tool-input {
+    textarea {
+      height: 208px;
+    }
+  }
+  .calc-tool-split-note{
+    padding-top: 100px;
+  }
 }

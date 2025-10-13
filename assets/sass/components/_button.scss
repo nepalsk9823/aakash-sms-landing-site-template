@@ -17,7 +17,7 @@ $btn-border-radius: 8px;
 
 $btn-hover-bg-color: color.adjust(map.get($colors, "primary"), $lightness: -10%);
 $btn-hover-text-color: $white;
-$btn-hover-border-color: map.get($colors, "primary");
+$btn-hover-border-color: color.adjust(map.get($colors, "primary"), $lightness: -10%);
 $btn-height: 46px;
 
 // BUTTON COLOR VARIANTS
@@ -26,6 +26,14 @@ $button-variants: (
     bg-color: color("primary"),
     text-color: color("white"),
     border-color: color("primary"),
+    hover-bg-color: color("night"),
+    hover-text-color: color("white"),
+    hover-border-color: color("night")
+  ),
+  "dark-cyprus": (
+    bg-color: color("dark-cyprus"),
+    text-color: color("white"),
+    border-color: color("dark-cyprus"),
     hover-bg-color: color("night"),
     hover-text-color: color("white"),
     hover-border-color: color("night")
@@ -77,6 +85,12 @@ $button-link-variants: (
     icon-color: color("primary"),
     hover-text-color: color.adjust(color("primary"), $lightness: -10%),
     hover-icon-color: color.adjust(color("primary"), $lightness: -10%)
+  ),
+  "p-green-700": (
+    text-color: color("p-green-700"),
+    icon-color: color("p-green-700"),
+    hover-text-color: color.adjust(color("p-green-700"), $lightness: -10%),
+    hover-icon-color: color.adjust(color("p-green-700"), $lightness: -10%)
   )
 );
 

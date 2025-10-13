@@ -25027,7 +25027,7 @@ a:visited, a:link {
 .btn:hover {
   background: rgb(46.3037974684, 139.6962025316, 58.0759493671) !important;
   color: #ffffff;
-  border-color: #3bb24a;
+  border-color: rgb(46.3037974684, 139.6962025316, 58.0759493671);
   opacity: 1 !important;
 }
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
@@ -25201,6 +25201,30 @@ a:visited, a:link {
   opacity: 0.8;
 }
 
+.btn-dark-cyprus {
+  background: #0d3f46 !important;
+  color: #ffffff !important;
+  border: 1px solid #0d3f46 !important;
+}
+.btn-dark-cyprus .btn-text {
+  color: #ffffff !important;
+  transition: all ease-in-out 300ms;
+}
+.btn-dark-cyprus .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-dark-cyprus:hover, .btn-dark-cyprus:focus, .btn-dark-cyprus:disabled, .btn-dark-cyprus:active, .btn-dark-cyprus.disabled, .btn-dark-cyprus.active {
+  background: #121212 !important;
+  border-color: #121212 !important;
+  color: #ffffff !important;
+}
+.btn-dark-cyprus:hover .btn-text, .btn-dark-cyprus:focus .btn-text, .btn-dark-cyprus:disabled .btn-text, .btn-dark-cyprus:active .btn-text, .btn-dark-cyprus.disabled .btn-text, .btn-dark-cyprus.active .btn-text {
+  color: #ffffff !important;
+}
+.btn-dark-cyprus:disabled, .btn-dark-cyprus.disabled {
+  opacity: 0.8;
+}
+
 .btn-white-night-grey-2 {
   background: #ffffff !important;
   color: #121212 !important;
@@ -25352,6 +25376,26 @@ a:visited, a:link {
 }
 .btn-link-primary:hover .btn-icon {
   color: rgb(46.3037974684, 139.6962025316, 58.0759493671) !important;
+}
+
+.btn-link-p-green-700 {
+  color: #269137 !important;
+  border: 0;
+}
+.btn-link-p-green-700 .btn-text {
+  color: #269137 !important;
+}
+.btn-link-p-green-700 .btn-icon {
+  color: #269137 !important;
+}
+.btn-link-p-green-700:hover {
+  color: rgb(27.4098360656, 104.5901639344, 39.6721311475) !important;
+}
+.btn-link-p-green-700:hover .btn-text {
+  color: rgb(27.4098360656, 104.5901639344, 39.6721311475) !important;
+}
+.btn-link-p-green-700:hover .btn-icon {
+  color: rgb(27.4098360656, 104.5901639344, 39.6721311475) !important;
 }
 
 .icon-btn {
@@ -25707,7 +25751,7 @@ input[type=button].btn-block {
 
 .form-custom .form-select, .form-custom .form-control {
   height: 52px !important;
-  border: 1px solid transparent !important;
+  border: 1px solid #e5e5e5 !important;
   border-radius: 8px !important;
   padding-left: 16px !important;
   padding-right: 16px !important;
@@ -25762,7 +25806,7 @@ input[type=button].btn-block {
 }
 .form-custom .form-control {
   background: rgba(235, 245, 251, 0.4);
-  border: 1px solid transparent;
+  border: 1px solid #e5e5e5;
   transition: all ease-in-out 300ms;
 }
 .form-custom .form-control::-moz-placeholder {
@@ -26059,8 +26103,24 @@ input:-webkit-autofill {
 .asms-banner.asms-svc-bulksms-banner .svc-bulksms-banner-split-img img {
   max-width: 440px;
 }
-.asms-banner.asms-res-neb-banner .res-neb-split-img img {
+.asms-banner.asms-res-neb-banner .res-neb-banner-split-img img {
   max-height: 450px;
+}
+.asms-banner.asms-res-see-banner .res-see-banner-split-img img {
+  max-height: 450px;
+}
+
+.asms-sms-calc-banner .calc-tool-split {
+  grid-template-columns: auto 343px;
+}
+.asms-sms-calc-banner .sms-calc-banner-tool {
+  max-width: 1280px;
+}
+.asms-sms-calc-banner .calc-tool-input textarea {
+  height: 208px;
+}
+.asms-sms-calc-banner .calc-tool-split-note {
+  padding-top: 100px;
 }
 
 .video-wrapper {
@@ -26598,6 +26658,19 @@ input:-webkit-autofill {
   height: 100%;
 }
 
+.asms-double-col-segment .double-col-segment-split-img img {
+  max-height: 520px !important;
+  width: auto !important;
+  margin-right: auto;
+}
+.asms-double-col-segment .double-col-segment-split-content + .double-col-segment-split-img img {
+  margin-left: auto;
+}
+
+.segment-steps-list .steps-item {
+  grid-template-columns: 60px auto;
+}
+
 .asms-blogs-segment .cards-list {
   margin-left: -12px !important;
   margin-right: -12px !important;
@@ -26607,4 +26680,18 @@ input:-webkit-autofill {
   background: #3bb24a;
   color: #ffffff !important;
   border-color: #3bb24a !important;
+}
+
+.asms-contact-segment .contact-segment-split {
+  background: #e6f7ff;
+  border-radius: 50px;
+}
+.asms-contact-segment .contact-segment-split::after {
+  content: "";
+  position: absolute;
+  width: 134px;
+  height: 131px;
+  bottom: -69px;
+  left: -58px;
+  background: url("../../../assets/images/misc/contact_arrow_shape.svg");
 }/*# sourceMappingURL=main.css.map */

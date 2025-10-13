@@ -9,7 +9,7 @@
 .form-custom {
   %form-input-common {
     height: 52px !important;
-    border: 1px solid transparent !important;
+    border: 1px solid color("grey-2") !important;
     border-radius: 8px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -53,7 +53,7 @@
   .form-control {
     @extend %form-input-common;
     background: rgba(235, 245, 251, 0.4);
-    border: 1px solid transparent;
+    border: 1px solid color("grey-2");
     transition: $default-transition;
 
     &::placeholder {
@@ -231,42 +231,3 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px color("white") inset;
 }
 
-// .page-content {
-//   &-search {
-//     height: 60px;
-//     max-width: 540px;
-
-//     @include breakpoint-down(lg) {
-//       padding-right: 8px !important;
-//       padding-left: 12px !important;
-//     }
-
-//     @include breakpoint-down(md){
-//       height: 56px;
-//     }
-
-//     @include breakpoint-down(sm) {
-//       height: 52px;
-//     }
-
-//     input {
-//       &.form-control {
-//         &::placeholder {
-//           color: color("grey-4");
-//           font-weight: 500;
-//         }
-//       }
-//     }
-
-//     .icon-btn {
-//       &:hover {
-//         background: color("primary") !important;
-//         border-color: color("primary") !important;
-//       }
-//     }
-
-//     &.light-searchbox {
-//       background: color("white");
-//     }
-//   }
-// }
