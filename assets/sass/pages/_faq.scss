@@ -1,0 +1,32 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../mixins/scrollbar" as *;
+@use "../abstracts/functions" as *;
+
+.asms-faq-segment {
+  .faq-split-cats{
+    margin-top: -80px;
+  }
+
+  .faq-cats-head {
+    max-width: 210px;
+
+    &.active {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 32px solid color("white");
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.05));
+      }
+    }
+  }
+}

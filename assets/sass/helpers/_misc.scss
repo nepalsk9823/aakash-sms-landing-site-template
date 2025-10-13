@@ -105,6 +105,10 @@
   width: 100%;
 }
 
+.grid-cols-28-auto{
+  grid-template-columns: 28% auto;
+}
+
 .grid-cols-36-auto{
   grid-template-columns: 36% auto;
 }

@@ -5,6 +5,10 @@
 @use "../abstracts/functions" as *;
 
 .asms-contact-segment {
+  &-container{
+    margin-top: -140px;
+  }
+  
   .contact-segment-split {
     background: #e6f7ff;
     border-radius: 50px;

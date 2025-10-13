@@ -24867,6 +24867,10 @@ a:visited, a:link {
   width: 100%;
 }
 
+.grid-cols-28-auto {
+  grid-template-columns: 28% auto;
+}
+
 .grid-cols-36-auto {
   grid-template-columns: 36% auto;
 }
@@ -26109,18 +26113,20 @@ input:-webkit-autofill {
 .asms-banner.asms-res-see-banner .res-see-banner-split-img img {
   max-height: 450px;
 }
-
-.asms-sms-calc-banner .calc-tool-split {
+.asms-banner.asms-sms-calc-banner .calc-tool-split {
   grid-template-columns: auto 343px;
 }
-.asms-sms-calc-banner .sms-calc-banner-tool {
+.asms-banner.asms-sms-calc-banner .sms-calc-banner-tool {
   max-width: 1280px;
 }
-.asms-sms-calc-banner .calc-tool-input textarea {
+.asms-banner.asms-sms-calc-banner .calc-tool-input textarea {
   height: 208px;
 }
-.asms-sms-calc-banner .calc-tool-split-note {
+.asms-banner.asms-sms-calc-banner .calc-tool-split-note {
   padding-top: 100px;
+}
+.asms-banner.asms-contact-banner .asms-contact-banner-container {
+  padding-bottom: 220px;
 }
 
 .video-wrapper {
@@ -26540,28 +26546,28 @@ input:-webkit-autofill {
 .asms-faq .segment-heading-img {
   max-width: 80px;
 }
-.asms-faq .faq-split {
-  grid-template-columns: 28% auto;
+
+.faq-split {
   max-width: 1200px;
 }
-.asms-faq .faq-split .accordion-item {
+.faq-split .accordion-item {
   margin-bottom: 12px !important;
 }
-.asms-faq .faq-split .accordion-item .accordion-button:hover {
+.faq-split .accordion-item .accordion-button:hover {
   color: #3bb24a !important;
 }
-.asms-faq .faq-split .accordion-item:has(.accordion-button[aria-expanded=true]) {
+.faq-split .accordion-item:has(.accordion-button[aria-expanded=true]) {
   background: #e9f2ed !important;
   box-shadow: none !important;
 }
-.asms-faq .faq-split .accordion-item:has(.accordion-button[aria-expanded=true]) .accordion-button {
+.faq-split .accordion-item:has(.accordion-button[aria-expanded=true]) .accordion-button {
   color: #3bb24a !important;
 }
-.asms-faq .faq-split .accordion-item .content-stylings {
+.faq-split .accordion-item .content-stylings {
   max-height: 220px;
   margin-right: 7px;
 }
-.asms-faq .faq-split .accordion-item .content-stylings ul li::before {
+.faq-split .accordion-item .content-stylings ul li::before {
   background-color: #ffffff;
 }
 
@@ -26682,6 +26688,9 @@ input:-webkit-autofill {
   border-color: #3bb24a !important;
 }
 
+.asms-contact-segment-container {
+  margin-top: -140px;
+}
 .asms-contact-segment .contact-segment-split {
   background: #e6f7ff;
   border-radius: 50px;
@@ -26694,4 +26703,25 @@ input:-webkit-autofill {
   bottom: -69px;
   left: -58px;
   background: url("../../../assets/images/misc/contact_arrow_shape.svg");
+}
+
+.asms-faq-segment .faq-split-cats {
+  margin-top: -80px;
+}
+.asms-faq-segment .faq-cats-head {
+  max-width: 210px;
+}
+.asms-faq-segment .faq-cats-head.active::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 32px solid #ffffff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.05));
 }/*# sourceMappingURL=main.css.map */

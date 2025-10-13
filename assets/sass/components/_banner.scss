@@ -31,6 +31,7 @@
     }
   }
 
+  // see result
   &.asms-res-see-banner {
     .res-see-banner-split-img {
       img {
@@ -38,21 +39,29 @@
       }
     }
   }
-}
 
-.asms-sms-calc-banner {
-  .calc-tool-split {
-    grid-template-columns: auto 343px;
-  }
-  .sms-calc-banner-tool {
-    max-width: 1280px;
-  }
-  .calc-tool-input {
-    textarea {
-      height: 208px;
+  // sms calculator
+  &.asms-sms-calc-banner {
+    .calc-tool-split {
+      grid-template-columns: auto 343px;
+    }
+    .sms-calc-banner-tool {
+      max-width: 1280px;
+    }
+    .calc-tool-input {
+      textarea {
+        height: 208px;
+      }
+    }
+    .calc-tool-split-note {
+      padding-top: 100px;
     }
   }
-  .calc-tool-split-note{
-    padding-top: 100px;
+
+  // contact us
+  &.asms-contact-banner {
+    .asms-contact-banner-container {
+      padding-bottom: 220px;
+    }
   }
 }

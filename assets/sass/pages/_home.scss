@@ -299,38 +299,37 @@ $page-top-spacing-desktop: 100px;
       max-width: 80px;
     }
   }
+}
 
-  .faq-split {
-    grid-template-columns: 28% auto;
-    max-width: 1200px;
+.faq-split {
+  max-width: 1200px;
 
-    .accordion-item {
-      margin-bottom: 12px !important;
+  .accordion-item {
+    margin-bottom: 12px !important;
+
+    .accordion-button {
+      &:hover {
+        color: color("primary") !important;
+      }
+    }
+
+    &:has(.accordion-button[aria-expanded="true"]) {
+      background: color("p-green-50") !important;
+      box-shadow: none !important;
 
       .accordion-button {
-        &:hover {
-          color: color("primary") !important;
-        }
+        color: color("primary") !important;
       }
+    }
 
-      &:has(.accordion-button[aria-expanded="true"]) {
-        background: color("p-green-50") !important;
-        box-shadow: none !important;
+    .content-stylings {
+      max-height: 220px;
+      margin-right: 7px;
 
-        .accordion-button {
-          color: color("primary") !important;
-        }
-      }
-
-      .content-stylings {
-        max-height: 220px;
-        margin-right: 7px;
-
-        ul {
-          li {
-            &::before {
-              background-color: color("white");
-            }
+      ul {
+        li {
+          &::before {
+            background-color: color("white");
           }
         }
       }
