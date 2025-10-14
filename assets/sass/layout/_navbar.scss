@@ -25,6 +25,10 @@ $z-index-navbar-toggler: 1010;
 
   .asms-logo {
     max-width: 200px;
+
+    @include breakpoint-down(xl){
+      max-width: 180px;
+    }
   }
 
   .asms {

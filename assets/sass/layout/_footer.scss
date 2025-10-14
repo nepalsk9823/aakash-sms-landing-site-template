@@ -2,13 +2,28 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.asms-footer{
-  .footer-split{
+.asms-footer {
+  .footer-split {
     gap: 60px;
     grid-template-columns: 380px auto;
     border-radius: 40px;
 
-    &::after{
+    @include breakpoint-down(xxl) {
+      gap: 40px;
+      grid-template-columns: 360px auto;
+    }
+
+    @include breakpoint-down(xl) {
+      gap: 32px;
+      grid-template-columns: 320px auto;
+    }
+
+    @include breakpoint-down(lg){
+      gap: 12px;
+      grid-template-columns: 100%;
+    }
+
+    &::after {
       content: "";
       position: absolute;
       background: url($img-path + "misc/footer_arrow_shape.svg") center/contain no-repeat;
@@ -16,29 +31,52 @@
       height: 104px;
       top: calc(100% - 6px);
       left: 148px;
+
+      @include breakpoint-down(xxl) {
+        left: 120px;
+        width: 90px;
+        height: 89px;
+      }
+
+      @include breakpoint-down(xl) {
+        left: 80px;
+        width: 70px;
+        height: 69px;
+        top: calc(100% - 14px);
+      }
+
+      @include breakpoint-down(lg){
+        top: calc(100% - 20px);
+      }
     }
 
-    .links-block{
-      .links-list{
-        a{
+    .splits-cta-btns{
+      max-width: 400px;
+    }
+
+    .links-block {
+      .links-list {
+        a {
           transition: $default-transition;
-          &:hover{
-            color: color("primary")!important;
+          &:hover {
+            color: color("primary") !important;
           }
         }
       }
     }
   }
 
-  .contacts-social-link{
-    &:hover{
+  .contacts-social-link {
+    &:hover {
       scale: 1.1;
     }
   }
 
-  .footer-meta{
+  .footer-meta {
     margin-left: 320px;
-    
-    
+
+    @include breakpoint-down(xxl) {
+      margin-left: 0;
+    }
   }
 }

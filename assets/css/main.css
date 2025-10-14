@@ -26303,6 +26303,11 @@ input:-webkit-autofill {
 .asms-navbar .asms-logo {
   max-width: 200px;
 }
+@media (max-width: 1199.98px) {
+  .asms-navbar .asms-logo {
+    max-width: 180px;
+  }
+}
 .asms-navbar .asms-navbar-menu .menu-link-text,
 .asms-navbar .asms-navbar-menu .menu-link-icon {
   color: #121212;
@@ -26330,6 +26335,24 @@ input:-webkit-autofill {
   grid-template-columns: 380px auto;
   border-radius: 40px;
 }
+@media (max-width: 1399.98px) {
+  .asms-footer .footer-split {
+    gap: 40px;
+    grid-template-columns: 360px auto;
+  }
+}
+@media (max-width: 1199.98px) {
+  .asms-footer .footer-split {
+    gap: 32px;
+    grid-template-columns: 320px auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-footer .footer-split {
+    gap: 12px;
+    grid-template-columns: 100%;
+  }
+}
 .asms-footer .footer-split::after {
   content: "";
   position: absolute;
@@ -26338,6 +26361,29 @@ input:-webkit-autofill {
   height: 104px;
   top: calc(100% - 6px);
   left: 148px;
+}
+@media (max-width: 1399.98px) {
+  .asms-footer .footer-split::after {
+    left: 120px;
+    width: 90px;
+    height: 89px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .asms-footer .footer-split::after {
+    left: 80px;
+    width: 70px;
+    height: 69px;
+    top: calc(100% - 14px);
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-footer .footer-split::after {
+    top: calc(100% - 20px);
+  }
+}
+.asms-footer .footer-split .splits-cta-btns {
+  max-width: 400px;
 }
 .asms-footer .footer-split .links-block .links-list a {
   transition: all ease-in-out 300ms;
@@ -26350,6 +26396,11 @@ input:-webkit-autofill {
 }
 .asms-footer .footer-meta {
   margin-left: 320px;
+}
+@media (max-width: 1399.98px) {
+  .asms-footer .footer-meta {
+    margin-left: 0;
+  }
 }
 
 .page-top-spacing {
@@ -26377,15 +26428,63 @@ input:-webkit-autofill {
   background: #d1d1d1;
   transform: translateY(-50%);
 }
+@media (max-width: 1199.98px) {
+  .asms-home-banner .home-banner-trust .trust-item::after {
+    left: calc(100% + 16px);
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-home-banner .home-banner-trust .trust-item::after {
+    left: calc(100% + 12px);
+  }
+}
+@media (max-width: 767.98px) {
+  .asms-home-banner .home-banner-trust .trust-item::after {
+    left: calc(100% + 4px);
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-home-banner .home-banner-trust .trust-item::after {
+    height: 100%;
+  }
+}
+.asms-home-banner .home-banner-trust .trust-item:nth-child(even)::after {
+  display: none;
+}
 .asms-home-banner .home-banner-trust .trust-item:last-child::after {
   display: none;
+}
+@media (max-width: 575.98px) {
+  .asms-home-banner .home-banner-trust .trust-item-icon img {
+    max-height: 32px;
+  }
 }
 
 .asms-sms-gateway {
   padding-top: 100px;
 }
+@media (max-width: 575.98px) {
+  .asms-sms-gateway {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 479.98px) {
+  .asms-sms-gateway {
+    padding-top: 72px;
+  }
+}
 .asms-sms-gateway .sms-gateway-split {
   gap: 60px;
+}
+@media (max-width: 1199.98px) {
+  .asms-sms-gateway .sms-gateway-split {
+    gap: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-sms-gateway .sms-gateway-split {
+    gap: 32px;
+  }
 }
 
 .asms-request-quote .request-quote-split-form .form-custom .form-control::-moz-placeholder {
@@ -26401,8 +26500,20 @@ input:-webkit-autofill {
   max-width: 1312px !important;
 }
 .asms-textline-workflow .textline-workflow-line {
-  top: -10px;
+  top: 0;
   max-width: 1380px;
+  left: calc(50% - 36px);
+  transform: translateX(-50%);
+}
+@media (max-width: 1199.98px) {
+  .asms-textline-workflow .textline-workflow-line {
+    top: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-textline-workflow .textline-workflow-line {
+    top: 40px;
+  }
 }
 .asms-textline-workflow .textline-workflow-icon {
   position: relative;
@@ -26410,6 +26521,12 @@ input:-webkit-autofill {
   height: 86px;
   border: 2px dashed #3bb24a;
   border-radius: 100%;
+}
+@media (max-width: 991.98px) {
+  .asms-textline-workflow .textline-workflow-icon {
+    width: 74px;
+    height: 74px;
+  }
 }
 
 .asms-dev-resource .dev-resource-split {

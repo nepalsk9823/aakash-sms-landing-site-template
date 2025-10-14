@@ -31,11 +31,41 @@ $page-top-spacing-desktop: 100px;
         width: 1px;
         background: color("grey-3");
         transform: translateY(-50%);
+
+        @include breakpoint-down(xl){
+          left: calc(100% + 16px);
+        }
+
+        @include breakpoint-down(lg){
+          left: calc(100% + 12px);
+        }
+
+        @include breakpoint-down(md){
+          left: calc(100% + 4px);
+        }
+
+        @include breakpoint-down(sm){
+          height: 100%;
+        }
+      }
+
+      &:nth-child(even){
+        &::after{
+          display: none;
+        }
       }
 
       &:last-child {
         &::after {
           display: none;
+        }
+      }
+
+      &-icon{
+        img{
+          @include breakpoint-down(sm){
+            max-height: 32px;
+          }
         }
       }
     }
@@ -45,8 +75,24 @@ $page-top-spacing-desktop: 100px;
 .asms-sms-gateway {
   padding-top: 100px;
 
+  @include breakpoint-down(sm){
+    padding-top: 80px;
+  }
+
+  @include breakpoint-down(xs){
+    padding-top: 72px;
+  }
+
   .sms-gateway-split {
     gap: 60px;
+
+    @include breakpoint-down(xl){
+      gap: 40px;
+    }
+
+    @include breakpoint-down(lg){
+      gap: 32px;
+    }
   }
 }
 
@@ -70,8 +116,18 @@ $page-top-spacing-desktop: 100px;
     max-width: 1312px !important;
 
     &-line {
-      top: -10px;
+      top: 0;
       max-width: 1380px;
+      left: calc(50% - 36px);
+      transform: translateX(-50%);
+
+      @include breakpoint-down(xl){
+        top: 24px;
+      }
+
+      @include breakpoint-down(lg){
+        top: 40px;
+      }
     }
 
     &-icon {
@@ -80,6 +136,11 @@ $page-top-spacing-desktop: 100px;
       height: 86px;
       border: 2px dashed color("primary");
       border-radius: 100%;
+
+      @include breakpoint-down(lg){
+        width: 74px;
+        height: 74px;
+      }
     }
   }
 }
