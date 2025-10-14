@@ -17,6 +17,29 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+/* ####### MOBILE SCREEN SIDEBAR ####### */
+const navbarOverlay = document.querySelector('.asms-navbar-overlay');
+const navbarOpenBtn = document.querySelector('.asms-navbar-open-btn');
+const navbarCloseBtn = document.querySelector('.asms-navbar-close-btn');
+const navbarMenuWrapper = document.querySelector('.asms-navbar-menu-wrapper');
+
+navbarOpenBtn.addEventListener("click", () => {
+  navbarMenuWrapper.classList.add("show");
+  navbarOverlay.classList.add("show");
+});
+
+navbarCloseBtn.addEventListener('click', () => {
+  navbarMenuWrapper.classList.remove("show");
+  navbarOverlay.classList.remove("show");
+});
+
+navbarOverlay.addEventListener('click', () => {
+  navbarOverlay.classList.remove("show");
+  navbarMenuWrapper.classList.remove("show");
+});
+
+/* ####### EOF MOBILE SCREEN SIDEBAR ####### */
+
 // Helper: safely init Swiper only when container is visible
 const initSwiperWhenVisible = (container, options) => {
   if (!container) return;
@@ -71,3 +94,20 @@ window.addEventListener("load", () => {
     },
   })
 });
+
+/* ===== RESIZE OPTIMIZATION ===== */
+let resizeTimer;
+let resizeScheduled = false;
+window.addEventListener("resize", () => {
+  if (!resizeScheduled) {
+    resizeScheduled = true;
+    requestAnimationFrame(() => {
+      document.body.classList.add("resize-animation-stopper");
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+      }, 400);
+      resizeScheduled = false;
+    });
+  }
+}, { passive: true });

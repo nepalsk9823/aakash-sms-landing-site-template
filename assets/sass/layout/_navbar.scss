@@ -13,6 +13,7 @@ $navbar-bg: transparent;
 $navbar-link-color: $night;
 $navbar-hover-link-color: color.adjust($night, $lightness: -10%);
 $z-index-navbar: 1000;
+$z-index-navbar-mobile: 1009;
 $z-index-navbar-toggler: 1010;
 
 .asms-navbar {
@@ -30,6 +31,19 @@ $z-index-navbar-toggler: 1010;
     min-height: $navbar-height-mobile;
   }
 
+  &-overlay {
+    @include breakpoint-down(xl) {
+      background: rgba(0, 0, 0, 0.3);
+      visibility: hidden;
+      opacity: 0;
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
   &-menu-logo {
     max-width: 140px;
   }
@@ -43,7 +57,14 @@ $z-index-navbar-toggler: 1010;
       height: 100%;
       background: color("white");
       box-shadow: map.get($shadows, "default");
-      padding: 16px;
+      padding: 16px 20px;
+      transform: translateX(100%);
+      transition: $default-transition;
+      z-index: $z-index-navbar-mobile;
+
+      &.show {
+        transform: translateX(0);
+      }
     }
   }
 
@@ -51,7 +72,6 @@ $z-index-navbar-toggler: 1010;
     @include breakpoint-down(xl) {
       max-height: calc(100vh - 60px);
       @include scrollbar("y");
-      align-items: flex-start !important;
     }
   }
 
@@ -102,7 +122,6 @@ $z-index-navbar-toggler: 1010;
 .asms-submenu {
   top: calc(100% + 28px);
   width: 1260px;
-  border-radius: 24px;
 
   @include breakpoint-down(xxl) {
     width: 1000px;
@@ -118,8 +137,10 @@ $z-index-navbar-toggler: 1010;
   }
 
   .asms-submenu-block {
-    @include breakpoint-down(xl) {
-      padding: 0 !important;
+    &-group {
+      @include breakpoint-down(xl) {
+        gap: 8px;
+      }
     }
   }
 
@@ -129,10 +150,6 @@ $z-index-navbar-toggler: 1010;
 
     @include breakpoint-down(xxl) {
       transform: translateX(-34%);
-    }
-
-    @include breakpoint-down(xl) {
-      padding: 0 !important;
     }
   }
 }
