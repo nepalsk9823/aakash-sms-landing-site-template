@@ -72,6 +72,13 @@ $z-index-navbar-toggler: 1010;
     @include breakpoint-down(xl) {
       max-height: calc(100vh - 60px);
       @include scrollbar("y");
+      padding-right: 8px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @include breakpoint-down(xl) {
+        background: color("grey-1");
+      }
     }
   }
 
@@ -92,15 +99,46 @@ $z-index-navbar-toggler: 1010;
       .menu-link-text,
       .menu-link-icon {
         color: color("night");
+
+        @include breakpoint-down(xl) {
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    &-menu-item {
+      @include breakpoint-down(xl) {
+        width: 100%;
       }
     }
 
     &-menu-link {
+      transition: $default-transition;
+
+      .menu-link-icon{
+        transition: $default-transition;
+      }
+
       &.active {
         color: color("primary") !important;
 
         .menu-link-text {
           color: color("primary") !important;
+        }
+      }
+
+      &[aria-expanded="true"]{
+        .menu-link-icon{
+          transform: rotate(180deg);
+        }
+      }
+
+      &[data-bs-toggle="collapse"] {
+        @include breakpoint-down(xl) {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
         }
       }
 
@@ -150,6 +188,15 @@ $z-index-navbar-toggler: 1010;
 
     @include breakpoint-down(xxl) {
       transform: translateX(-34%);
+    }
+  }
+
+  .submenu-menu-item{
+    &-link{
+      transition: $default-transition;
+      &:hover{
+        background: color("p-green-50");
+      }
     }
   }
 }
