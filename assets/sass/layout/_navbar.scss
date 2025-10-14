@@ -6,7 +6,7 @@
 
 // NAVBAR
 $navbar-height-desktop: 100px;
-$navbar-height-mobile: 100px;
+$navbar-height-mobile: 72px;
 $navbar-bg: transparent;
 $navbar-link-color: $night;
 $navbar-hover-link-color: color.adjust($night, $lightness: -10%);
@@ -16,25 +16,40 @@ $z-index-navbar-toggler: 1010;
 .asms-navbar {
   min-height: $navbar-height-desktop;
   background: $navbar-bg;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
-  &-menu{
-    @include breakpoint-down(xl){
-      display: none!important;
+  @include breakpoint-down(lg) {
+    $navbar-height-desktop: 80px;
+    min-height: $navbar-height-desktop;
+  }
+
+  @include breakpoint-down(sm) {
+    min-height: $navbar-height-mobile;
+  }
+
+  &-menu {
+    @include breakpoint-down(xl) {
+      display: none !important;
     }
   }
 
   .asms-logo {
     max-width: 200px;
 
-    @include breakpoint-down(xl){
+    @include breakpoint-down(xl) {
       max-width: 180px;
+    }
+
+    @include breakpoint-down(sm){
+      max-width: 160px;
     }
   }
 
   .asms {
     &-navbar-menu {
       .menu-link-text,
-      .menu-link-icon{
+      .menu-link-icon {
         color: color("night");
       }
     }
@@ -43,13 +58,13 @@ $z-index-navbar-toggler: 1010;
       &.active {
         color: color("primary") !important;
 
-        .menu-link-text{
+        .menu-link-text {
           color: color("primary") !important;
         }
       }
 
-      &:hover{
-        color: $navbar-hover-link-color!important;
+      &:hover {
+        color: $navbar-hover-link-color !important;
       }
     }
   }

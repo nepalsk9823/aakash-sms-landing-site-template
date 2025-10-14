@@ -12,6 +12,14 @@
   background: color("white");
   border-radius: 24px;
   cursor: pointer;
+
+  @include breakpoint-down(xl){
+    border-radius: 20px;
+  }
+
+  @include breakpoint-down(lg){
+    border-radius: 16px;
+  }
 }
 
 .video-wrapper iframe{

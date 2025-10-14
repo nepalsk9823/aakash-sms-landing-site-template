@@ -8,10 +8,30 @@
 .industry-cards{
   .swiper-slide{
     max-width: 300px;
+
+    @include breakpoint-down(xl){
+      max-width: 260px;
+    }
+
+    @include breakpoint-down(lg){
+      max-width: 220px;
+    }
+
+    @include breakpoint-down(md){
+      max-width: 200px;
+    }
   }
 
   .industry-card{
     height: 380px;
+
+    @include breakpoint-down(xl){
+      height: 340px;
+    }
+
+    @include breakpoint-down(md){
+      height: 320px;
+    }
 
     &-content{
       height: 114px;
