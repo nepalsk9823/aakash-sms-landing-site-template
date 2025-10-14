@@ -170,7 +170,7 @@ $button-link-variants: (
     transition: $default-transition;
   }
 
-  &-icon{
+  &-icon {
     transition: $default-transition;
     font-size: map.get($font-sizes, "sm");
   }
@@ -194,7 +194,7 @@ $button-link-variants: (
     height: 58px;
     min-width: 150px;
     font-size: map.get($font-sizes, "lg") !important;
-    border-width: 1.5px!important;
+    border-width: 1.5px !important;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -216,7 +216,7 @@ $button-link-variants: (
     height: 52px;
     min-width: 146px;
     font-size: map.get($font-sizes, "lg") !important;
-    border-width: 1.5px!important;
+    border-width: 1.5px !important;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -384,22 +384,13 @@ $button-link-variants: (
 
 // MISC BUTTON STYLINGS
 .icon-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 !important;
 
   &:hover {
     opacity: 0.8;
-
-    img {
-      &:not(.hovered-state) {
-        display: none;
-      }
-      &.hovered-state {
-        display: inline-flex !important;
-      }
-    }
   }
 }
 
@@ -427,9 +418,8 @@ input[type="button"] {
   }
 }
 
-
-.btn-downloads{
-  .btn-download{
+.btn-downloads {
+  .btn-download {
     max-width: 200px;
   }
 }

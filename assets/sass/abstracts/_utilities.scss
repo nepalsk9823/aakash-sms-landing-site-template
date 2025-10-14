@@ -773,15 +773,6 @@ $tracking: (
   }
 }
 
-.btn {
-  &-transparent-white {
-    .btn-icon,
-    img {
-      filter: invert(0) brightness(100);
-    }
-  }
-}
-
 .text-justify {
   text-align: justify;
 }
