@@ -26130,11 +26130,6 @@ input:-webkit-autofill {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 575.98px) {
-  .accordion-button {
-    padding: 8px 16px !important;
-  }
-}
 .accordion-button[aria-expanded=true] {
   border-left-color: #3bb24a !important;
 }
@@ -26510,12 +26505,18 @@ input:-webkit-autofill {
   .asms-footer .footer-split {
     gap: 32px;
     grid-template-columns: 320px auto;
+    border-radius: 32px;
   }
 }
 @media (max-width: 991.98px) {
   .asms-footer .footer-split {
     gap: 12px;
     grid-template-columns: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-footer .footer-split {
+    gap: 0;
   }
 }
 .asms-footer .footer-split::after {
@@ -26545,6 +26546,12 @@ input:-webkit-autofill {
 @media (max-width: 991.98px) {
   .asms-footer .footer-split::after {
     top: calc(100% - 20px);
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-footer .footer-split::after {
+    top: calc(100% - 32px);
+    left: 48px;
   }
 }
 .asms-footer .footer-split .splits-cta-btns {
@@ -26819,6 +26826,11 @@ input:-webkit-autofill {
 .asms-industries .industries-split .accordion-item:last-child .accordion-collapse {
   border-radius: 0 !important;
 }
+@media (max-width: 575.98px) {
+  .asms-industries .industries-split .accordion-button {
+    padding: 8px 16px !important;
+  }
+}
 .asms-industries .industries-split .industries-feature-item:hover {
   color: #3bb24a !important;
 }
@@ -26896,6 +26908,11 @@ input:-webkit-autofill {
 .asms-presence .presence-item-text {
   margin-left: 20px;
 }
+@media (max-width: 575.98px) {
+  .asms-presence .presence-item-text {
+    margin-left: 16px;
+  }
+}
 .asms-presence .presence-item-text::after {
   content: "";
   position: absolute;
@@ -26907,6 +26924,12 @@ input:-webkit-autofill {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (max-width: 575.98px) {
+  .asms-presence .presence-item-text::after {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 .asms-faq .segment-heading-img {
   max-width: 80px;
@@ -26917,6 +26940,11 @@ input:-webkit-autofill {
 }
 .faq-split .accordion-item {
   margin-bottom: 12px !important;
+}
+@media (max-width: 767.98px) {
+  .faq-split .accordion-item {
+    border-radius: 8px !important;
+  }
 }
 .faq-split .accordion-item .accordion-button:hover {
   color: #3bb24a !important;

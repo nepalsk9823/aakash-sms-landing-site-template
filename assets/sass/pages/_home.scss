@@ -258,6 +258,12 @@ $page-top-spacing-mobile: 72px;
       }
     }
 
+    .accordion-button{
+      @include breakpoint-down(sm) {
+        padding: 8px 16px !important;
+      }
+    }
+
     .industries-feature {
       &-item {
         &:hover {
@@ -343,8 +349,13 @@ $page-top-spacing-mobile: 72px;
   .presence {
     &-item {
       min-height: 42px;
+
       &-text {
         margin-left: 20px;
+
+        @include breakpoint-down(sm){
+          margin-left: 16px;
+        }
 
         &::after {
           content: "";
@@ -356,6 +367,11 @@ $page-top-spacing-mobile: 72px;
           border-radius: 100%;
           top: 50%;
           transform: translateY(-50%);
+
+          @include breakpoint-down(sm){
+            width: 10px;
+            height: 10px;
+          }
         }
       }
     }
@@ -375,6 +391,10 @@ $page-top-spacing-mobile: 72px;
 
   .accordion-item {
     margin-bottom: 12px !important;
+
+    @include breakpoint-down(md){
+      border-radius: 8px!important;
+    }
 
     .accordion-button {
       &:hover {

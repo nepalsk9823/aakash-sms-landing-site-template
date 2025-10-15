@@ -16,11 +16,16 @@
     @include breakpoint-down(xl) {
       gap: 32px;
       grid-template-columns: 320px auto;
+      border-radius: 32px;
     }
 
     @include breakpoint-down(lg){
       gap: 12px;
       grid-template-columns: 100%;
+    }
+
+    @include breakpoint-down(sm){
+      gap: 0;
     }
 
     &::after {
@@ -47,6 +52,11 @@
 
       @include breakpoint-down(lg){
         top: calc(100% - 20px);
+      }
+
+      @include breakpoint-down(sm){
+        top: calc(100% - 32px);
+        left: 48px;
       }
     }
 
