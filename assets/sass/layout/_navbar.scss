@@ -32,6 +32,8 @@ $z-index-navbar-toggler: 1010;
   }
 
   &-overlay {
+    visibility: hidden;
+    
     @include breakpoint-down(xl) {
       background: rgba(0, 0, 0, 0.3);
       visibility: hidden;
@@ -62,6 +64,10 @@ $z-index-navbar-toggler: 1010;
       transition: $default-transition;
       z-index: $z-index-navbar-mobile;
 
+      @include breakpoint-down(sm){
+        width: 100%;
+      }
+
       &.show {
         transform: translateX(0);
       }
@@ -70,7 +76,7 @@ $z-index-navbar-toggler: 1010;
 
   &-menu-body {
     @include breakpoint-down(xl) {
-      max-height: calc(100vh - 60px);
+      max-height: calc(100vh - 100px);
       @include scrollbar("y");
       padding-right: 8px !important;
     }

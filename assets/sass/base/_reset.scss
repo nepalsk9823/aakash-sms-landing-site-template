@@ -129,8 +129,8 @@ template {
 
 // bootstrap resets
 .container {
-  padding-right: 20px !important;
-  padding-left: 20px !important;
+  padding-right: 18px !important;
+  padding-left: 18px !important;
 
   @include breakpoint-up(xxxl) {
     max-width: $max-width !important;

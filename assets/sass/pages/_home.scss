@@ -184,6 +184,10 @@ $page-top-spacing-mobile: 72px;
       gap: 8px !important;
     }
 
+    @include breakpoint-down(xs){
+      flex-direction: column;
+    }
+
     .btn {
       @include breakpoint-down(sm) {
         flex: 1;

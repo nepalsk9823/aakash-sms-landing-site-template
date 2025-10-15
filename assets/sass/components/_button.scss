@@ -120,12 +120,12 @@ $button-link-variants: (
   -moz-appearance: none;
 
   @include breakpoint-down(md) {
-    height: 44px;
-  }
-
-  @include breakpoint-down(md) {
     font-size: map.get($font-sizes, "sm") !important;
     height: 40px;
+  }
+
+  @include breakpoint-down(sm){
+    padding: 8px 12px;
   }
 
   // EFFECTS
