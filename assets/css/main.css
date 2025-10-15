@@ -26450,6 +26450,7 @@ input:-webkit-autofill {
 }
 .asms-navbar .asms-menu-link:hover {
   color: hsl(0, 0%, -2.9411764706%) !important;
+  opacity: 0.8;
 }
 
 .custom-fixed-util {
@@ -26981,6 +26982,21 @@ input:-webkit-autofill {
 
 .asms-svc-bulksms-segment-01 .svc-bulksms-segment-split-content {
   padding-left: 75px;
+}
+@media (max-width: 1399.98px) {
+  .asms-svc-bulksms-segment-01 .svc-bulksms-segment-split-content {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .asms-svc-bulksms-segment-01 .svc-bulksms-segment-split-content {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-svc-bulksms-segment-01 .svc-bulksms-segment-split-content {
+    padding-left: 0;
+  }
 }
 
 .numbered-content-list .numbered-content-item::after {

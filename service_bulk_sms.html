@@ -47,48 +47,255 @@
   <div class="asms-page-wrapper">
     <!-- HEADER -->
     <header class="asms-header">
-      <div class="asms-navbar container d-flex align-items-center justify-content-between gap-4">
+      <div class="asms-navbar-overlay w-100 h-100 position-fixed start-0 top-0 default-transition"></div>
+      <div class="asms-navbar container d-flex align-items-center justify-content-between xl-gap-4 lg-gap-3 gap-2">
         <a href="index.html" class="asms-logo d-inline-flex align-items-center">
           <img src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
         </a>
-        <ul class="asms-navbar-menu list-unstyled d-flex align-items-center gap-5">
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link active">
-              <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+        <div class="asms-navbar-menu-wrapper">
+          <div
+            class="asms-navbar-menu-head d-xl-none d-flex align-items-center justify-content-between gap-3 mb-custom-4">
+            <a href="index.html" class="asms-navbar-menu-logo d-inline-flex align-items-center">
+              <img src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
             </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
-              <span class="menu-link-icon text-sm icon-24">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
-            </a>
-          </li>
-        </ul>
-        <div class="asms-navbar-btns d-inline-flex gap-2">
+            <button type="button" class="asms-navbar-close-btn icon-btn icon-28">
+              <img class="icon-24" src="assets/icons/close_dark.svg" alt="" />
+            </button>
+          </div>
+          <ul
+            class="asms-navbar-menu-body list-unstyled d-flex flex-column flex-xl-row align-items-xl-center align-items-start gap-5 xl-py-custom-0 lg-py-custom-4 py-custom-3">
+            <li class="asms-menu-item">
+              <a href="index.html" class="asms-menu-link active">
+                <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+              </a>
+            </li>
+            <li class="asms-menu-item position-relative">
+              <a class="asms-menu-link" data-bs-toggle="collapse" href="#collapseAsmsMenuSoln" role="button"
+                aria-expanded="false" aria-controls="collapseAsmsMenuSoln">
+                <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
+                <span class="menu-link-icon text-sm icon-24">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div id="collapseAsmsMenuSoln"
+                class="collapse asms-submenu rounded-24 asms-submenu-soln position-absolute bg-white shadow-default">
+                <div
+                  class="asms-submenu-block-group xl-px-custom-4 px-0 xl-py-custom-4 py-custom-2 d-grid xl-grid-cols-4 grid-cols-1 align-items-start">
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Service
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="service_bulk_sms.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/messages_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Bulk SMS
+                            service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_api_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/code_branch_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">API Service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_software_app.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/grid_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Software
+                            Application</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_voting_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/box_ballot_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Voting Service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_campaign_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/four_arrows_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Campaign
+                            Provider</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Industries
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="industry_health.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/notes_medical_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Health</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_marketing.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/megaphone_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Marketing</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_hospitality.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/hotel_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Hospitality</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_logistics.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Logistics</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_banking_finance.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Banking &
+                            Finance</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_ecommerce.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">E-commerce</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_government.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/landmark_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Government</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_education.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/graduation_hat_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Education</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Exam Result
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="result_neb.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/square_pol_vertical_filled_primary_icon.svg"
+                              alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">NEB Result</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="result_see.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/file_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">SEE Result</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block">
+                    <a href="#"
+                      class="card-item card border-0 d-flex flex-column justify-content-start bg-grey-1 p-custom-3 rounded-20 gap-5">
+                      <div class="card-img rounded-16 overflow-hidden">
+                        <img src="assets/images/blogs/blog_img3.png"
+                          alt="Frequently asked questions by NEB Students Regarding Exam Results" />
+                      </div>
+                      <div class="card-body p-0 d-flex flex-column gap-1 justify-content-start justify-content-between">
+                        <div class="card-body-top d-flex flex-column">
+                          <h3 class="card-title text-lg text-primary font-bold clamp-line-2">
+                            Why AakashSMS?
+                          </h3>
+                          <div class="content-stylings text-night text-base clamp-line-3">
+                            Reliable, fast, and affordable bulk SMS solutions
+                            tailored for businesses in Nepal.
+                          </div>
+                        </div>
+                        <div class="btn btn-link btn-link-primary justify-content-start h-auto p-0">
+                          <span class="btn-text">Learn More</span>
+                          <span class="btn-icon">
+                            <i class="fas fa-chevron-right"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="asms-menu-item">
+              <a href="blogs.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="faq.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="sms_calculator.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="contact_us.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="asms-navbar-btns d-inline-flex align-items-center gap-2">
           <a href="#" class="btn btn-base btn-link btn-link-primary">
-            <span class="btn-text">Sign In</span>
+            <span class="btn-text d-none d-sm-inline">Sign In</span>
             <span class="btn-icon">
               <img src="assets/icons/sign_in_primary_icon.svg" alt="sign in icon" loading="lazy" />
             </span>
@@ -96,6 +303,9 @@
           <a href="#" class="btn btn-base btn-primary">
             <span class="btn-text">Try for Free</span>
           </a>
+          <button type="button" class="asms-navbar-open-btn icon-btn ms-xl-0 ms-1 d-xl-none icon-28">
+            <img src="assets/icons/menu_dark.svg" alt="menu icon" />
+          </button>
         </div>
       </div>
     </header>
@@ -104,22 +314,32 @@
     <!-- BULK SMS BANNER SECTION -->
     <section class="asms-svc-bulksms-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
       <div class="container asms-svc-bulksms-banner-container segment-pt-80 segment-pb-100">
-        <div class="svc-bulksms-banner-split d-grid grid-cols-2 gap-10">
+        <div class="svc-bulksms-banner-split d-grid lg-grid-cols-2 grid-cols-1 xl-gap-12 lg-gap-10 md-gap-8 gap-6">
           <div class="svc-bulksms-banner-split-content">
-            <h1 class="svc-bulksms-banner-split-ttl text-8xl font-bold mb-custom-8 mt-0 leading-extra-tight">
+            <h1
+              class="svc-bulksms-banner-split-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
               Streamline customer communication with our Bulk SMS solutions.
             </h1>
             <div class="content-stylings text-lg font-semibold svc-bulksms-banner-split-text">
-              <p>Offer personalized messaging, automated campaigns, and real-time delivery insights for effective
-                communication. Reach a wide audience instantly, ensuring your messages are delivered on time and with
-                impact.</p>
+              <p>
+                Offer personalized messaging, automated campaigns, and
+                real-time delivery insights for effective communication. Reach
+                a wide audience instantly, ensuring your messages are
+                delivered on time and with impact.
+              </p>
               <ul>
                 <li>Send messages to a large group instantly.</li>
-                <li>Save time by scheduling and automating your SMS campaigns.</li>
-                <li>Create Ensure high message delivery rates with our trusted platform.</li>
+                <li>
+                  Save time by scheduling and automating your SMS campaigns.
+                </li>
+                <li>
+                  Create Ensure high message delivery rates with our trusted
+                  platform.
+                </li>
               </ul>
             </div>
-            <div class="svc-bulksms-banner-split-btns d-flex align-items-center justify-content-start gap-3 mt-custom-8">
+            <div
+              class="svc-bulksms-banner-split-btns d-flex align-items-center justify-content-start gap-3 xl-mt-custom-8 lg-mt-custom-7 md-mt-custom-6 sm-mt-custom-5 mt-custom-4">
               <a href="#" class="btn btn-primary btn-lg">
                 <span class="btn-text">Try for Free</span>
               </a>
@@ -136,25 +356,36 @@
     <!-- SERVICE BULK SMS - SECTION ONE -->
     <section class="asms-svc-bulksms-segment-01 segment-py-80 bg-grey-1">
       <div class="asms-svc-bulksms-segment-container container">
-        <div class="svc-bulksms-segment-split d-grid align-items-center grid-cols-2 gap-12">
+        <div
+          class="svc-bulksms-segment-split d-grid align-items-center lg-grid-cols-2 grid-cols-1 xl-gap-12 lg-gap-10 md-gap-8 gap-6">
           <div class="svc-bulksms-segment-split-img">
             <img src="assets/images/services/service_01_01_img.png" alt="what is bulk sms image" />
           </div>
           <div class="svc-bulksms-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+            <div class="segment-heading d-flex align-items-start gap-3 lg-mb-custom-5 mb-custom-4 mb-custom-3">
               <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
                 What is Bulk SMS ?
               </h2>
             </div>
             <div class="content-stylings text-night text-lg">
-              <p>Bulk SMS is a powerful tool for sending large volumes of messages quickly and efficiently to mobile
-                phones. Commonly used for alerts, reminders, marketing, and communication, it benefits businesses,
-                banks, media, and consumer brands by enabling fast and direct customer engagement. </p>
-              <p>With higher open and interaction rates compared to other marketing methods, Bulk SMS connects
-                businesses to a large audience instantly. </p>
-              <p>It’s cost-effective, works on any mobile phone without additional apps, and ensures seamless delivery
-                across telecom networks, making it an ideal offline marketing solution for growing customer reach with
-                minimal investment.</p>
+              <p>
+                Bulk SMS is a powerful tool for sending large volumes of
+                messages quickly and efficiently to mobile phones. Commonly
+                used for alerts, reminders, marketing, and communication, it
+                benefits businesses, banks, media, and consumer brands by
+                enabling fast and direct customer engagement.
+              </p>
+              <p>
+                With higher open and interaction rates compared to other
+                marketing methods, Bulk SMS connects businesses to a large
+                audience instantly.
+              </p>
+              <p>
+                It’s cost-effective, works on any mobile phone without
+                additional apps, and ensures seamless delivery across telecom
+                networks, making it an ideal offline marketing solution for
+                growing customer reach with minimal investment.
+              </p>
             </div>
           </div>
         </div>
@@ -165,24 +396,28 @@
     <!-- SERVICE BULK SMS - SECTION TWO -->
     <section class="asms-svc-bulksms-segment-02 segment-py-80">
       <div class="asms-svc-bulksms-segment-container container">
-        <div class="svc-bulksms-segment-split d-grid align-items-center grid-cols-2 gap-12">
+        <div
+          class="svc-bulksms-segment-split d-grid align-items-center lg-grid-cols-2 grid-cols-1 xl-gap-12 lg-gap-10 md-gap-8 gap-6">
           <div class="svc-bulksms-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+            <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
               <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
                 How to get free Bulk SMS?
               </h2>
             </div>
             <div class="content-stylings text-night text-lg">
-              <p>Aakash SMS is Nepal's leading Bulk SMS provider, offering quick delivery and personalized messaging for
-                businesses. Prices are flexible and depend on the number of SMS purchased, with free trials available
-                (5-10 SMS). </p>
+              <p>
+                Aakash SMS is Nepal's leading Bulk SMS provider, offering
+                quick delivery and personalized messaging for businesses.
+                Prices are flexible and depend on the number of SMS purchased,
+                with free trials available (5-10 SMS).
+              </p>
               <ul>
                 <li>Create Account</li>
                 <li>Upload Content</li>
                 <li>Send SMS</li>
               </ul>
             </div>
-            <div class="d-flex flex-wrap gap-2 mt-custom-8">
+            <div class="d-flex flex-wrap gap-2 xl-mt-custom-8 lg-mt-custom-7 mt-custom-6">
               <a href="#" class="btn btn-outline-primary btn-lg">
                 <span class="btn-text">Try for Free</span>
               </a>
@@ -199,26 +434,33 @@
     <!-- SERVICE BULK SMS - SECTION THREE -->
     <section class="asms-svc-bulksms-segment-03 segment-py-80 bg-grey-1">
       <div class="asms-svc-bulksms-segment-container container">
-        <div class="svc-bulksms-segment-split d-grid align-items-center grid-cols-2 gap-10">
+        <div
+          class="svc-bulksms-segment-split d-grid align-items-center lg-grid-cols-2 grid-cols-1 xl-gap-10 lg-gap-8 gap-6">
           <div class="svc-bulksms-segment-split-img">
             <img src="assets/images/services/service_01_03_img.png"
               alt="Does Bulk SMS require an Internet Connection?" />
           </div>
           <div class="svc-bulksms-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+            <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
               <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
                 Does Bulk SMS require an Internet Connection?
               </h2>
             </div>
             <div class="content-stylings text-night text-lg">
-              <p>Bulk SMS is a reliable and efficient way to communicate with your audience without needing an internet
-                connection. It ensures quick delivery of personalized messages for various purposes.</p>
+              <p>
+                Bulk SMS is a reliable and efficient way to communicate with
+                your audience without needing an internet connection. It
+                ensures quick delivery of personalized messages for various
+                purposes.
+              </p>
               <ul>
                 <li>Enables fast, two-way communication worldwide.</li>
                 <li>Works without an internet connection for delivery.</li>
                 <li>Send tailored messages to target customers.</li>
                 <li>Ideal for direct and bulk SMS campaigns.</li>
-                <li>Used for advertising, alerts, updates, banking, and more.</li>
+                <li>
+                  Used for advertising, alerts, updates, banking, and more.
+                </li>
               </ul>
             </div>
           </div>
@@ -230,21 +472,32 @@
     <!-- SERVICE BULK SMS - SECTION FOUR -->
     <section class="asms-svc-bulksms-segment-04 segment-py-80">
       <div class="asms-svc-bulksms-segment-container container">
-        <div class="svc-bulksms-segment-split d-grid align-items-center grid-cols-2 gap-10">
+        <div
+          class="svc-bulksms-segment-split d-grid align-items-center lg-grid-cols-2 grid-cols-1 xl-gap-10 lg-gap-8 gap-6">
           <div class="svc-bulksms-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+            <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
               <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
                 Is Bulk SMS good for Your business?
               </h2>
             </div>
             <div class="content-stylings text-night text-lg">
-              <p>Bulk text messaging service helps to boost sales of products and services. You can send SMS alerts in
-                the event of a problem that your customers should need to know. Interactive Bulk SMS services like SMS
-                voting and polling helps customers to stick with your business.</p>
+              <p>
+                Bulk text messaging service helps to boost sales of products
+                and services. You can send SMS alerts in the event of a
+                problem that your customers should need to know. Interactive
+                Bulk SMS services like SMS voting and polling helps customers
+                to stick with your business.
+              </p>
               <ul>
-                <li>Instantly promote your products and services to customers.</li>
-                <li>Keep customers informed with real-time updates or issues.</li>
-                <li>Create interaction through SMS voting, polling, or surveys.</li>
+                <li>
+                  Instantly promote your products and services to customers.
+                </li>
+                <li>
+                  Keep customers informed with real-time updates or issues.
+                </li>
+                <li>
+                  Create interaction through SMS voting, polling, or surveys.
+                </li>
                 <li>Ensure your messages are seen with 98% open rates.</li>
                 <li>Reach a large audience without high marketing costs.</li>
               </ul>
@@ -265,9 +518,10 @@
             Unlock the Power of Bulk SMS for Your Business
           </h2>
         </div>
-        <div class="cards-list segment-mt-60 d-grid align-items-start grid-cols-5 gap-5">
+        <div
+          class="cards-list segment-mt-60 d-grid align-items-start xxl-grid-cols-5 md-grid-cols-3 sm-grid-cols-2 grid-cols-1 xl-gap-5 lg-gap-4 gap-3">
           <div
-            class="card-item card d-flex flex-column align-items-start gap-4 p-custom-4 bg-white rounded-8 border-0 h-100">
+            class="card-item card d-flex flex-column align-items-start sm-gap-4 gap-3 sm-p-custom-4 p-custom-3 bg-white rounded-8 border-0 h-100">
             <div class="card-head d-flex align-items-center gap-2">
               <span class="card-head-icon icon-24">
                 <img src="assets/icons/users_p_green_700_icon.svg" alt="mass reach icon" />
@@ -275,59 +529,71 @@
               <h3 class="text-xl text-night font-semibold">Mass Reach</h3>
             </div>
             <div class="card-body text-base text-night font-medium p-0">
-              Send personalized messages to thousands of customers simultaneously, ensuring your message reaches a wide
-              audience quickly.
+              Send personalized messages to thousands of customers
+              simultaneously, ensuring your message reaches a wide audience
+              quickly.
             </div>
           </div>
           <div
-            class="card-item card d-flex flex-column align-items-start gap-4 p-custom-4 bg-white rounded-8 border-0 h-100">
+            class="card-item card d-flex flex-column align-items-start sm-gap-4 gap-3 sm-p-custom-4 p-custom-3 bg-white rounded-8 border-0 h-100">
             <div class="card-head d-flex align-items-center gap-2">
               <span class="card-head-icon icon-24">
                 <img class="icon-24" src="assets/icons/timer_p_green_700_icon.svg" alt="Time-Saving Automation icon" />
               </span>
-              <h3 class="text-xl text-night font-semibold">Time-Saving Automation</h3>
+              <h3 class="text-xl text-night font-semibold">
+                Time-Saving Automation
+              </h3>
             </div>
             <div class="card-body text-base text-night font-medium p-0">
-              Schedule and automate SMS campaigns to reach customers at the optimal time without manual intervention.
+              Schedule and automate SMS campaigns to reach customers at the
+              optimal time without manual intervention.
             </div>
           </div>
           <div
-            class="card-item card d-flex flex-column align-items-start gap-4 p-custom-4 bg-white rounded-8 border-0 h-100">
+            class="card-item card d-flex flex-column align-items-start sm-gap-4 gap-3 sm-p-custom-4 p-custom-3 bg-white rounded-8 border-0 h-100">
             <div class="card-head d-flex align-items-center gap-2">
               <span class="card-head-icon icon-24">
                 <img class="icon-24" src="assets/icons/hourglass_p_green_700_icon.svg" alt="Real-Time Updates icon" />
               </span>
-              <h3 class="text-xl text-night font-semibold">Real-Time Updates</h3>
+              <h3 class="text-xl text-night font-semibold">
+                Real-Time Updates
+              </h3>
             </div>
             <div class="card-body text-base text-night font-medium p-0">
-              Instantly notify customers about promotions, updates, or important information, ensuring they stay
-              informed.
+              Instantly notify customers about promotions, updates, or
+              important information, ensuring they stay informed.
             </div>
           </div>
           <div
-            class="card-item card d-flex flex-column align-items-start gap-4 p-custom-4 bg-white rounded-8 border-0 h-100">
+            class="card-item card d-flex flex-column align-items-start sm-gap-4 gap-3 sm-p-custom-4 p-custom-3 bg-white rounded-8 border-0 h-100">
             <div class="card-head d-flex align-items-center gap-2">
               <span class="card-head-icon icon-24">
                 <img class="icon-24" src="assets/icons/chart_mixed_p_green_700_icon.svg"
                   alt="Tracking and Analyticss icon" />
               </span>
-              <h3 class="text-xl text-night font-semibold">Tracking and Analyticss</h3>
+              <h3 class="text-xl text-night font-semibold">
+                Tracking and Analyticss
+              </h3>
             </div>
             <div class="card-body text-base text-night font-medium p-0">
-              Track delivery rates, read receipts, and responses to evaluate the effectiveness of your campaigns.
+              Track delivery rates, read receipts, and responses to evaluate
+              the effectiveness of your campaigns.
             </div>
           </div>
           <div
-            class="card-item card d-flex flex-column align-items-start gap-4 p-custom-4 bg-white rounded-8 border-0 h-100">
+            class="card-item card d-flex flex-column align-items-start sm-gap-4 gap-3 sm-p-custom-4 p-custom-3 bg-white rounded-8 border-0 h-100">
             <div class="card-head d-flex align-items-center gap-2">
               <span class="card-head-icon icon-24">
                 <img class="icon-24" src="assets/icons/personarrow_p_green_700_icon.svg"
                   alt="High Engagement Rates icon" />
               </span>
-              <h3 class="text-xl text-night font-semibold">High Engagement Rates</h3>
+              <h3 class="text-xl text-night font-semibold">
+                High Engagement Rates
+              </h3>
             </div>
             <div class="card-body text-base text-night font-medium p-0">
-              SMS has a high open rate compared to emails, making it an effective tool for customer engagement.
+              SMS has a high open rate compared to emails, making it an
+              effective tool for customer engagement.
             </div>
           </div>
         </div>
@@ -335,14 +601,16 @@
     </section>
 
     <!-- TRIAL CTA SECTION -->
-    <section class="asms-cta-trial segment-py-40 bg-light-cyprus">
+    <section class="asms-cta-trial segment-py-60 bg-light-cyprus">
       <div class="asms-cta-trial-container container">
         <div class="segment-heading d-flex flex-column align-items-center justify-content-center gap-3 text-center">
           <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
             Want to trial a Bulk SMS Service
           </h2>
-          <p class="segment-heading-lead text-night text-base font-semibold">Get quick Try sending a text to yourself
-            today to experience how bulk SMS works.</p>
+          <p class="segment-heading-lead text-night text-base font-semibold">
+            Get quick Try sending a text to yourself today to experience how
+            bulk SMS works.
+          </p>
           <a href="#" class="btn btn-primary btn-lg mt-custom-2">
             <span class="btn-text">Start your trial</span>
           </a>
@@ -354,7 +622,8 @@
     <!-- FAQ SECTION -->
     <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
       <div class="asms-faq-container container">
-        <div class="faq-split mx-auto w-100 d-grid align-items-start gap-12 grid-cols-28-auto">
+        <div
+          class="faq-split mx-auto w-100 d-grid align-items-start xl-gap-12 lg-gap-10 md-gap-8 gap-6 grid-cols-28-auto">
           <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
             <div class="segment-heading-img mb-custom-3">
               <img class="w-100" src="assets/icons/faq_question.svg" alt="" />
@@ -362,12 +631,14 @@
             <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
               FAQs
             </h2>
-            <p class="segment-heading-lead text-night text-base font-semibold">Get quick answers to your questions about
-              our phone system and
-              services. For more help, contact our support team!</p>
+            <p class="segment-heading-lead text-night text-base font-semibold">
+              Get quick answers to your questions about our phone system and
+              services. For more help, contact our support team!
+            </p>
           </div>
           <div class="faq-split-accordion accordion" id="accordionAsmsFaq" data-aos="fade-left">
-            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+            <div
+              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0"
@@ -378,27 +649,45 @@
                 </button>
               </h2>
               <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
                   <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
-                      designed to help businesses, organizations, and individuals reach thousands of people instantly
-                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
-                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <p>
+                      Sending bulk text messages in Nepal is simple and
+                      convenient with Aakash SMS. Our platform is designed to
+                      help businesses, organizations, and individuals reach
+                      thousands of people instantly through a reliable SMS
+                      gateway. Whether you’re promoting a product, sending
+                      notifications, or sharing important updates, you can
+                      easily manage your campaigns online with just a few
+                      clicks.
+                    </p>
                     <ol>
-                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
-                        dashboard.</li>
-                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
-                        entering numbers directly.</li>
-                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
-                        ensuring it fits within the character limit.</li>
-                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
-                        represent your brand.</li>
+                      <li>
+                        <strong>Create an Account</strong> – Sign up on the
+                        Aakash SMS platform and log in to your dashboard.
+                      </li>
+                      <li>
+                        <strong>Upload Contacts</strong> – Add your recipient
+                        list by uploading a CSV/Excel file or entering numbers
+                        directly.
+                      </li>
+                      <li>
+                        <strong>Compose Your Message</strong> – Write your SMS
+                        content with the required information, ensuring it
+                        fits within the character limit.
+                      </li>
+                      <li>
+                        <strong>Choose Sender ID</strong> – Select or apply
+                        for a custom sender ID (if applicable) to represent
+                        your brand.
+                      </li>
                     </ol>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+            <div
+              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
@@ -409,58 +698,95 @@
                 </button>
               </h2>
               <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
                   <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
-                      designed to help businesses, organizations, and individuals reach thousands of people instantly
-                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
-                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <p>
+                      Sending bulk text messages in Nepal is simple and
+                      convenient with Aakash SMS. Our platform is designed to
+                      help businesses, organizations, and individuals reach
+                      thousands of people instantly through a reliable SMS
+                      gateway. Whether you’re promoting a product, sending
+                      notifications, or sharing important updates, you can
+                      easily manage your campaigns online with just a few
+                      clicks.
+                    </p>
                     <ol>
-                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
-                        dashboard.</li>
-                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
-                        entering numbers directly.</li>
-                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
-                        ensuring it fits within the character limit.</li>
-                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
-                        represent your brand.</li>
+                      <li>
+                        <strong>Create an Account</strong> – Sign up on the
+                        Aakash SMS platform and log in to your dashboard.
+                      </li>
+                      <li>
+                        <strong>Upload Contacts</strong> – Add your recipient
+                        list by uploading a CSV/Excel file or entering numbers
+                        directly.
+                      </li>
+                      <li>
+                        <strong>Compose Your Message</strong> – Write your SMS
+                        content with the required information, ensuring it
+                        fits within the character limit.
+                      </li>
+                      <li>
+                        <strong>Choose Sender ID</strong> – Select or apply
+                        for a custom sender ID (if applicable) to represent
+                        your brand.
+                      </li>
                     </ol>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+            <div
+              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
                   type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFaq" aria-expanded="false"
                   aria-controls="collapseThreeFaq">
-                  Is Bulk SMS compatible with the Nepalese or foreign language?
+                  Is Bulk SMS compatible with the Nepalese or foreign
+                  language?
                   <span class="icon-24 accordion-button-icon rounded-8"></span>
                 </button>
               </h2>
               <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
                   <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
-                      designed to help businesses, organizations, and individuals reach thousands of people instantly
-                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
-                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <p>
+                      Sending bulk text messages in Nepal is simple and
+                      convenient with Aakash SMS. Our platform is designed to
+                      help businesses, organizations, and individuals reach
+                      thousands of people instantly through a reliable SMS
+                      gateway. Whether you’re promoting a product, sending
+                      notifications, or sharing important updates, you can
+                      easily manage your campaigns online with just a few
+                      clicks.
+                    </p>
                     <ol>
-                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
-                        dashboard.</li>
-                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
-                        entering numbers directly.</li>
-                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
-                        ensuring it fits within the character limit.</li>
-                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
-                        represent your brand.</li>
+                      <li>
+                        <strong>Create an Account</strong> – Sign up on the
+                        Aakash SMS platform and log in to your dashboard.
+                      </li>
+                      <li>
+                        <strong>Upload Contacts</strong> – Add your recipient
+                        list by uploading a CSV/Excel file or entering numbers
+                        directly.
+                      </li>
+                      <li>
+                        <strong>Compose Your Message</strong> – Write your SMS
+                        content with the required information, ensuring it
+                        fits within the character limit.
+                      </li>
+                      <li>
+                        <strong>Choose Sender ID</strong> – Select or apply
+                        for a custom sender ID (if applicable) to represent
+                        your brand.
+                      </li>
                     </ol>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+            <div
+              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
@@ -471,27 +797,45 @@
                 </button>
               </h2>
               <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
                   <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
-                      designed to help businesses, organizations, and individuals reach thousands of people instantly
-                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
-                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <p>
+                      Sending bulk text messages in Nepal is simple and
+                      convenient with Aakash SMS. Our platform is designed to
+                      help businesses, organizations, and individuals reach
+                      thousands of people instantly through a reliable SMS
+                      gateway. Whether you’re promoting a product, sending
+                      notifications, or sharing important updates, you can
+                      easily manage your campaigns online with just a few
+                      clicks.
+                    </p>
                     <ol>
-                      <li><strong>Create an Account</strong> – Sign up on the Aakash SMS platform and log in to your
-                        dashboard.</li>
-                      <li><strong>Upload Contacts</strong> – Add your recipient list by uploading a CSV/Excel file or
-                        entering numbers directly.</li>
-                      <li><strong>Compose Your Message</strong> – Write your SMS content with the required information,
-                        ensuring it fits within the character limit.</li>
-                      <li><strong>Choose Sender ID</strong> – Select or apply for a custom sender ID (if applicable) to
-                        represent your brand.</li>
+                      <li>
+                        <strong>Create an Account</strong> – Sign up on the
+                        Aakash SMS platform and log in to your dashboard.
+                      </li>
+                      <li>
+                        <strong>Upload Contacts</strong> – Add your recipient
+                        list by uploading a CSV/Excel file or entering numbers
+                        directly.
+                      </li>
+                      <li>
+                        <strong>Compose Your Message</strong> – Write your SMS
+                        content with the required information, ensuring it
+                        fits within the character limit.
+                      </li>
+                      <li>
+                        <strong>Choose Sender ID</strong> – Select or apply
+                        for a custom sender ID (if applicable) to represent
+                        your brand.
+                      </li>
                     </ol>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordion-item px-custom-5 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+            <div
+              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
@@ -502,12 +846,18 @@
                 </button>
               </h2>
               <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 pt-custom-4">
+                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
                   <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>Sending bulk text messages in Nepal is simple and convenient with Aakash SMS. Our platform is
-                      designed to help businesses, organizations, and individuals reach thousands of people instantly
-                      through a reliable SMS gateway. Whether you’re promoting a product, sending notifications, or
-                      sharing important updates, you can easily manage your campaigns online with just a few clicks.</p>
+                    <p>
+                      Sending bulk text messages in Nepal is simple and
+                      convenient with Aakash SMS. Our platform is designed to
+                      help businesses, organizations, and individuals reach
+                      thousands of people instantly through a reliable SMS
+                      gateway. Whether you’re promoting a product, sending
+                      notifications, or sharing important updates, you can
+                      easily manage your campaigns online with just a few
+                      clicks.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -521,77 +871,128 @@
     <!-- FOOTER -->
     <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
       <div class="asms-footer-container container">
-        <div class="footer-split d-grid align-items-stretch bg-white p-custom-5 position-relative">
+        <div class="footer-split d-grid align-items-stretch bg-white xl-p-custom-5 p-custom-4 position-relative">
           <div
-            class="footer-split-cta d-flex flex-column align-items-center justify-content-center rounded-20 p-custom-5 bg-p-green-50">
+            class="footer-split-cta d-flex flex-column align-items-center justify-content-center rounded-20 xl-p-custom-5 p-custom-4 bg-p-green-50">
             <div class="split-cta-icon d-flex align-items-center justify-content-center">
               <img src="assets/icons/sms_and_cloud.svg" alt="cta sms icon" />
             </div>
-            <h2 class="text-6xl font-semibold text-primary mt-custom-2 mb-0 text-center">Never Miss an <br> SMS Again!
-              <br>
+            <h2 class="text-6xl font-semibold text-primary sm-mt-custom-2 mt-custom-1 mb-0 text-center">
+              Never Miss an <br />
+              SMS Again!
+              <br />
               <span class="text-night">Stay Connected</span>
             </h2>
-            <div class="splits-cta-btns w-100 d-flex justify-content-center gap-2 mt-custom-5">
+            <div
+              class="splits-cta-btns w-100 d-flex flex-lg-row flex-column justify-content-center gap-2 lg-mt-custom-5 sm-mt-custom-4 mt-custom-3">
               <a href="#" class="btn btn-lg btn-primary flex-1">
                 <span class="btn-text">Try for Free</span>
               </a>
-              <a href="#" class="btn btn-lg btn-white-night-grey-2 flex-1">
+              <a href="contact_us.html" class="btn btn-lg btn-white-night-grey-2 flex-1">
                 <span class="btn-text">See Our Pricing</span>
               </a>
             </div>
           </div>
           <div class="footer-split-main d-flex flex-column justify-content-between">
-            <div class="links-block-group d-grid align-items-start grid-cols-3 segment-mt-40">
+            <div class="links-block-group d-grid align-items-start grid-cols-3 segment-mt-40 gap-3">
               <div class="links-block">
-                <p class="mb-custom-3 text-night font-semibold text-base">Services</p>
-                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled">
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Bulk SMS Service</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">API Service</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">SMS Software Application</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">SMS Campaign</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">SMS Voting Service</a></li>
+                <p class="xl-mb-custom-3 lg-mb-custom-2 mb-custom-1 text-night font-semibold text-base">
+                  Services
+                </p>
+                <ul class="links-list d-flex flex-column align-items-start sm-gap-1 gap-0 list-unstyled">
+                  <li>
+                    <a href="service_bulk_sms.html" class="text-gray text-sm font-semibold -tracking-03">Bulk SMS
+                      Service</a>
+                  </li>
+                  <li>
+                    <a href="service_api_service.html" class="text-gray text-sm font-semibold -tracking-03">API
+                      Service</a>
+                  </li>
+                  <li>
+                    <a href="service_software_app.html" class="text-gray text-sm font-semibold -tracking-03">SMS
+                      Software Application</a>
+                  </li>
+                  <li>
+                    <a href="service_campaign_service.html" class="text-gray text-sm font-semibold -tracking-03">SMS
+                      Campaign</a>
+                  </li>
+                  <li>
+                    <a href="service_voting_service.html" class="text-gray text-sm font-semibold -tracking-03">SMS
+                      Voting Service</a>
+                  </li>
                 </ul>
               </div>
               <div class="links-block">
-                <p class="mb-custom-3 text-night font-semibold text-base">Services</p>
-                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled">
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Documentation</a></li>
+                <p class="xl-mb-custom-3 lg-mb-custom-2 mb-custom-1 text-night font-semibold text-base">
+                  Services
+                </p>
+                <ul class="links-list d-flex flex-column align-items-start sm-gap-1 gap-0 list-unstyled">
+                  <li>
+                    <a href="" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Documentation</a>
+                  </li>
                 </ul>
-                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled mt-custom-7">
-                  <li><a href="#" class="text-night text-base font-semibold -tracking-03">Pricing</a></li>
-                  <li><a href="#" class="text-night text-base font-semibold -tracking-03">About</a></li>
-                  <li><a href="#" class="text-night text-base font-semibold -tracking-03">Contact</a></li>
+                <ul
+                  class="links-list d-flex flex-column align-items-start sm-gap-1 gap-0 list-unstyled xl-mt-custom-7 lg-mt-custom-6 mt-custom-5">
+                  <li>
+                    <a href="#" class="text-night text-base font-semibold -tracking-03">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-night text-base font-semibold -tracking-03">About</a>
+                  </li>
+                  <li>
+                    <a href="contact_us.html" class="text-night text-base font-semibold -tracking-03">Contact</a>
+                  </li>
                 </ul>
               </div>
               <div class="links-block">
-                <p class="mb-custom-3 text-night font-semibold text-base">Quick Links</p>
-                <ul class="links-list d-flex flex-column align-items-start gap-1 list-unstyled">
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Home</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Login</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Industries</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">FAQ</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Blog</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Services</a></li>
-                  <li><a href="#" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a></li>
+                <p class="xl-mb-custom-3 lg-mb-custom-2 mb-custom-1 text-night font-semibold text-base">
+                  Quick Links
+                </p>
+                <ul class="links-list d-flex flex-column align-items-start sm-gap-1 gap-0 list-unstyled">
+                  <li>
+                    <a href="index.html" class="text-gray text-sm font-semibold -tracking-03">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Login</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Industries</a>
+                  </li>
+                  <li>
+                    <a href="faq.html" class="text-gray text-sm font-semibold -tracking-03">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="blogs.html" class="text-gray text-sm font-semibold -tracking-03">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Services</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="contacts-block-group d-flex flex-wrap justify-content-between gap-5 mt-custom-9">
+            <div
+              class="contacts-block-group d-flex flex-wrap justify-content-md-between justify-content-center xl-gap-5 lg-gap-4 sm-gap-3 gap-2 xl-mt-custom-9 lg-mt-custom-8 md-mt-custom-7 sm-mt-custom-6 xs-mt-custom-5 mt-custom-4">
               <div
-                class="contacts-block-info d-flex flex-wrap gap-x-5 gap-y-3 align-items-center justify-content-start">
-                <div class="contacts-info-item d-inline-flex align-items-center gap-2">
+                class="contacts-block-info d-flex flex-wrap gap-x-5 md-gap-y-3 sm-gap-y-2 gap-y-1 align-items-center justify-content-md-start justify-content-center">
+                <a href="tel:+977 9808139797" class="contacts-info-item d-inline-flex align-items-center gap-2">
                   <span class="contacts-info-item-icon icon-24">
                     <img class="icon-20" src="assets/icons/phone_outline_primary_icon.svg" alt="phone icon" />
                   </span>
                   <span class="text-base text-night font-semibold">+977 9808139797</span>
-                </div>
-                <div class="contacts-info-item d-inline-flex align-items-center gap-2">
+                </a>
+                <a href="mailto:info@aakashtech.com.np"
+                  class="contacts-info-item d-inline-flex align-items-center gap-2">
                   <span class="contacts-info-item-icon icon-24">
                     <img class="icon-20" src="assets/icons/envelope_outline_primary_icon.svg" alt="phone icon" />
                   </span>
                   <span class="text-base text-night font-semibold">info@aakashtech.com.np</span>
-                </div>
+                </a>
               </div>
               <div class="contacts-block-social d-flex flex-wrap align-items-center">
                 <a href="#" class="contacts-social-link default-transition icon-40">
@@ -617,13 +1018,21 @@
           </div>
         </div>
 
-        <div class="footer-meta-wrapper container d-flex align-items-center justify-content-end py-custom-10">
-          <div class="footer-meta d-flex align-items-center justify-content-between gap-5 w-100">
-            <div class="footer-meta-copyright text-white text-xs font-semibold opacity-60">Copyright © 2024 Aakashtech.
+        <div
+          class="footer-meta-wrapper container d-flex align-items-center justify-content-end xxl-py-custom-10 xl-py-custom-9 lg-py-custom-8 sm-py-custom-7 py-custom-8">
+          <div
+            class="footer-meta d-flex flex-xxl-row flex-column align-items-center justify-content-between gap-5 w-100">
+            <div class="footer-meta-copyright text-white text-xs font-semibold opacity-60 text-nowrap">
+              Copyright © 2024 Aakashtech.
             </div>
-            <nav class="footer-meta-legal d-flex flex-wrap align-items-center" aria-label="Legal Links">
-              <p class="text-xs text-white font-semibold my-0 meta-legal-ttl pe-2 me-2 border-r-grey-1-1">Legal</p>
-              <ul class="meta-legal-links flex-wrap align-items-center d-flex gap-x-4 gap-y-2 list-unstyled">
+            <nav class="footer-meta-legal d-flex align-items-center" aria-label="Legal Links">
+              <ul
+                class="meta-legal-links flex-wrap align-items-center d-flex lg-gap-x-4 gap-x-3 gap-y-2 list-unstyled justify-content-xxl-end justify-content-center">
+                <li>
+                  <p class="text-xs text-white font-semibold my-0 meta-legal-ttl pe-2 border-r-grey-1-1">
+                    Legal
+                  </p>
+                </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
                   <a href="#" class="text-white text-xs font-semibold default-transition">Terms & Conditions</a>
                 </li>
@@ -646,6 +1055,7 @@
             </nav>
           </div>
         </div>
+      </div>
     </footer>
     <!-- EOF FOOTER -->
   </div>

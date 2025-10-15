@@ -10,6 +10,18 @@
     &-split {
       &-content {
         padding-left: 75px;
+
+        @include breakpoint-down(xxl){
+          padding-left: 60px;
+        }
+
+        @include breakpoint-down(xl){
+          padding-left: 40px;
+        }
+
+        @include breakpoint-down(lg){
+          padding-left: 0;
+        }
       }
     }
   }
