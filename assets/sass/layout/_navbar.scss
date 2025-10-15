@@ -132,7 +132,7 @@ $z-index-navbar-toggler: 1010;
       &.active {
         color: color("primary") !important;
 
-        .menu-link-text {
+        .menu-link-text, .menu-link-icon {
           color: color("primary") !important;
         }
       }

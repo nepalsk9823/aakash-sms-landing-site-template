@@ -47,49 +47,256 @@
   <div class="asms-page-wrapper">
     <!-- HEADER -->
     <header class="asms-header asms-inverted-header">
-      <div class="asms-navbar container d-flex align-items-center justify-content-between gap-4">
+      <div class="asms-navbar-overlay w-100 h-100 position-fixed start-0 top-0 default-transition"></div>
+      <div class="asms-navbar container d-flex align-items-center justify-content-between xl-gap-4 lg-gap-3 gap-2">
         <a href="index.html" class="asms-logo d-inline-flex align-items-center">
           <img class="logo-default" src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
           <img class="logo-white d-none" src="assets/images/site/logo_white.svg" alt="Aakash SMS brand white logo" />
         </a>
-        <ul class="asms-navbar-menu list-unstyled d-flex align-items-center gap-5">
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link active">
-              <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+        <div class="asms-navbar-menu-wrapper">
+          <div
+            class="asms-navbar-menu-head d-xl-none d-flex align-items-center justify-content-between gap-3 mb-custom-4">
+            <a href="index.html" class="asms-navbar-menu-logo d-inline-flex align-items-center">
+              <img src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
             </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
-              <span class="menu-link-icon text-sm icon-24">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
-            </a>
-          </li>
-        </ul>
-        <div class="asms-navbar-btns d-inline-flex gap-2">
+            <button type="button" class="asms-navbar-close-btn icon-btn icon-28">
+              <img class="icon-24" src="assets/icons/close_dark.svg" alt="" />
+            </button>
+          </div>
+          <ul
+            class="asms-navbar-menu-body list-unstyled d-flex flex-column flex-xl-row align-items-xl-center align-items-start gap-5 xl-py-custom-0 lg-py-custom-4 py-custom-3">
+            <li class="asms-menu-item">
+              <a href="index.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+              </a>
+            </li>
+            <li class="asms-menu-item position-relative">
+              <a class="asms-menu-link active" data-bs-toggle="collapse" href="#collapseAsmsMenuSoln" role="button"
+                aria-expanded="false" aria-controls="collapseAsmsMenuSoln">
+                <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
+                <span class="menu-link-icon text-sm icon-24">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div id="collapseAsmsMenuSoln"
+                class="collapse asms-submenu rounded-24 asms-submenu-soln position-absolute bg-white shadow-default">
+                <div
+                  class="asms-submenu-block-group xl-px-custom-4 px-0 xl-py-custom-4 py-custom-2 d-grid xl-grid-cols-4 grid-cols-1 align-items-start">
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Service
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="service_bulk_sms.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/messages_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Bulk SMS
+                            service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_api_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/code_branch_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">API Service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_software_app.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/grid_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Software
+                            Application</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_voting_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/box_ballot_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Voting Service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_campaign_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/four_arrows_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Campaign
+                            Provider</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Industries
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="industry_health.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/notes_medical_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Health</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_marketing.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/megaphone_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Marketing</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_hospitality.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/hotel_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Hospitality</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_logistics.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Logistics</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_banking_finance.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Banking &
+                            Finance</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_ecommerce.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">E-commerce</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_government.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/landmark_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Government</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_education.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/graduation_hat_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Education</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Exam Result
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="result_neb.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/square_pol_vertical_filled_primary_icon.svg"
+                              alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">NEB Result</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="result_see.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/file_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">SEE Result</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block">
+                    <a href="#"
+                      class="card-item card border-0 d-flex flex-column justify-content-start bg-grey-1 p-custom-3 rounded-20 gap-5">
+                      <div class="card-img rounded-16 overflow-hidden">
+                        <img src="assets/images/blogs/blog_img3.png"
+                          alt="Frequently asked questions by NEB Students Regarding Exam Results" />
+                      </div>
+                      <div class="card-body p-0 d-flex flex-column gap-1 justify-content-start justify-content-between">
+                        <div class="card-body-top d-flex flex-column">
+                          <h3 class="card-title text-lg text-primary font-bold clamp-line-2">
+                            Why AakashSMS?
+                          </h3>
+                          <div class="content-stylings text-night text-base clamp-line-3">
+                            Reliable, fast, and affordable bulk SMS solutions
+                            tailored for businesses in Nepal.
+                          </div>
+                        </div>
+                        <div class="btn btn-link btn-link-primary justify-content-start h-auto p-0">
+                          <span class="btn-text">Learn More</span>
+                          <span class="btn-icon">
+                            <i class="fas fa-chevron-right"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="asms-menu-item">
+              <a href="blogs.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="faq.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="sms_calculator.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="contact_us.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="asms-navbar-btns d-inline-flex align-items-center gap-2">
           <a href="#" class="btn btn-base btn-link btn-link-primary">
-            <span class="btn-text">Sign In</span>
+            <span class="btn-text d-none d-sm-inline">Sign In</span>
             <span class="btn-icon">
               <img src="assets/icons/sign_in_primary_icon.svg" alt="sign in icon" loading="lazy" />
             </span>
@@ -97,6 +304,9 @@
           <a href="#" class="btn btn-base btn-primary">
             <span class="btn-text">Try for Free</span>
           </a>
+          <button type="button" class="asms-navbar-open-btn icon-btn ms-xl-0 ms-1 d-xl-none icon-28">
+            <img src="assets/icons/menu_dark.svg" alt="menu icon" />
+          </button>
         </div>
       </div>
     </header>
@@ -108,7 +318,8 @@
       <div class="container asms-res-neb-banner-container segment-pt-80 segment-pb-100">
         <div class="res-neb-banner-split d-grid gap-20 grid-cols-40-auto align-items-center">
           <div class="res-neb-banner-split-content">
-            <h1 class="res-neb-banner-split-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
+            <h1
+              class="res-neb-banner-split-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
               NEB Result In Nepal
             </h1>
             <div class="res-neb-banner-split-text content-stylings text-lg font-semibold">
@@ -119,8 +330,8 @@
             </div>
           </div>
           <div class="res-neb-banner-split-img d-flex align-items-center justify-content-end">
-            <img class="w-auto" src="assets/images/results/result_neb_banner_img.png"
-              alt="NEB Result In Nepal" fetchpriority="high" />
+            <img class="w-auto" src="assets/images/results/result_neb_banner_img.png" alt="NEB Result In Nepal"
+              fetchpriority="high" />
           </div>
         </div>
       </div>
@@ -269,7 +480,8 @@
                 </ul>
                 <h3 class="card-title text-xl text-night font-bold clamp-line-2">NEB Results 2081/2082</h3>
                 <div class="content-stylings text-night text-base clamp-line-3">
-                  The NED 2081/2082 results will be announced shortly. Here are some of the queries we receive from students  
+                  The NED 2081/2082 results will be announced shortly. Here are some of the queries we receive from
+                  students 
                 </div>
               </div>
               <div class="card-metadata d-flex align-items-center justify-content-between">
@@ -305,7 +517,8 @@
                   Students Regarding Exam
                   Results</h3>
                 <div class="content-stylings text-night text-base clamp-line-3">
-                  The SEE 2081/2082 results will be announced shortly. Here are some of the queries we receive from SEE students  
+                  The SEE 2081/2082 results will be announced shortly. Here are some of the queries we receive from SEE
+                  students 
                 </div>
               </div>
               <div class="card-metadata d-flex align-items-center justify-content-between">
