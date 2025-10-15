@@ -26205,8 +26205,18 @@ input:-webkit-autofill {
 .asms-banner.asms-svc-bulksms-banner .svc-bulksms-banner-split-img img {
   max-width: 440px;
 }
+@media (max-width: 991.98px) {
+  .asms-banner.asms-res-neb-banner .res-neb-banner-split-img {
+    justify-content: center !important;
+  }
+}
 .asms-banner.asms-res-neb-banner .res-neb-banner-split-img img {
   max-height: 450px;
+}
+@media (max-width: 991.98px) {
+  .asms-banner.asms-res-see-banner .res-see-banner-split-img {
+    justify-content: center !important;
+  }
 }
 .asms-banner.asms-res-see-banner .res-see-banner-split-img img {
   max-height: 450px;
@@ -26334,6 +26344,9 @@ input:-webkit-autofill {
 }
 .asms-inverted-header:not(.asms-header-fixed) .asms-navbar-menu-wrapper .asms-menu-link .menu-link-icon {
   color: #ffffff;
+}
+.asms-inverted-header:not(.asms-header-fixed) .asms-navbar-open-btn {
+  filter: invert(1) brightness(100);
 }
 
 .asms-navbar {

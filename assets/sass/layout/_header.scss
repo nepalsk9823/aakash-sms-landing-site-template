@@ -42,6 +42,10 @@ $z-index-header: 1000;
           }
         }
       }
+
+      &-open-btn{
+        filter: invert(1) brightness(100);
+      }
     }
   }
 }

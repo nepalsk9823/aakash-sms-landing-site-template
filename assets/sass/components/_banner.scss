@@ -25,6 +25,10 @@
   // neb result
   &.asms-res-neb-banner {
     .res-neb-banner-split-img {
+      @include breakpoint-down(lg) {
+        justify-content: center !important;
+      }
+
       img {
         max-height: 450px;
       }
@@ -34,6 +38,9 @@
   // see result
   &.asms-res-see-banner {
     .res-see-banner-split-img {
+      @include breakpoint-down(lg) {
+        justify-content: center !important;
+      }
       img {
         max-height: 450px;
       }
