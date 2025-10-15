@@ -62,21 +62,65 @@
   &-item {
     grid-template-columns: auto 455px;
 
+    @include breakpoint-down(xl){
+      grid-template-columns: auto 420px;
+    }
+
+    @include breakpoint-down(lg){
+      grid-template-columns: auto 380px;
+    }
+
+    @include breakpoint-down(md){
+      grid-template-columns: auto 320px;
+    }
+
+    @include breakpoint-down(sm){
+      grid-template-columns: 100%;
+    }
+
     &-img {
       img {
         max-height: 380px;
         width: auto;
+
+        @include breakpoint-down(lg){
+          max-height: 360px;
+        }
       }
     }
 
     &:nth-child(even) {
       grid-template-columns: 455px auto;
 
+      @include breakpoint-down(xl){
+        grid-template-columns: 420px auto;
+      }
+  
+      @include breakpoint-down(lg){
+        grid-template-columns: 380px auto;
+      }
+  
+      @include breakpoint-down(md){
+        grid-template-columns: 320px auto;
+      }
+  
+      @include breakpoint-down(sm){
+        grid-template-columns: 100%;
+      }
+
       .steps-block-item-img {
         order: 2;
+
+        @include breakpoint-down(sm){
+          order: 1;
+        }
       }
       .steps-block-item-content {
         order: 1;
+
+        @include breakpoint-down(sm){
+          order: 2;
+        }
       }
     }
   }

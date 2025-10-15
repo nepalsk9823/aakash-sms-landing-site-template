@@ -421,5 +421,17 @@ input[type="button"] {
 .btn-downloads {
   .btn-download {
     max-width: 200px;
+
+    @include breakpoint-down(xl){
+      max-width: 180px;
+    }
+
+    @include breakpoint-down(lg){
+      max-width: 160px;
+    }
+
+    @include breakpoint-down(sm){
+      max-width: 140px;
+    }
   }
 }

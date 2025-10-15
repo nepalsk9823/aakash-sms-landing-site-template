@@ -369,14 +369,22 @@ $gap-count: 12;
 
 .gap-20{
   gap: 80px;
-}
 
-.gap-x-20{
-  column-gap: 80px;
-}
+  @include breakpoint-down(xl){
+    gap: 64px;
+  }
 
-.gap-y-20{
-  row-gap: 80px;
+  @include breakpoint-down(lg){
+    gap: 48px;
+  }
+
+  @include breakpoint-down(md){
+    gap: 40px;
+  }
+
+  @include breakpoint-down(sm){
+    gap: 32px;
+  }
 }
 
 // Mixin for responsive gap classes

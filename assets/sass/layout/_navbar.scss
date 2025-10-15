@@ -98,6 +98,10 @@ $z-index-navbar-toggler: 1010;
     @include breakpoint-down(sm) {
       max-width: 160px;
     }
+
+    @include breakpoint-down(xs){
+      max-width: 140px;
+    }
   }
 
   .asms {

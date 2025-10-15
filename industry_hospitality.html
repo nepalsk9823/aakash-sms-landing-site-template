@@ -47,48 +47,255 @@
   <div class="asms-page-wrapper">
     <!-- HEADER -->
     <header class="asms-header">
-      <div class="asms-navbar container d-flex align-items-center justify-content-between gap-4">
+      <div class="asms-navbar-overlay w-100 h-100 position-fixed start-0 top-0 default-transition"></div>
+      <div class="asms-navbar container d-flex align-items-center justify-content-between xl-gap-4 lg-gap-3 gap-2">
         <a href="index.html" class="asms-logo d-inline-flex align-items-center">
           <img src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
         </a>
-        <ul class="asms-navbar-menu list-unstyled d-flex align-items-center gap-5">
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link active">
-              <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+        <div class="asms-navbar-menu-wrapper">
+          <div
+            class="asms-navbar-menu-head d-xl-none d-flex align-items-center justify-content-between gap-3 mb-custom-4">
+            <a href="index.html" class="asms-navbar-menu-logo d-inline-flex align-items-center">
+              <img src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" />
             </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
-              <span class="menu-link-icon text-sm icon-24">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
-            </a>
-          </li>
-          <li class="asms-menu-item">
-            <a href="#" class="asms-menu-link">
-              <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
-            </a>
-          </li>
-        </ul>
-        <div class="asms-navbar-btns d-inline-flex gap-2">
+            <button type="button" class="asms-navbar-close-btn icon-btn icon-28">
+              <img class="icon-24" src="assets/icons/close_dark.svg" alt="" />
+            </button>
+          </div>
+          <ul
+            class="asms-navbar-menu-body list-unstyled d-flex flex-column flex-xl-row align-items-xl-center align-items-start gap-5 xl-py-custom-0 lg-py-custom-4 py-custom-3">
+            <li class="asms-menu-item">
+              <a href="index.html" class="asms-menu-link active">
+                <span class="menu-link-text font-semibold text-base default-transition">Home</span>
+              </a>
+            </li>
+            <li class="asms-menu-item position-relative">
+              <a class="asms-menu-link" data-bs-toggle="collapse" href="#collapseAsmsMenuSoln" role="button"
+                aria-expanded="false" aria-controls="collapseAsmsMenuSoln">
+                <span class="menu-link-text font-semibold text-base default-transition">Solutions</span>
+                <span class="menu-link-icon text-sm icon-24">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div id="collapseAsmsMenuSoln"
+                class="collapse asms-submenu rounded-24 asms-submenu-soln position-absolute bg-white shadow-default">
+                <div
+                  class="asms-submenu-block-group xl-px-custom-4 px-0 xl-py-custom-4 py-custom-2 d-grid xl-grid-cols-4 grid-cols-1 align-items-start">
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Service
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="service_bulk_sms.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/messages_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Bulk SMS
+                            service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_api_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/code_branch_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">API Service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_software_app.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/grid_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Software
+                            Application</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_voting_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/box_ballot_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Voting Service</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="service_campaign_service.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/four_arrows_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Campaign
+                            Provider</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Industries
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="industry_health.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/notes_medical_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Health</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_marketing.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/megaphone_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Marketing</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_hospitality.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/hotel_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Hospitality</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_logistics.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Logistics</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_banking_finance.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Banking &
+                            Finance</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_ecommerce.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/sign_hanging_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">E-commerce</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_government.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/landmark_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Government</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="industry_education.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/graduation_hat_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">Education</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block d-flex flex-column xl-gap-2 gap-0 xl-px-custom-5 p-0">
+                    <p class="asms-submenu-ttl font-semibold text-primary text-lg mb-0 px-custom-2 py-custom-2">
+                      By Exam Result
+                    </p>
+                    <ul class="submenu-menu-list list-unstyled d-grid align-items-start xl-gap-2 gap-1">
+                      <li class="submenu-menu-item">
+                        <a href="result_neb.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/square_pol_vertical_filled_primary_icon.svg"
+                              alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">NEB Result</span>
+                        </a>
+                      </li>
+                      <li class="submenu-menu-item">
+                        <a href="result_see.html"
+                          class="submenu-menu-item-link d-flex align-items-center gap-3 px-custom-2 py-custom-1 rounded-8 overflow-hidden">
+                          <span class="submenu-menu-item-icon icon-28 bg-p-green-50 rounded-8">
+                            <img class="icon-18" src="assets/icons/file_filled_primary_icon.svg" alt="" />
+                          </span>
+                          <span class="submenu-menu-item-text font-semibold text-night text-base">SEE Result</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="asms-submenu-block">
+                    <a href="#"
+                      class="card-item card border-0 d-flex flex-column justify-content-start bg-grey-1 p-custom-3 rounded-20 gap-5">
+                      <div class="card-img rounded-16 overflow-hidden">
+                        <img src="assets/images/blogs/blog_img3.png"
+                          alt="Frequently asked questions by NEB Students Regarding Exam Results" />
+                      </div>
+                      <div class="card-body p-0 d-flex flex-column gap-1 justify-content-start justify-content-between">
+                        <div class="card-body-top d-flex flex-column">
+                          <h3 class="card-title text-lg text-primary font-bold clamp-line-2">
+                            Why AakashSMS?
+                          </h3>
+                          <div class="content-stylings text-night text-base clamp-line-3">
+                            Reliable, fast, and affordable bulk SMS solutions
+                            tailored for businesses in Nepal.
+                          </div>
+                        </div>
+                        <div class="btn btn-link btn-link-primary justify-content-start h-auto p-0">
+                          <span class="btn-text">Learn More</span>
+                          <span class="btn-icon">
+                            <i class="fas fa-chevron-right"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="asms-menu-item">
+              <a href="blogs.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Blog</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="faq.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">FAQs</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="sms_calculator.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">SMS Calculator</span>
+              </a>
+            </li>
+            <li class="asms-menu-item">
+              <a href="contact_us.html" class="asms-menu-link">
+                <span class="menu-link-text font-semibold text-base default-transition">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="asms-navbar-btns d-inline-flex align-items-center gap-2">
           <a href="#" class="btn btn-base btn-link btn-link-primary">
-            <span class="btn-text">Sign In</span>
+            <span class="btn-text d-none d-sm-inline">Sign In</span>
             <span class="btn-icon">
               <img src="assets/icons/sign_in_primary_icon.svg" alt="sign in icon" loading="lazy" />
             </span>
@@ -96,6 +303,9 @@
           <a href="#" class="btn btn-base btn-primary">
             <span class="btn-text">Try for Free</span>
           </a>
+          <button type="button" class="asms-navbar-open-btn icon-btn ms-xl-0 ms-1 d-xl-none icon-28">
+            <img src="assets/icons/menu_dark.svg" alt="menu icon" />
+          </button>
         </div>
       </div>
     </header>
@@ -104,9 +314,9 @@
     <!--  INDUSTRY HEALTH SECTION -->
     <section class="asms-ind-hospt-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
       <div class="container asms-ind-hospt-banner-container segment-pt-80 segment-pb-100">
-        <div class="ind-hospt-banner-split d-grid gap-12 grid-cols-2">
+        <div class="ind-hospt-banner-split d-grid xl-gap-12 lg-gap-10 md-gap-8 gap-6 lg-grid-cols-2 grid-cols-1">
           <div class="ind-hospt-banner-split-content">
-            <h1 class="ind-hospt-banner-split-ttl text-8xl font-bold mb-custom-8 mt-0 leading-extra-tight">
+            <h1 class="ind-hospt-banner-split-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
               Elevating Hospitality with Smart & Efficient SMS Solutions
             </h1>
             <div class="ind-hospt-banner-split-text content-stylings text-lg font-semibold">
@@ -116,7 +326,7 @@
                 interactions, optimizing service efficiency, and enhancing overall customer satisfaction.
               </p>
             </div>
-            <div class="ind-hospt-banner-split-btns d-flex align-items-center justify-content-start gap-3 mt-custom-7">
+            <div class="ind-hospt-banner-split-btns d-flex align-items-center justify-content-start gap-3 xl-mt-custom-8 lg-mt-custom-7 md-mt-custom-6 mt-custom-5">
               <a href="#" class="btn btn-primary btn-lg">
                 <span class="btn-text">Try for Free</span>
               </a>
@@ -139,9 +349,9 @@
             Ensure a Hassle-Free Stay with Automated Reservation Alerts.
           </h2>
         </div>
-        <div class="segment-mt-40 cards-list d-grid grid-cols-4 gap-5">
+        <div class="segment-mt-40 cards-list d-grid lg-grid-cols-4 md-grid-cols-2 grid-cols-1 xl-gap-5 lg-gap-4 gap-3">
           <div
-            class="card-item card border-0 p-custom-5 d-flex flex-column gap-4 align-items-center shadow-default rounded-12 h-100">
+            class="card-item card border-0 sm-p-custom-5 p-custom-4 d-flex flex-column sm-gap-4 gap-3 align-items-center shadow-default rounded-12 h-100">
             <div class="card-head d-flex flex-column gap-3 align-items-center text-center">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/circle_check_filled_blue_200_icon.svg"
@@ -156,7 +366,7 @@
             </div>
           </div>
           <div
-            class="card-item card border-0 p-custom-5 d-flex flex-column gap-4 align-items-center shadow-default rounded-12 h-100">
+            class="card-item card border-0 sm-p-custom-5 p-custom-4 d-flex flex-column sm-gap-4 gap-3 align-items-center shadow-default rounded-12 h-100">
             <div class="card-head d-flex flex-column gap-3 align-items-center text-center">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/timer_outline_blue_200_icon.svg"
@@ -171,7 +381,7 @@
             </div>
           </div>
           <div
-            class="card-item card border-0 p-custom-5 d-flex flex-column gap-4 align-items-center shadow-default rounded-12 h-100">
+            class="card-item card border-0 sm-p-custom-5 p-custom-4 d-flex flex-column sm-gap-4 gap-3 align-items-center shadow-default rounded-12 h-100">
             <div class="card-head d-flex flex-column gap-3 align-items-center text-center">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/sparkles_filled_blue_200_icon.svg"
@@ -186,7 +396,7 @@
             </div>
           </div>
           <div
-            class="card-item card border-0 p-custom-5 d-flex flex-column gap-4 align-items-center shadow-default rounded-12 h-100">
+            class="card-item card border-0 sm-p-custom-5 p-custom-4 d-flex flex-column sm-gap-4 gap-3 align-items-center shadow-default rounded-12 h-100">
             <div class="card-head d-flex flex-column gap-3 align-items-center text-center">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/plane_filled_blue_200_icon.svg"
@@ -206,7 +416,7 @@
 
     <section class="asms-double-col-segment segment-py-100">
       <div class="asms-double-col-segment-container container">
-        <div class="double-col-segment-split-item d-grid align-items-center grid-cols-2 gap-12">
+        <div class="double-col-segment-split-item d-grid align-items-center grid-cols-2 xl-gap-12 lg-gap-10 md-gap-8 gap-6">
           <div class="double-col-segment-split-img">
             <img src="assets/images/industries/industry_02_02_img.png"
               alt="Guest Experience Survey: Understanding Customer Feedback for Improvement" />
@@ -304,7 +514,7 @@
 
     <section class="asms-double-col-segment segment-py-100">
       <div class="asms-double-col-segment-container container">
-        <div class="double-col-split-item d-grid align-items-center grid-cols-2 gap-12">
+        <div class="double-col-split-item d-grid align-items-center grid-cols-2 xl-gap-12 lg-gap-10 md-gap-8 gap-6">
           <div class="double-col-split-content">
             <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
               <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
@@ -342,7 +552,8 @@
           </h2>
         </div>
         <div class="cards-list segment-mt-60 d-grid align-items-start grid-cols-5 gap-5">
-          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
+          <div
+            class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/message_filled_p_green_700.svg"
@@ -356,7 +567,8 @@
               </div>
             </div>
           </div>
-          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
+          <div
+            class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/timer_outline_p_green_700.svg" alt="Automated Campaigns icon" />
@@ -369,7 +581,8 @@
               </div>
             </div>
           </div>
-          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
+          <div
+            class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/signal_outline_p_green_700.svg" alt="Advanced Analytics icon" />
@@ -383,7 +596,8 @@
               </div>
             </div>
           </div>
-          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
+          <div
+            class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/users_outline_p_green_700.svg" alt="Segmented Targeting icon" />
@@ -396,7 +610,8 @@
               </div>
             </div>
           </div>
-          <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
+          <div
+            class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
                 <img class="icon-24" src="assets/icons/network_wired_outline_p_green_700.svg"
@@ -424,7 +639,8 @@
           <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
             Want to trial a Bulk SMS Service
           </h2>
-          <p class="segment-heading-lead text-night text-base font-semibold mx-w-850">Try sending a text to yourself today to experience how bulk SMS works.</p>
+          <p class="segment-heading-lead text-night text-base font-semibold mx-w-850">Try sending a text to yourself
+            today to experience how bulk SMS works.</p>
           <a href="#" class="btn btn-primary btn-lg mt-custom-2">
             <span class="btn-text">Start your trial</span>
           </a>
@@ -436,7 +652,7 @@
     <!-- FAQ SECTION -->
     <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
       <div class="asms-faq-container container">
-        <div class="faq-split mx-auto w-100 d-grid align-items-start gap-12 grid-cols-28-auto">
+        <div class="faq-split mx-auto w-100 d-grid align-items-start xl-gap-12 lg-gap-10 md-gap-8 gap-6 grid-cols-28-auto">
           <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
             <div class="segment-heading-img mb-custom-3">
               <img class="w-100" src="assets/icons/faq_question.svg" alt="" />

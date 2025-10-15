@@ -9,36 +9,42 @@
 // HOSPITALITY PAGE
 
 // MARKETING PAGE
-.asms-ind-mktg-banner {
-  .ind-mktg-split {
-    grid-template-columns: auto 42%;
-  }
-}
 
 // EDUCATION PAGE
-
 .ind-split-block {
   &-item {
     grid-template-columns: 45% auto;
 
+    @include breakpoint-down(lg){
+      grid-template-columns: 100%;
+    }
+
     &:nth-child(even) {
       grid-template-columns: auto 45%;
 
+      @include breakpoint-down(lg){
+        grid-template-columns: 100%;
+      }
+
       .ind-split-block-item-img {
         order: 2;
+
+        @include breakpoint-down(lg){
+          order: 1;
+        }
       }
       .ind-split-block-item-content {
         order: 1;
+
+        @include breakpoint-down(lg){
+          order: 2;
+        }
       }
     }
   }
 }
 
 .ind-split-block{
-  &-group {
-    gap: 80px;
-  }
-
   &-item{
     &-img{
       img{
