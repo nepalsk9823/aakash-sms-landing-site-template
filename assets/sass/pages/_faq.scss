@@ -5,12 +5,30 @@
 @use "../abstracts/functions" as *;
 
 .asms-faq-segment {
-  .faq-split-cats{
+  .faq-split-cats {
     margin-top: -80px;
+    flex-wrap: nowrap!important;
+
+    @include breakpoint-down(xxl) {
+      margin-top: -60px;
+    }
   }
 
   .faq-cats-head {
     max-width: 210px;
+    height: 100%;
+
+    @include breakpoint-down(xl){
+      max-width: 180px;
+    }
+
+    @include breakpoint-down(lg){
+      max-width: 140px;
+    }
+
+    @include breakpoint-down(sm){
+      border-radius: 12px!important;
+    }
 
     &.active {
       &::after {
@@ -26,6 +44,13 @@
         left: 50%;
         transform: translateX(-50%);
         filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.05));
+
+        @include breakpoint-down(xl) {
+          border-top: 22px solid #ffffff;
+          border-left: 14px solid transparent;
+          border-right: 14px solid transparent;
+          border-bottom: 14px solid transparent;
+        }
       }
     }
   }

@@ -27267,6 +27267,12 @@ input:-webkit-autofill {
   margin-left: -12px !important;
   margin-right: -12px !important;
 }
+@media (max-width: 767.98px) {
+  .asms-blogs-segment .card-item-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 
 .filters-button-group button.is-checked {
   background: #3bb24a;
@@ -27293,9 +27299,31 @@ input:-webkit-autofill {
 
 .asms-faq-segment .faq-split-cats {
   margin-top: -80px;
+  flex-wrap: nowrap !important;
+}
+@media (max-width: 1399.98px) {
+  .asms-faq-segment .faq-split-cats {
+    margin-top: -60px;
+  }
 }
 .asms-faq-segment .faq-cats-head {
   max-width: 210px;
+  height: 100%;
+}
+@media (max-width: 1199.98px) {
+  .asms-faq-segment .faq-cats-head {
+    max-width: 180px;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-faq-segment .faq-cats-head {
+    max-width: 140px;
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-faq-segment .faq-cats-head {
+    border-radius: 12px !important;
+  }
 }
 .asms-faq-segment .faq-cats-head.active::after {
   position: absolute;
@@ -27310,4 +27338,12 @@ input:-webkit-autofill {
   left: 50%;
   transform: translateX(-50%);
   filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.05));
+}
+@media (max-width: 1199.98px) {
+  .asms-faq-segment .faq-cats-head.active::after {
+    border-top: 22px solid #ffffff;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+  }
 }/*# sourceMappingURL=main.css.map */
