@@ -32,11 +32,15 @@ $z-index-header: 1000;
           &-link {
             .menu-link {
               &-text {
-                color: color("white");
+                @include breakpoint-up(xl){
+                  color: color("white");
+                }
               }
 
               &-icon {
-                color: color("white");
+                @include breakpoint-up(xl){
+                  color: color("white");
+                }
               }
             }
           }
