@@ -90,6 +90,10 @@
       @include breakpoint-down(md) {
         height: 80px !important;
       }
+
+      &:focus {
+        border-color: color("primary") !important;
+      }
     }
   }
 

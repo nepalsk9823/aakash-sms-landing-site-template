@@ -51,17 +51,33 @@
   &.asms-sms-calc-banner {
     .calc-tool-split {
       grid-template-columns: auto 343px;
+
+      @include breakpoint-down(lg){
+        grid-template-columns: 100%;
+      }
     }
+
     .sms-calc-banner-tool {
       max-width: 1280px;
     }
+
     .calc-tool-input {
       textarea {
-        height: 208px;
+        height: 208px!important;
       }
     }
+
     .calc-tool-split-note {
-      padding-top: 100px;
+      padding-top: 80px;
+
+      @include breakpoint-down(lg){
+        padding-top: 0;
+      }
+
+      @include breakpoint-up(lg){
+        padding-left: 0!important;
+        padding-bottom: 0!important;
+      }
     }
   }
 

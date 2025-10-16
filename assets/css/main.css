@@ -25933,6 +25933,9 @@ input[type=button].btn-block {
     height: 80px !important;
   }
 }
+.form-custom textarea.form-control:focus {
+  border-color: #3bb24a !important;
+}
 .form-custom .form-select {
   background-color: rgba(235, 245, 251, 0.4);
   background-size: 16px 16px !important;
@@ -26224,14 +26227,30 @@ input:-webkit-autofill {
 .asms-banner.asms-sms-calc-banner .calc-tool-split {
   grid-template-columns: auto 343px;
 }
+@media (max-width: 991.98px) {
+  .asms-banner.asms-sms-calc-banner .calc-tool-split {
+    grid-template-columns: 100%;
+  }
+}
 .asms-banner.asms-sms-calc-banner .sms-calc-banner-tool {
   max-width: 1280px;
 }
 .asms-banner.asms-sms-calc-banner .calc-tool-input textarea {
-  height: 208px;
+  height: 208px !important;
 }
 .asms-banner.asms-sms-calc-banner .calc-tool-split-note {
-  padding-top: 100px;
+  padding-top: 80px;
+}
+@media (max-width: 991.98px) {
+  .asms-banner.asms-sms-calc-banner .calc-tool-split-note {
+    padding-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .asms-banner.asms-sms-calc-banner .calc-tool-split-note {
+    padding-left: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 .asms-banner.asms-contact-banner .asms-contact-banner-container {
   padding-bottom: 220px;
