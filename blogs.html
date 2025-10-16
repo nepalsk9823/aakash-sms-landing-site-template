@@ -1242,7 +1242,7 @@
       });
 
       // Handle filter buttons
-      const filtersElem = document.querySelector(".filters-button-group");
+      const filtersElem = document.querySelector(".asms-blogs-segment .filters-button-group");
       if (filtersElem) {
         filtersElem.addEventListener("click", (event) => {
           const target = event.target;
@@ -1254,7 +1254,7 @@
       }
 
       // Handle button group state (is-checked class toggle)
-      const buttonGroups = document.querySelectorAll(".filters-button-group");
+      const buttonGroups = document.querySelectorAll(".asms-blogs-segment .filters-button-group");
       buttonGroups.forEach((buttonGroup) => {
         buttonGroup.addEventListener("click", (event) => {
           const target = event.target;
