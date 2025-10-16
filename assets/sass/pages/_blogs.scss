@@ -4,28 +4,453 @@
 @use "../mixins/scrollbar" as *;
 @use "../abstracts/functions" as *;
 
-.asms-blogs-segment{
-  .cards-list{
-    margin-left: -12px!important;
-    margin-right: -12px!important;
+.asms-blogs-segment {
+  .cards-list {
+    margin-left: -12px !important;
+    margin-right: -12px !important;
   }
 
-  .card-item{
-    &-wrapper{
-      @include breakpoint-down(md){
-        padding-left: 0!important;
-        padding-right: 0!important;
+  .card-item {
+    &-wrapper {
+      @include breakpoint-down(md) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
     }
   }
 }
 
-.filters-button-group{
-  button{
-    &.is-checked{
+.filters-button-group {
+  button {
+    &.is-checked {
       background: color("primary");
-      color: color("white")!important;
-      border-color: color("primary")!important;
+      color: color("white") !important;
+      border-color: color("primary") !important;
+    }
+  }
+}
+
+// BLOG DETAILS PAGE
+.asms-blog-feat-banner {
+  .blog-feat-banner-split {
+    &-img {
+      img {
+        max-height: 480px;
+        width: auto;
+      }
+    }
+  }
+}
+
+.asms-blogs-details-segment {
+  .blogs-details-split {
+    grid-template-columns: 305px auto;
+
+    @include breakpoint-down(xl) {
+      grid-template-columns: 280px auto;
+    }
+
+    @include breakpoint-down(lg) {
+      grid-template-columns: 100%;
+      gap: 24px;
+    }
+
+    @include breakpoint-down(sm) {
+      gap: 20px;
+    }
+
+    @include breakpoint-down(xs) {
+      gap: 16px;
+    }
+
+    &-content {
+      .content-stylings {
+        padding: 10px 0px 10px 120px;
+        text-align: justify;
+
+        @include breakpoint-down(xxxl) {
+          padding: 10px 40px 10px 100px;
+        }
+
+        @include breakpoint-down(xxl) {
+          padding: 10px 24px 10px 80px;
+        }
+
+        @include breakpoint-down(xl) {
+          padding: 10px 20px 10px 40px;
+        }
+
+        @include breakpoint-down(lg) {
+          padding: 0;
+        }
+      }
+    }
+
+    &-bookmark {
+      position: sticky;
+      top: 100px;
+
+      @include breakpoint-down(lg) {
+        position: relative;
+        top: 0;
+      }
+
+      @include breakpoint-down(sm) {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .blogs-bookmark-item {
+        transition: $default-transition;
+
+        a {
+          transition: $default-transition;
+          &:hover,
+          &.active {
+            background: color("p-green-50");
+            color: color("night");
+          }
+
+          @include breakpoint-down(lg) {
+            border-radius: 12px !important;
+          }
+
+          @include breakpoint-down(sm) {
+            border-radius: 8px !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-stylings {
+  @include breakpoint-down(lg) {
+    font-size: 16px !important;
+  }
+
+  @include breakpoint-down(md) {
+    font-size: 14px !important;
+  }
+
+  a,
+  a * {
+    color: color("primary") !important;
+    span,
+    i,
+    b,
+    strong,
+    em,
+    small {
+      color: color("primary") !important;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: left !important;
+    letter-spacing: -0.06em !important;
+    font-weight: 700 !important;
+  }
+
+  p {
+    letter-spacing: -0.04em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 24px !important;
+    margin-top: 0 !important;
+
+    @include breakpoint-down(lg) {
+      margin-bottom: 20px !important;
+    }
+
+    @include breakpoint-down(md) {
+      margin-bottom: 16px !important;
+    }
+
+    b,
+    strong {
+      font-weight: 700 !important;
+      color: color("night") !important;
+    }
+    a,
+    a * {
+      color: color("primary") !important;
+      span,
+      i,
+      b,
+      strong,
+      em,
+      small {
+        color: color("primary") !important;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 38px !important;
+
+    @include breakpoint-down(xl) {
+      font-size: 36px !important;
+    }
+
+    @include breakpoint-down(lg) {
+      font-size: 32px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 30px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 28px !important;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+
+    @include breakpoint-down(xl) {
+      font-size: 34px !important;
+    }
+
+    @include breakpoint-down(lg) {
+      font-size: 32px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 28px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 24px !important;
+    }
+  }
+
+  h3 {
+    font-size: 32px !important;
+
+    @include breakpoint-down(xl) {
+      font-size: 30px !important;
+    }
+
+    @include breakpoint-down(lg) {
+      font-size: 28px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 24px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 22px !important;
+    }
+  }
+
+  h4 {
+    font-size: 28px !important;
+
+    @include breakpoint-down(xl) {
+      font-size: 26px !important;
+    }
+
+    @include breakpoint-down(lg) {
+      font-size: 24px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 22px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 20px !important;
+    }
+  }
+
+  h5 {
+    font-size: 26px !important;
+
+    @include breakpoint-down(xl) {
+      font-size: 24px !important;
+    }
+
+    @include breakpoint-down(lg) {
+      font-size: 22px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 20px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 18px !important;
+    }
+  }
+
+  h6 {
+    font-size: 24px !important;
+
+    @include breakpoint-down(xl) {
+      font-size: 22px !important;
+    }
+
+    @include breakpoint-down(lg) {
+      font-size: 20px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 18px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 16px !important;
+    }
+  }
+
+  p {
+    font-size: 18px !important;
+    color: color("night") !important;
+
+    @include breakpoint-down(lg) {
+      font-size: 16px !important;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: 14px !important;
+    }
+  }
+
+  img {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    border-radius: 20px;
+
+    @include breakpoint-down(md) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      border-radius: 16px;
+    }
+
+    @include breakpoint-down(sm) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 100px;
+
+    &:has(+ p) {
+      margin-bottom: 12px !important;
+    }
+
+    &:has(+ ul),
+    &:has(+ ol) {
+      margin-bottom: 12px !important;
+    }
+  }
+
+  ol {
+    list-style-type: auto !important;
+    padding-left: 28px !important;
+    margin-bottom: 24px !important;
+
+    @include breakpoint-down(lg) {
+      padding-left: 24px !important;
+      margin-bottom: 20px !important;
+    }
+
+    @include breakpoint-down(md) {
+      padding-left: 20px !important;
+      margin-bottom: 16px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      padding-left: 16px !important;
+    }
+
+    &:not([class]) > li::marker {
+      color: color("night");
+    }
+
+    li {
+      margin-bottom: 8px !important;
+    }
+
+    b,
+    strong {
+      font-weight: 700 !important;
+      color: color("night") !important;
+    }
+  }
+
+  ul {
+    margin-bottom: 24px !important;
+
+    @include breakpoint-down(lg) {
+      padding-left: 24px !important;
+      margin-bottom: 20px !important;
+    }
+
+    @include breakpoint-down(md) {
+      padding-left: 20px !important;
+      margin-bottom: 16px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      padding-left: 16px !important;
+    }
+
+    &:not([class]) > li::marker {
+      color: color("night");
+    }
+
+    b,
+    strong {
+      font-weight: 700 !important;
+      color: color("night") !important;
+    }
+    li {
+      margin-bottom: 8px !important;
+    }
+  }
+
+  table {
+    margin-bottom: 24px;
+
+    td {
+      padding: 12px 10px;
+    }
+
+    @include breakpoint-down(lg) {
+      margin-bottom: 20px !important;
+    }
+
+    @include breakpoint-down(md) {
+      margin-bottom: 16px !important;
     }
   }
 }

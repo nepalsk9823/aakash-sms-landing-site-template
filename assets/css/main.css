@@ -26414,7 +26414,7 @@ input:-webkit-autofill {
     height: 100%;
     background: #ffffff;
     box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
-    padding: 16px 20px;
+    padding: 16px 20px 12px 20px;
     transform: translateX(100%);
     transition: all ease-in-out 300ms;
     z-index: 1009;
@@ -26432,7 +26432,7 @@ input:-webkit-autofill {
 }
 @media (max-width: 1199.98px) {
   .asms-navbar-menu-body {
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 125px);
     overflow-y: scroll;
     padding-right: 8px !important;
   }
@@ -27301,6 +27301,575 @@ input:-webkit-autofill {
   background: #3bb24a;
   color: #ffffff !important;
   border-color: #3bb24a !important;
+}
+
+.asms-blog-feat-banner .blog-feat-banner-split-img img {
+  max-height: 480px;
+  width: auto;
+}
+
+.asms-blogs-details-segment .blogs-details-split {
+  grid-template-columns: 305px auto;
+}
+@media (max-width: 1199.98px) {
+  .asms-blogs-details-segment .blogs-details-split {
+    grid-template-columns: 280px auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-blogs-details-segment .blogs-details-split {
+    grid-template-columns: 100%;
+    gap: 24px;
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-blogs-details-segment .blogs-details-split {
+    gap: 20px;
+  }
+}
+@media (max-width: 479.98px) {
+  .asms-blogs-details-segment .blogs-details-split {
+    gap: 16px;
+  }
+}
+.asms-blogs-details-segment .blogs-details-split-content .content-stylings {
+  padding: 10px 0px 10px 120px;
+  text-align: justify;
+}
+@media (max-width: 1535.98px) {
+  .asms-blogs-details-segment .blogs-details-split-content .content-stylings {
+    padding: 10px 40px 10px 100px;
+  }
+}
+@media (max-width: 1399.98px) {
+  .asms-blogs-details-segment .blogs-details-split-content .content-stylings {
+    padding: 10px 24px 10px 80px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .asms-blogs-details-segment .blogs-details-split-content .content-stylings {
+    padding: 10px 20px 10px 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .asms-blogs-details-segment .blogs-details-split-content .content-stylings {
+    padding: 0;
+  }
+}
+.asms-blogs-details-segment .blogs-details-split-bookmark {
+  position: sticky;
+  top: 100px;
+}
+@media (max-width: 991.98px) {
+  .asms-blogs-details-segment .blogs-details-split-bookmark {
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-blogs-details-segment .blogs-details-split-bookmark {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+.asms-blogs-details-segment .blogs-details-split-bookmark .blogs-bookmark-item {
+  transition: all ease-in-out 300ms;
+}
+.asms-blogs-details-segment .blogs-details-split-bookmark .blogs-bookmark-item a {
+  transition: all ease-in-out 300ms;
+}
+.asms-blogs-details-segment .blogs-details-split-bookmark .blogs-bookmark-item a:hover, .asms-blogs-details-segment .blogs-details-split-bookmark .blogs-bookmark-item a.active {
+  background: #e9f2ed;
+  color: #121212;
+}
+@media (max-width: 991.98px) {
+  .asms-blogs-details-segment .blogs-details-split-bookmark .blogs-bookmark-item a {
+    border-radius: 12px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .asms-blogs-details-segment .blogs-details-split-bookmark .blogs-bookmark-item a {
+    border-radius: 8px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .content-stylings {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings {
+    font-size: 14px !important;
+  }
+}
+.content-stylings a,
+.content-stylings a * {
+  color: #3bb24a !important;
+}
+.content-stylings a span,
+.content-stylings a i,
+.content-stylings a b,
+.content-stylings a strong,
+.content-stylings a em,
+.content-stylings a small,
+.content-stylings a * span,
+.content-stylings a * i,
+.content-stylings a * b,
+.content-stylings a * strong,
+.content-stylings a * em,
+.content-stylings a * small {
+  color: #3bb24a !important;
+}
+.content-stylings a:hover,
+.content-stylings a *:hover {
+  text-decoration: underline;
+}
+.content-stylings h1,
+.content-stylings h2,
+.content-stylings h3,
+.content-stylings h4,
+.content-stylings h5,
+.content-stylings h6 {
+  text-align: left !important;
+  letter-spacing: -0.06em !important;
+  font-weight: 700 !important;
+}
+.content-stylings p {
+  letter-spacing: -0.04em;
+}
+.content-stylings h1,
+.content-stylings h2,
+.content-stylings h3,
+.content-stylings h4,
+.content-stylings h5,
+.content-stylings h6,
+.content-stylings p {
+  margin-bottom: 24px !important;
+  margin-top: 0 !important;
+}
+@media (max-width: 991.98px) {
+  .content-stylings h1,
+  .content-stylings h2,
+  .content-stylings h3,
+  .content-stylings h4,
+  .content-stylings h5,
+  .content-stylings h6,
+  .content-stylings p {
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h1,
+  .content-stylings h2,
+  .content-stylings h3,
+  .content-stylings h4,
+  .content-stylings h5,
+  .content-stylings h6,
+  .content-stylings p {
+    margin-bottom: 16px !important;
+  }
+}
+.content-stylings h1 b,
+.content-stylings h1 strong,
+.content-stylings h2 b,
+.content-stylings h2 strong,
+.content-stylings h3 b,
+.content-stylings h3 strong,
+.content-stylings h4 b,
+.content-stylings h4 strong,
+.content-stylings h5 b,
+.content-stylings h5 strong,
+.content-stylings h6 b,
+.content-stylings h6 strong,
+.content-stylings p b,
+.content-stylings p strong {
+  font-weight: 700 !important;
+  color: #121212 !important;
+}
+.content-stylings h1 a,
+.content-stylings h1 a *,
+.content-stylings h2 a,
+.content-stylings h2 a *,
+.content-stylings h3 a,
+.content-stylings h3 a *,
+.content-stylings h4 a,
+.content-stylings h4 a *,
+.content-stylings h5 a,
+.content-stylings h5 a *,
+.content-stylings h6 a,
+.content-stylings h6 a *,
+.content-stylings p a,
+.content-stylings p a * {
+  color: #3bb24a !important;
+}
+.content-stylings h1 a span,
+.content-stylings h1 a i,
+.content-stylings h1 a b,
+.content-stylings h1 a strong,
+.content-stylings h1 a em,
+.content-stylings h1 a small,
+.content-stylings h1 a * span,
+.content-stylings h1 a * i,
+.content-stylings h1 a * b,
+.content-stylings h1 a * strong,
+.content-stylings h1 a * em,
+.content-stylings h1 a * small,
+.content-stylings h2 a span,
+.content-stylings h2 a i,
+.content-stylings h2 a b,
+.content-stylings h2 a strong,
+.content-stylings h2 a em,
+.content-stylings h2 a small,
+.content-stylings h2 a * span,
+.content-stylings h2 a * i,
+.content-stylings h2 a * b,
+.content-stylings h2 a * strong,
+.content-stylings h2 a * em,
+.content-stylings h2 a * small,
+.content-stylings h3 a span,
+.content-stylings h3 a i,
+.content-stylings h3 a b,
+.content-stylings h3 a strong,
+.content-stylings h3 a em,
+.content-stylings h3 a small,
+.content-stylings h3 a * span,
+.content-stylings h3 a * i,
+.content-stylings h3 a * b,
+.content-stylings h3 a * strong,
+.content-stylings h3 a * em,
+.content-stylings h3 a * small,
+.content-stylings h4 a span,
+.content-stylings h4 a i,
+.content-stylings h4 a b,
+.content-stylings h4 a strong,
+.content-stylings h4 a em,
+.content-stylings h4 a small,
+.content-stylings h4 a * span,
+.content-stylings h4 a * i,
+.content-stylings h4 a * b,
+.content-stylings h4 a * strong,
+.content-stylings h4 a * em,
+.content-stylings h4 a * small,
+.content-stylings h5 a span,
+.content-stylings h5 a i,
+.content-stylings h5 a b,
+.content-stylings h5 a strong,
+.content-stylings h5 a em,
+.content-stylings h5 a small,
+.content-stylings h5 a * span,
+.content-stylings h5 a * i,
+.content-stylings h5 a * b,
+.content-stylings h5 a * strong,
+.content-stylings h5 a * em,
+.content-stylings h5 a * small,
+.content-stylings h6 a span,
+.content-stylings h6 a i,
+.content-stylings h6 a b,
+.content-stylings h6 a strong,
+.content-stylings h6 a em,
+.content-stylings h6 a small,
+.content-stylings h6 a * span,
+.content-stylings h6 a * i,
+.content-stylings h6 a * b,
+.content-stylings h6 a * strong,
+.content-stylings h6 a * em,
+.content-stylings h6 a * small,
+.content-stylings p a span,
+.content-stylings p a i,
+.content-stylings p a b,
+.content-stylings p a strong,
+.content-stylings p a em,
+.content-stylings p a small,
+.content-stylings p a * span,
+.content-stylings p a * i,
+.content-stylings p a * b,
+.content-stylings p a * strong,
+.content-stylings p a * em,
+.content-stylings p a * small {
+  color: #3bb24a !important;
+}
+.content-stylings h1 {
+  font-size: 38px !important;
+}
+@media (max-width: 1199.98px) {
+  .content-stylings h1 {
+    font-size: 36px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-stylings h1 {
+    font-size: 32px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h1 {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings h1 {
+    font-size: 28px !important;
+  }
+}
+.content-stylings h2 {
+  font-size: 36px;
+}
+@media (max-width: 1199.98px) {
+  .content-stylings h2 {
+    font-size: 34px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-stylings h2 {
+    font-size: 32px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h2 {
+    font-size: 28px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings h2 {
+    font-size: 24px !important;
+  }
+}
+.content-stylings h3 {
+  font-size: 32px !important;
+}
+@media (max-width: 1199.98px) {
+  .content-stylings h3 {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-stylings h3 {
+    font-size: 28px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h3 {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings h3 {
+    font-size: 22px !important;
+  }
+}
+.content-stylings h4 {
+  font-size: 28px !important;
+}
+@media (max-width: 1199.98px) {
+  .content-stylings h4 {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-stylings h4 {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h4 {
+    font-size: 22px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings h4 {
+    font-size: 20px !important;
+  }
+}
+.content-stylings h5 {
+  font-size: 26px !important;
+}
+@media (max-width: 1199.98px) {
+  .content-stylings h5 {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-stylings h5 {
+    font-size: 22px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h5 {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings h5 {
+    font-size: 18px !important;
+  }
+}
+.content-stylings h6 {
+  font-size: 24px !important;
+}
+@media (max-width: 1199.98px) {
+  .content-stylings h6 {
+    font-size: 22px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-stylings h6 {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings h6 {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings h6 {
+    font-size: 16px !important;
+  }
+}
+.content-stylings p {
+  font-size: 18px !important;
+  color: #121212 !important;
+}
+@media (max-width: 991.98px) {
+  .content-stylings p {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings p {
+    font-size: 14px !important;
+  }
+}
+.content-stylings img {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  border-radius: 20px;
+}
+@media (max-width: 767.98px) {
+  .content-stylings img {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+}
+.content-stylings h1,
+.content-stylings h2,
+.content-stylings h3,
+.content-stylings h4,
+.content-stylings h5,
+.content-stylings h6 {
+  scroll-margin-top: 100px;
+}
+.content-stylings h1:has(+ p),
+.content-stylings h2:has(+ p),
+.content-stylings h3:has(+ p),
+.content-stylings h4:has(+ p),
+.content-stylings h5:has(+ p),
+.content-stylings h6:has(+ p) {
+  margin-bottom: 12px !important;
+}
+.content-stylings h1:has(+ ul), .content-stylings h1:has(+ ol),
+.content-stylings h2:has(+ ul),
+.content-stylings h2:has(+ ol),
+.content-stylings h3:has(+ ul),
+.content-stylings h3:has(+ ol),
+.content-stylings h4:has(+ ul),
+.content-stylings h4:has(+ ol),
+.content-stylings h5:has(+ ul),
+.content-stylings h5:has(+ ol),
+.content-stylings h6:has(+ ul),
+.content-stylings h6:has(+ ol) {
+  margin-bottom: 12px !important;
+}
+.content-stylings ol {
+  list-style-type: auto !important;
+  padding-left: 28px !important;
+  margin-bottom: 24px !important;
+}
+@media (max-width: 991.98px) {
+  .content-stylings ol {
+    padding-left: 24px !important;
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings ol {
+    padding-left: 20px !important;
+    margin-bottom: 16px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings ol {
+    padding-left: 16px !important;
+  }
+}
+.content-stylings ol:not([class]) > li::marker {
+  color: #121212;
+}
+.content-stylings ol li {
+  margin-bottom: 8px !important;
+}
+.content-stylings ol b,
+.content-stylings ol strong {
+  font-weight: 700 !important;
+  color: #121212 !important;
+}
+.content-stylings ul {
+  margin-bottom: 24px !important;
+}
+@media (max-width: 991.98px) {
+  .content-stylings ul {
+    padding-left: 24px !important;
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings ul {
+    padding-left: 20px !important;
+    margin-bottom: 16px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-stylings ul {
+    padding-left: 16px !important;
+  }
+}
+.content-stylings ul:not([class]) > li::marker {
+  color: #121212;
+}
+.content-stylings ul b,
+.content-stylings ul strong {
+  font-weight: 700 !important;
+  color: #121212 !important;
+}
+.content-stylings ul li {
+  margin-bottom: 8px !important;
+}
+.content-stylings table {
+  margin-bottom: 24px;
+}
+.content-stylings table td {
+  padding: 12px 10px;
+}
+@media (max-width: 991.98px) {
+  .content-stylings table {
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .content-stylings table {
+    margin-bottom: 16px !important;
+  }
 }
 
 .asms-contact-segment-container {
