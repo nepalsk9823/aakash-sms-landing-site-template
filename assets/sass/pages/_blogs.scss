@@ -1,8 +1,10 @@
 @use "../abstracts/colors" as *;
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
 @use "../mixins/scrollbar" as *;
 @use "../abstracts/functions" as *;
+@use "sass:map";
 
 .asms-blogs-segment {
   .cards-list {
@@ -124,72 +126,18 @@
       }
     }
   }
-}
 
-.content-stylings {
-  @include breakpoint-down(lg) {
-    font-size: 16px !important;
-  }
-
-  @include breakpoint-down(md) {
-    font-size: 14px !important;
-  }
-
-  a,
-  a * {
-    color: color("primary") !important;
-    span,
-    i,
-    b,
-    strong,
-    em,
-    small {
-      color: color("primary") !important;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: left !important;
-    letter-spacing: -0.06em !important;
-    font-weight: 700 !important;
-  }
-
-  p {
-    letter-spacing: -0.04em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin-bottom: 24px !important;
-    margin-top: 0 !important;
-
-    @include breakpoint-down(lg) {
-      margin-bottom: 20px !important;
-    }
-
+  .content-stylings {
+    @include text-font-sizes(map.get($text-sizes, lg));
+    
+    // @include breakpoint-down(lg) {
+    //   font-size: 16px !important;
+    // }
+  
     @include breakpoint-down(md) {
-      margin-bottom: 16px !important;
+      font-size: 14px !important;
     }
-
-    b,
-    strong {
-      font-weight: 700 !important;
-      color: color("night") !important;
-    }
+  
     a,
     a * {
       color: color("primary") !important;
@@ -201,256 +149,311 @@
       small {
         color: color("primary") !important;
       }
+  
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
-
-  h1 {
-    font-size: 38px !important;
-
-    @include breakpoint-down(xl) {
-      font-size: 36px !important;
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: left !important;
+      letter-spacing: -0.06em !important;
+      font-weight: 700 !important;
     }
-
-    @include breakpoint-down(lg) {
+  
+    p, ul ol, dl {
+      letter-spacing: -0.04em;
+      @include text-font-sizes(map.get($text-sizes, lg));
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-bottom: 20px !important;
+      margin-top: 0 !important;
+  
+      @include breakpoint-down(lg) {
+        margin-bottom: 20px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        margin-bottom: 16px !important;
+      }
+  
+      b,
+      strong {
+        font-weight: 700 !important;
+        color: color("night") !important;
+      }
+      a,
+      a * {
+        color: color("primary") !important;
+        span,
+        i,
+        b,
+        strong,
+        em,
+        small {
+          color: color("primary") !important;
+        }
+      }
+    }
+  
+    h1 {
+      font-size: 38px !important;
+  
+      @include breakpoint-down(xl) {
+        font-size: 36px !important;
+      }
+  
+      @include breakpoint-down(lg) {
+        font-size: 32px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 30px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        font-size: 28px !important;
+      }
+    }
+  
+    h2 {
+      font-size: 36px;
+  
+      @include breakpoint-down(xl) {
+        font-size: 34px !important;
+      }
+  
+      @include breakpoint-down(lg) {
+        font-size: 32px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 28px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        font-size: 24px !important;
+      }
+    }
+  
+    h3 {
       font-size: 32px !important;
+  
+      @include breakpoint-down(xl) {
+        font-size: 30px !important;
+      }
+  
+      @include breakpoint-down(lg) {
+        font-size: 28px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 24px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        font-size: 22px !important;
+      }
     }
-
-    @include breakpoint-down(md) {
-      font-size: 30px !important;
-    }
-
-    @include breakpoint-down(sm) {
+  
+    h4 {
       font-size: 28px !important;
+  
+      @include breakpoint-down(xl) {
+        font-size: 26px !important;
+      }
+  
+      @include breakpoint-down(lg) {
+        font-size: 24px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 22px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        font-size: 20px !important;
+      }
     }
-  }
-
-  h2 {
-    font-size: 36px;
-
-    @include breakpoint-down(xl) {
-      font-size: 34px !important;
-    }
-
-    @include breakpoint-down(lg) {
-      font-size: 32px !important;
-    }
-
-    @include breakpoint-down(md) {
-      font-size: 28px !important;
-    }
-
-    @include breakpoint-down(sm) {
-      font-size: 24px !important;
-    }
-  }
-
-  h3 {
-    font-size: 32px !important;
-
-    @include breakpoint-down(xl) {
-      font-size: 30px !important;
-    }
-
-    @include breakpoint-down(lg) {
-      font-size: 28px !important;
-    }
-
-    @include breakpoint-down(md) {
-      font-size: 24px !important;
-    }
-
-    @include breakpoint-down(sm) {
-      font-size: 22px !important;
-    }
-  }
-
-  h4 {
-    font-size: 28px !important;
-
-    @include breakpoint-down(xl) {
+  
+    h5 {
       font-size: 26px !important;
+  
+      @include breakpoint-down(xl) {
+        font-size: 24px !important;
+      }
+  
+      @include breakpoint-down(lg) {
+        font-size: 22px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 20px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        font-size: 18px !important;
+      }
     }
-
-    @include breakpoint-down(lg) {
+  
+    h6 {
       font-size: 24px !important;
+  
+      @include breakpoint-down(xl) {
+        font-size: 22px !important;
+      }
+  
+      @include breakpoint-down(lg) {
+        font-size: 20px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 18px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        font-size: 16px !important;
+      }
     }
-
-    @include breakpoint-down(md) {
-      font-size: 22px !important;
+  
+    p {
+      @include breakpoint-down(lg) {
+        font-size: 16px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        font-size: 14px !important;
+      }
     }
-
-    @include breakpoint-down(sm) {
-      font-size: 20px !important;
-    }
-  }
-
-  h5 {
-    font-size: 26px !important;
-
-    @include breakpoint-down(xl) {
-      font-size: 24px !important;
-    }
-
-    @include breakpoint-down(lg) {
-      font-size: 22px !important;
-    }
-
-    @include breakpoint-down(md) {
-      font-size: 20px !important;
-    }
-
-    @include breakpoint-down(sm) {
-      font-size: 18px !important;
-    }
-  }
-
-  h6 {
-    font-size: 24px !important;
-
-    @include breakpoint-down(xl) {
-      font-size: 22px !important;
-    }
-
-    @include breakpoint-down(lg) {
-      font-size: 20px !important;
-    }
-
-    @include breakpoint-down(md) {
-      font-size: 18px !important;
-    }
-
-    @include breakpoint-down(sm) {
-      font-size: 16px !important;
-    }
-  }
-
-  p {
-    font-size: 18px !important;
-    color: color("night") !important;
-
-    @include breakpoint-down(lg) {
-      font-size: 16px !important;
-    }
-
-    @include breakpoint-down(md) {
-      font-size: 14px !important;
-    }
-  }
-
-  img {
-    margin-top: 28px;
-    margin-bottom: 28px;
-    border-radius: 20px;
-
-    @include breakpoint-down(md) {
+  
+    figure {
       margin-top: 24px;
       margin-bottom: 24px;
-      border-radius: 16px;
+  
+      figcaption {
+        text-align: center;
+        font-weight: 600;
+        font-style: italic;
+      }
+  
+      @include breakpoint-down(md) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+  
+      @include breakpoint-down(sm) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
     }
-
-    @include breakpoint-down(sm) {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      scroll-margin-top: 100px;
+  
+      &:has(+ p) {
+        margin-bottom: 16px !important;
+      }
+  
+      &:has(+ ul),
+      &:has(+ ol) {
+        margin-bottom: 16px !important;
+      }
     }
-  }
+  
+    ol {
+      list-style-type: auto !important;
+      margin-bottom: 24px !important;
+      gap: 12px;
+  
+      @include breakpoint-down(lg) {
+        margin-bottom: 20px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        margin-bottom: 16px !important;
+      }
+  
+      &:not([class]) > li::marker {
+        color: color("night");
+      }
+  
+      b,
+      strong {
+        font-weight: 700 !important;
+        color: color("night") !important;
+      }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 100px;
-
-    &:has(+ p) {
-      margin-bottom: 12px !important;
+      li{
+        font-weight: 500;
+      }
     }
+  
+    ul {
+      margin-bottom: 24px !important;
+      @extend %text-base;
+      gap: 12px;
+  
+      @include breakpoint-down(lg) {
+        padding-left: 24px !important;
+        margin-bottom: 20px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        padding-left: 20px !important;
+        margin-bottom: 16px !important;
+      }
+  
+      @include breakpoint-down(sm) {
+        padding-left: 16px !important;
+      }
+  
+      &:not([class]) > li::marker {
+        color: color("night");
+      }
+  
+      b,
+      strong {
+        font-weight: 700 !important;
+        color: color("night") !important;
+      }
 
-    &:has(+ ul),
-    &:has(+ ol) {
-      margin-bottom: 12px !important;
+      li{
+        font-weight: 500;
+      }
     }
-  }
-
-  ol {
-    list-style-type: auto !important;
-    padding-left: 28px !important;
-    margin-bottom: 24px !important;
-
-    @include breakpoint-down(lg) {
-      padding-left: 24px !important;
-      margin-bottom: 20px !important;
-    }
-
-    @include breakpoint-down(md) {
-      padding-left: 20px !important;
-      margin-bottom: 16px !important;
-    }
-
-    @include breakpoint-down(sm) {
-      padding-left: 16px !important;
-    }
-
-    &:not([class]) > li::marker {
-      color: color("night");
-    }
-
-    li {
-      margin-bottom: 8px !important;
-    }
-
-    b,
-    strong {
-      font-weight: 700 !important;
-      color: color("night") !important;
-    }
-  }
-
-  ul {
-    margin-bottom: 24px !important;
-
-    @include breakpoint-down(lg) {
-      padding-left: 24px !important;
-      margin-bottom: 20px !important;
-    }
-
-    @include breakpoint-down(md) {
-      padding-left: 20px !important;
-      margin-bottom: 16px !important;
-    }
-
-    @include breakpoint-down(sm) {
-      padding-left: 16px !important;
-    }
-
-    &:not([class]) > li::marker {
-      color: color("night");
-    }
-
-    b,
-    strong {
-      font-weight: 700 !important;
-      color: color("night") !important;
-    }
-    li {
-      margin-bottom: 8px !important;
-    }
-  }
-
-  table {
-    margin-bottom: 24px;
-
-    td {
-      padding: 12px 10px;
-    }
-
-    @include breakpoint-down(lg) {
-      margin-bottom: 20px !important;
-    }
-
-    @include breakpoint-down(md) {
-      margin-bottom: 16px !important;
+  
+    table {
+      margin-bottom: 24px;
+  
+      td {
+        padding: 12px 10px;
+      }
+  
+      @include breakpoint-down(lg) {
+        margin-bottom: 20px !important;
+      }
+  
+      @include breakpoint-down(md) {
+        margin-bottom: 16px !important;
+      }
     }
   }
 }
+
