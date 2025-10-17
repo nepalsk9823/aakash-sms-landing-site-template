@@ -36,11 +36,11 @@
     &-content{
       height: 114px;
       background: linear-gradient(rgb(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.9) 100%);
+
+      @include breakpoint-down(lg){
+        height: auto;
+      }
     }
   }
 }
 
-//  CENTERED CARDS
-.asms-centered-cards-segment{
-  
-}

@@ -26097,6 +26097,11 @@ input:-webkit-autofill {
   height: 114px;
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.9) 100%);
 }
+@media (max-width: 991.98px) {
+  .industry-cards .industry-card-content {
+    height: auto;
+  }
+}
 
 .breadcrumb {
   row-gap: 8px;
