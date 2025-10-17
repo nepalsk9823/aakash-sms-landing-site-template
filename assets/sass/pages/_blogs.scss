@@ -7,24 +7,29 @@
 @use "sass:map";
 
 .asms-blogs-segment {
-  .cards-list {
-    margin-left: -12px !important;
-    margin-right: -12px !important;
-  }
-
   .card-item {
     &-wrapper {
-      @include breakpoint-down(md) {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
+     width: calc(33.3333% - 14px);
+     transition: $default-transition;
+     will-change: opacity, transform;
+     transform: scale(1);
+     opacity: 1;
+     box-sizing: border-box;
+
+     @include breakpoint-down(lg){
+      width: calc(50% - 10px);
+     }
+
+     @include breakpoint-down(md){
+      width: 100%;
+     }
     }
   }
 }
 
 .filters-button-group {
   button {
-    &.is-checked {
+    &.active {
       background: color("primary");
       color: color("white") !important;
       border-color: color("primary") !important;

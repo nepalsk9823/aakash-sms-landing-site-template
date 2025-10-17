@@ -27288,18 +27288,26 @@ input:-webkit-autofill {
   grid-template-columns: 60px auto;
 }
 
-.asms-blogs-segment .cards-list {
-  margin-left: -12px !important;
-  margin-right: -12px !important;
+.asms-blogs-segment .card-item-wrapper {
+  width: calc(33.3333% - 14px);
+  transition: all ease-in-out 300ms;
+  will-change: opacity, transform;
+  transform: scale(1);
+  opacity: 1;
+  box-sizing: border-box;
+}
+@media (max-width: 991.98px) {
+  .asms-blogs-segment .card-item-wrapper {
+    width: calc(50% - 10px);
+  }
 }
 @media (max-width: 767.98px) {
   .asms-blogs-segment .card-item-wrapper {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 100%;
   }
 }
 
-.filters-button-group button.is-checked {
+.filters-button-group button.active {
   background: #3bb24a;
   color: #ffffff !important;
   border-color: #3bb24a !important;
