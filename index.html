@@ -19,6 +19,9 @@
   <!-- Preconnect to Google Fonts domains for faster DNS lookup and TLS handshake -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preconnect to critical CDNs -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <!-- Preload the stylesheet to start fetching it early -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
     as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -61,7 +64,8 @@
           <div
             class="asms-navbar-menu-head d-xl-none d-flex align-items-center justify-content-between gap-3 mb-custom-4">
             <a href="index.html" class="asms-navbar-menu-logo d-inline-flex align-items-center">
-              <img class="h-auto" src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" width="140" height="51" />
+              <img class="h-auto" src="assets/images/site/logo_default.svg" alt="Aakash SMS brand logo" width="140"
+                height="51" />
             </a>
             <button aria-label="Close menu" type="button" class="asms-navbar-close-btn icon-btn icon-28">
               <img class="icon-24" src="assets/icons/close_dark.svg" alt="" />
@@ -341,7 +345,7 @@
       <!-- HOME BANNER SECTION -->
       <section class="asms-home-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
         <div class="container asms-home-banner-container segment-pt-80 segment-pb-140">
-          <div class="home-banner-split d-grid lg-grid-cols-2 grid-cols-1 xl-gap-10 lg-gap">
+          <div class="home-banner-split d-grid lg-grid-cols-2 grid-cols-1 xl-gap-10 lg-gap-8 gap-6">
             <div class="home-banner-split-content text-center text-sm-start">
               <h1
                 class="home-banner-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 mb-custom-4 mt-0 leading-extra-tight">
