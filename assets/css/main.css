@@ -24970,6 +24970,23 @@ a:visited, a:link {
   }
 }
 
+.col-reverse .double-col-segment-split-img {
+  order: 2;
+}
+.col-reverse .double-col-segment-split-content {
+  order: 1;
+}
+@media (max-width: 991.98px) {
+  .col-reverse.lg-grid-cols-2 .double-col-segment-split-img {
+    order: 1;
+  }
+}
+@media (max-width: 991.98px) {
+  .col-reverse.lg-grid-cols-2 .double-col-segment-split-content {
+    order: 2;
+  }
+}
+
 .scrollbar-x {
   overflow-x: scroll;
 }
