@@ -5,15 +5,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Aakash SMS - Service API Page</title>
-  <meta name="description" content="AakashSMS is Nepal's leading bulk SMS service provider offering reliable, fast, and affordable SMS solutions for businesses, schools, and organizations. Send promotional, transactional, and OTP messages instantly to any network across Nepal." />
+  <meta name="description"
+    content="AakashSMS is Nepal's leading bulk SMS service provider offering reliable, fast, and affordable SMS solutions for businesses, schools, and organizations. Send promotional, transactional, and OTP messages instantly to any network across Nepal." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="AakashSMS, bulk SMS Nepal, SMS gateway Nepal, SMS service provider, send bulk SMS, OTP SMS Nepal, promotional SMS, transactional SMS, business messaging Nepal, SMS marketing Nepal, SMS API Nepal" />
+  <meta name="keywords"
+    content="AakashSMS, bulk SMS Nepal, SMS gateway Nepal, SMS service provider, send bulk SMS, OTP SMS Nepal, promotional SMS, transactional SMS, business messaging Nepal, SMS marketing Nepal, SMS API Nepal" />
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+  <!-- ⚡️ Preconnects: establish early connections -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <!-- Preconnect to Google Fonts domains for faster DNS lookup and TLS handshake -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,8 +57,10 @@
       <div class="asms-navbar-overlay w-100 h-100 position-fixed start-0 top-0 default-transition"></div>
       <div class="asms-navbar container d-flex align-items-center justify-content-between xl-gap-4 lg-gap-3 gap-2">
         <a href="index.html" class="asms-logo d-inline-flex align-items-center">
-          <img class="logo-default h-auto" src="assets/images/site/logo_default.svg" width="198" height="72" alt="Aakash SMS brand logo" />
-          <img class="logo-white d-none h-auto" src="assets/images/site/logo_white.svg" width="198" height="72" alt="Aakash SMS brand white logo" />
+          <img class="logo-default h-auto" src="assets/images/site/logo_default.svg" width="198" height="72"
+            alt="Aakash SMS brand logo" />
+          <img class="logo-white d-none h-auto" src="assets/images/site/logo_white.svg" width="198" height="72"
+            alt="Aakash SMS brand white logo" />
         </a>
         <div class="asms-navbar-menu-wrapper d-flex flex-column">
           <div
@@ -293,7 +302,8 @@
               </a>
             </li>
           </ul>
-          <div class="contacts-block-social d-flex justify-content-center gap-2 flex-wrap align-items-center d-xl-none pt-custom-2 border-t-grey-1-1">
+          <div
+            class="contacts-block-social d-flex justify-content-center gap-2 flex-wrap align-items-center d-xl-none pt-custom-2 border-t-grey-1-1">
             <a href="#" class="contacts-social-link default-transition icon-32">
               <img class="icon-20" src="assets/icons/facebook_night_icon.svg" alt="facebook icon" />
             </a>
@@ -332,531 +342,534 @@
     </header>
     <!-- EOF HEADER -->
 
-    <!--  API SERVICE SECTION -->
-    <section class="asms-svc-api-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
-      <div class="container asms-svc-api-banner-container segment-pt-80 segment-pb-100">
-        <div class="svc-api-banner-split d-grid gap-12 grid-cols-60-auto">
-          <div class="svc-api-banner-split-content">
-            <h1
-              class="svc-api-banner-split-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
-              Enhance customer communication with seamless SMS API
-              integration.
-            </h1>
-            <div class="content-stylings text-lg font-semibold svc-bulksms-banner-split-text">
-              <p>
-                Enable personalized messaging, automated workflows, and
-                real-time delivery tracking with our SMS API.
-              </p>
-              <ul>
-                <li>Connect your system effortlessly with our SMS API.</li>
-                <li>Ensure fast and secure message transmission.</li>
-                <li>Streamline customer interactions with instant SMS.</li>
-              </ul>
+    <main>
+      <!--  API SERVICE SECTION -->
+      <section class="asms-svc-api-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
+        <div class="container asms-svc-api-banner-container segment-pt-80 segment-pb-100">
+          <div class="svc-api-banner-split d-grid gap-12 grid-cols-60-auto">
+            <div class="svc-api-banner-split-content">
+              <h1
+                class="svc-api-banner-split-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
+                Enhance customer communication with seamless SMS API
+                integration.
+              </h1>
+              <div class="content-stylings text-lg font-semibold svc-bulksms-banner-split-text">
+                <p>
+                  Enable personalized messaging, automated workflows, and
+                  real-time delivery tracking with our SMS API.
+                </p>
+                <ul>
+                  <li>Connect your system effortlessly with our SMS API.</li>
+                  <li>Ensure fast and secure message transmission.</li>
+                  <li>Streamline customer interactions with instant SMS.</li>
+                </ul>
+              </div>
+              <div
+                class="svc-api-banner-split-btns d-flex align-items-center justify-content-start gap-3 xl-mt-custom-8 lg-mt-custom-7 md-mt-custom-6 mt-custom-5">
+                <a href="#" class="btn btn-primary btn-lg">
+                  <span class="btn-text">Try for Free</span>
+                </a>
+              </div>
             </div>
+            <div class="svc-api-banner-split-img d-flex align-items-center justify-content-end">
+              <img src="assets/images/services/api_service_banner_img.png" alt="home banner image"
+                fetchpriority="high" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EOF  API SERVICE SECTION -->
+
+      <!-- HERO TEXT SECTION -->
+      <section class="asms-hero-text segment-py-80 bg-grey-1">
+        <div class="asms-hero-text-container container">
+          <div class="hero-text-content">
             <div
-              class="svc-api-banner-split-btns d-flex align-items-center justify-content-start gap-3 xl-mt-custom-8 lg-mt-custom-7 md-mt-custom-6 mt-custom-5">
-              <a href="#" class="btn btn-primary btn-lg">
-                <span class="btn-text">Try for Free</span>
-              </a>
-            </div>
-          </div>
-          <div class="svc-api-banner-split-img d-flex align-items-center justify-content-end">
-            <img src="assets/images/services/api_service_banner_img.png" alt="home banner image" fetchpriority="high" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- EOF  API SERVICE SECTION -->
-
-    <!-- HERO TEXT SECTION -->
-    <section class="asms-hero-text segment-py-80 bg-grey-1">
-      <div class="asms-hero-text-container container">
-        <div class="hero-text-content">
-          <div
-            class="segment-heading d-flex align-items-start justify-content-center gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3 text-center">
-            <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-              Bulk SMS API Integration Services in Nepal
-            </h2>
-          </div>
-          <div class="content-stylings text-night text-lg text-center">
-            <p>
-              Bulk SMS Gateway API allows businesses to send bulk messages
-              efficiently across Nepal and globally. It integrates seamlessly
-              into applications, websites, CRMs, ERPs, and other corporate
-              software, enabling real-time messaging. Our expert team ensures
-              smooth integration with secure web interfaces tailored to your
-              needs. With a high delivery rate and instant messaging
-              capability, you can send and receive SMS from any device
-              effortlessly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- EOF HERO TEXT SECTION -->
-
-    <!-- HIGHLIGHT CARD GROUP SEGMENT -->
-    <section class="asms-highlight-card-group-segment segment-py-100">
-      <div class="asms-highlight-card-group-segment-container container">
-        <div
-          class="segment-heading d-flex flex-column align-items-center justify-content-start gap-3 mb-custom-2 text-center mx-w-725">
-          <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-            Features of Aakash SMS Gateway API
-          </h2>
-          <p class="segment-heading-lead text-night text-base font-semibold">
-            Get quick Bulk SMS Gateway API allows businesses to send bulk
-            messages efficiently across Nepal and globally. It integrates
-            seamlessly into applications, websites, CRMs, ERPs, and other
-            corporate software, enabling real-time messaging.
-          </p>
-        </div>
-        <div
-          class="segment-mt-40 cards-list d-grid md-grid-cols-3 sm-grid-cols-2 grid-cols-1 sm-gap-4 gap-3 mx-auto w-100">
-          <div
-            class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
-            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
-              <img class="icon-24" src="assets/icons/message_sms_outline_white_icon.png" alt="message sms icon" />
-            </div>
-            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
-              <h3 class="text-2xl text-night font-semibold">
-                Broadcast SMS Quickly
-              </h3>
-              <div class="content-stylings text-gray text-base">
-                Send SMS to all your contacts within seconds using the Bulk
-                SMS Gateway.
-              </div>
-            </div>
-          </div>
-          <div
-            class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
-            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
-              <img class="icon-24" src="assets/icons/megaphone_outline_white_icon.svg"
-                alt="Shipment and Campaign Tracking icon" />
-            </div>
-            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
-              <h3 class="text-2xl text-night font-semibold">
-                Shipment and Campaign Tracking
-              </h3>
-              <div class="content-stylings text-gray text-base">
-                Track shipments and campaign statistics online to monitor SMS
-                performance.
-              </div>
-            </div>
-          </div>
-          <div
-            class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
-            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
-              <img class="icon-24" src="assets/icons/messages_outline_white_icon.svg"
-                alt="Customer Feedback Collection icon" />
-            </div>
-            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
-              <h3 class="text-2xl text-night font-semibold">
-                Customer Feedback Collection
-              </h3>
-              <div class="content-stylings text-gray text-base">
-                Conduct polls and survey requests effortlessly for feedback.
-              </div>
-            </div>
-          </div>
-          <div
-            class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
-            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
-              <img class="icon-24" src="assets/icons/key_outline_white_icon.svg"
-                alt="Two-Factor Authentication (2FA) icon" />
-            </div>
-            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
-              <h3 class="text-2xl text-night font-semibold">
-                Two-Factor Authentication (2FA)
-              </h3>
-              <div class="content-stylings text-gray text-base">
-                Supports OTP SMS for secure user verification.
-              </div>
-            </div>
-          </div>
-          <div
-            class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
-            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
-              <img class="icon-24" src="assets/icons/gauge_outline_white_icon.svg"
-                alt="Multi-Featured Dashboard icon" />
-            </div>
-            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
-              <h3 class="text-2xl text-night font-semibold">
-                Multi-Featured Dashboard
-              </h3>
-              <div class="content-stylings text-gray text-base">
-                Access a comprehensive dashboard for managing Bulk SMS and
-                Gateway services.
-              </div>
-            </div>
-          </div>
-          <div
-            class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
-            <div class="card-icon icon-52 bg-light-cyprus rounded-12">
-              <img class="icon-24" src="assets/icons/signal_bars_outline_white_icon.svg"
-                alt="Low Latency and High Delivery icon" />
-            </div>
-            <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
-              <h3 class="text-2xl text-night font-semibold">
-                Low Latency and High Delivery
-              </h3>
-              <div class="content-stylings text-gray text-base">
-                Ensures fast message delivery with high engagement rates.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- EOF HIGHLIGHT CARD GROUP SEGMENT -->
-
-    <!-- API SERVICE - SECTION ONE -->
-    <section class="asms-svc-api-segment-01 segment-py-80 bg-grey-1">
-      <div class="asms-svc-api-segment-container container">
-        <div class="svc-api-segment-split d-grid align-items-center grid-cols-36-auto gap-12">
-          <div class="svc-api-segment-split-img">
-            <img src="assets/images/services/service_02_03_img.png"
-              alt="Effortless SMS Automation with API Integration" />
-          </div>
-          <div class="svc-api-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+              class="segment-heading d-flex align-items-start justify-content-center gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3 text-center">
               <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-                Effortless SMS Automation with API Integration
+                Bulk SMS API Integration Services in Nepal
               </h2>
             </div>
-            <div class="svc-api-segment-split-text content-stylings text-night text-lg">
+            <div class="content-stylings text-night text-lg text-center">
               <p>
-                Aakash SMS Gateway API delivers fast, reliable messaging to
-                180+ countries, supporting personalized texts, coupons, and
-                surveys. It features encrypted codes, easy integration, and
-                eliminates frequent logins. Expert support ensures a seamless
-                experience.
+                Bulk SMS Gateway API allows businesses to send bulk messages
+                efficiently across Nepal and globally. It integrates seamlessly
+                into applications, websites, CRMs, ERPs, and other corporate
+                software, enabling real-time messaging. Our expert team ensures
+                smooth integration with secure web interfaces tailored to your
+                needs. With a high delivery rate and instant messaging
+                capability, you can send and receive SMS from any device
+                effortlessly.
               </p>
-              <ul>
-                <li>
-                  Deliver messages seamlessly to 180+ countries with a robust
-                  and secure network.
-                </li>
-                <li>
-                  Easily integrate with websites, apps, and software for
-                  automated messaging.
-                </li>
-                <li>
-                  Protect your data with encrypted communication and secure
-                  authentication.
-                </li>
-              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- EOF API SERVICE - SECTION ONE -->
+      </section>
+      <!-- EOF HERO TEXT SECTION -->
 
-    <!-- API SERVICE - SECTION TWO -->
-    <section class="asms-svc-api-segment-02 segment-py-80">
-      <div class="asms-svc-api-segment-container container">
-        <div class="svc-api-segment-split d-grid align-items-center grid-cols-55-auto gap-12">
-          <div class="svc-api-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
-              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-                Who can use SMS Bulk Gateways? 
-              </h2>
-            </div>
-            <div class="svc-api-segment-split-text content-stylings text-night text-lg">
-              <p>
-                SMS API Integration enables affordable two-way communication
-                for businesses, including sending OTPs, booking confirmations,
-                and message tracking. It's perfect for industries like
-                banking, healthcare, schools, airlines, and retail. The
-                service supports flexible marketing campaigns for various
-                sectors.
-              </p>
-              <ul>
-                <li>Banks & Financial Institutions</li>
-                <li>Hospitals & Clinics</li>
-                <li>Schools & Universities</li>
-                <li>E-commerce & Retail Businesses</li>
-                <li>Airlines & Travel Agencies</li>
-                <li>Customer Support Centers</li>
-                <li>Government Agencies</li>
-              </ul>
-            </div>
-          </div>
-          <div class="svc-api-segment-split-img">
-            <img src="assets/images/services/service_02_04_img.png" alt="Who can use SMS Bulk Gateways? " />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- EOF API SERVICE - SECTION TWO -->
-
-    <!-- TRIAL CTA SECTION -->
-    <section class="asms-cta-trial segment-py-40 bg-light-cyprus">
-      <div class="asms-cta-trial-container container">
-        <div class="segment-heading d-flex flex-column align-items-center justify-content-center gap-3 text-center">
-          <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
-            Want to trial a Bulk SMS Service
-          </h2>
-          <p class="segment-heading-lead text-night text-base font-semibold">
-            Get quick Try sending a text to yourself today to experience how
-            bulk SMS works.
-          </p>
-          <a href="#" class="btn btn-primary btn-lg mt-custom-2">
-            <span class="btn-text">Start your trial</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- EOF TRIAL CTA SECTION -->
-
-    <!-- FAQ SECTION -->
-    <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
-      <div class="asms-faq-container container">
-        <div
-          class="faq-split mx-auto w-100 d-grid align-items-start xl-gap-12 lg-gap-10 md-gap-8 gap-6 grid-cols-28-auto">
-          <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
-            <div class="segment-heading-img mb-custom-3">
-              <img class="w-100" src="assets/icons/faq_question.svg" alt="" />
-            </div>
+      <!-- HIGHLIGHT CARD GROUP SEGMENT -->
+      <section class="asms-highlight-card-group-segment segment-py-100">
+        <div class="asms-highlight-card-group-segment-container container">
+          <div
+            class="segment-heading d-flex flex-column align-items-center justify-content-start gap-3 mb-custom-2 text-center mx-w-725">
             <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-              FAQs
+              Features of Aakash SMS Gateway API
             </h2>
             <p class="segment-heading-lead text-night text-base font-semibold">
-              Get quick answers to your questions about our phone system and
-              services. For more help, contact our support team!
+              Get quick Bulk SMS Gateway API allows businesses to send bulk
+              messages efficiently across Nepal and globally. It integrates
+              seamlessly into applications, websites, CRMs, ERPs, and other
+              corporate software, enabling real-time messaging.
             </p>
           </div>
-          <div class="faq-split-accordion accordion" id="accordionAsmsFaq" data-aos="fade-left">
+          <div
+            class="segment-mt-40 cards-list d-grid md-grid-cols-3 sm-grid-cols-2 grid-cols-1 sm-gap-4 gap-3 mx-auto w-100">
             <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="true"
-                  aria-controls="collapseOneFaq">
-                  How do I send bulk text messages in Nepal?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
+              class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
+              <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+                <img class="icon-24" src="assets/icons/message_sms_outline_white_icon.png" alt="message sms icon" />
+              </div>
+              <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+                <h3 class="text-2xl text-night font-semibold">
+                  Broadcast SMS Quickly
+                </h3>
+                <div class="content-stylings text-gray text-base">
+                  Send SMS to all your contacts within seconds using the Bulk
+                  SMS Gateway.
                 </div>
               </div>
             </div>
             <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFaq" aria-expanded="false"
-                  aria-controls="collapseTwoFaq">
-                  How long can a SMS be?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
+              class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
+              <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+                <img class="icon-24" src="assets/icons/megaphone_outline_white_icon.svg"
+                  alt="Shipment and Campaign Tracking icon" />
+              </div>
+              <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+                <h3 class="text-2xl text-night font-semibold">
+                  Shipment and Campaign Tracking
+                </h3>
+                <div class="content-stylings text-gray text-base">
+                  Track shipments and campaign statistics online to monitor SMS
+                  performance.
                 </div>
               </div>
             </div>
             <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFaq" aria-expanded="false"
-                  aria-controls="collapseThreeFaq">
-                  Is Bulk SMS compatible with the Nepalese or foreign
-                  language?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
+              class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
+              <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+                <img class="icon-24" src="assets/icons/messages_outline_white_icon.svg"
+                  alt="Customer Feedback Collection icon" />
+              </div>
+              <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+                <h3 class="text-2xl text-night font-semibold">
+                  Customer Feedback Collection
+                </h3>
+                <div class="content-stylings text-gray text-base">
+                  Conduct polls and survey requests effortlessly for feedback.
                 </div>
               </div>
             </div>
             <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFaq" aria-expanded="false"
-                  aria-controls="collapseFourFaq">
-                  What is Dynamic SMS? How to use it?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
+              class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
+              <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+                <img class="icon-24" src="assets/icons/key_outline_white_icon.svg"
+                  alt="Two-Factor Authentication (2FA) icon" />
+              </div>
+              <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+                <h3 class="text-2xl text-night font-semibold">
+                  Two-Factor Authentication (2FA)
+                </h3>
+                <div class="content-stylings text-gray text-base">
+                  Supports OTP SMS for secure user verification.
                 </div>
               </div>
             </div>
             <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFaq" aria-expanded="false"
-                  aria-controls="collapseFiveFaq">
-                  Can I have a trial of the services before buying them?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
+              class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
+              <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+                <img class="icon-24" src="assets/icons/gauge_outline_white_icon.svg"
+                  alt="Multi-Featured Dashboard icon" />
+              </div>
+              <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+                <h3 class="text-2xl text-night font-semibold">
+                  Multi-Featured Dashboard
+                </h3>
+                <div class="content-stylings text-gray text-base">
+                  Access a comprehensive dashboard for managing Bulk SMS and
+                  Gateway services.
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-item card border-0 xl-p-custom-7 lg-p-custom-6 p-custom-5 d-flex flex-column lg-gap-5 sm-gap-4 gap-3 align-items-center shadow-default rounded-12">
+              <div class="card-icon icon-52 bg-light-cyprus rounded-12">
+                <img class="icon-24" src="assets/icons/signal_bars_outline_white_icon.svg"
+                  alt="Low Latency and High Delivery icon" />
+              </div>
+              <div class="card-body p-0 d-flex flex-column gap-2 align-items-center text-center">
+                <h3 class="text-2xl text-night font-semibold">
+                  Low Latency and High Delivery
+                </h3>
+                <div class="content-stylings text-gray text-base">
+                  Ensures fast message delivery with high engagement rates.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EOF HIGHLIGHT CARD GROUP SEGMENT -->
+
+      <!-- API SERVICE - SECTION ONE -->
+      <section class="asms-svc-api-segment-01 segment-py-80 bg-grey-1">
+        <div class="asms-svc-api-segment-container container">
+          <div class="svc-api-segment-split d-grid align-items-center grid-cols-36-auto gap-12">
+            <div class="svc-api-segment-split-img">
+              <img src="assets/images/services/service_02_03_img.png"
+                alt="Effortless SMS Automation with API Integration" />
+            </div>
+            <div class="svc-api-segment-split-content">
+              <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+                <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                  Effortless SMS Automation with API Integration
+                </h2>
+              </div>
+              <div class="svc-api-segment-split-text content-stylings text-night text-lg">
+                <p>
+                  Aakash SMS Gateway API delivers fast, reliable messaging to
+                  180+ countries, supporting personalized texts, coupons, and
+                  surveys. It features encrypted codes, easy integration, and
+                  eliminates frequent logins. Expert support ensures a seamless
+                  experience.
+                </p>
+                <ul>
+                  <li>
+                    Deliver messages seamlessly to 180+ countries with a robust
+                    and secure network.
+                  </li>
+                  <li>
+                    Easily integrate with websites, apps, and software for
+                    automated messaging.
+                  </li>
+                  <li>
+                    Protect your data with encrypted communication and secure
+                    authentication.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EOF API SERVICE - SECTION ONE -->
+
+      <!-- API SERVICE - SECTION TWO -->
+      <section class="asms-svc-api-segment-02 segment-py-80">
+        <div class="asms-svc-api-segment-container container">
+          <div class="svc-api-segment-split d-grid align-items-center grid-cols-55-auto gap-12">
+            <div class="svc-api-segment-split-content">
+              <div class="segment-heading d-flex align-items-start gap-3 mb-custom-5">
+                <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                  Who can use SMS Bulk Gateways? 
+                </h2>
+              </div>
+              <div class="svc-api-segment-split-text content-stylings text-night text-lg">
+                <p>
+                  SMS API Integration enables affordable two-way communication
+                  for businesses, including sending OTPs, booking confirmations,
+                  and message tracking. It's perfect for industries like
+                  banking, healthcare, schools, airlines, and retail. The
+                  service supports flexible marketing campaigns for various
+                  sectors.
+                </p>
+                <ul>
+                  <li>Banks & Financial Institutions</li>
+                  <li>Hospitals & Clinics</li>
+                  <li>Schools & Universities</li>
+                  <li>E-commerce & Retail Businesses</li>
+                  <li>Airlines & Travel Agencies</li>
+                  <li>Customer Support Centers</li>
+                  <li>Government Agencies</li>
+                </ul>
+              </div>
+            </div>
+            <div class="svc-api-segment-split-img">
+              <img src="assets/images/services/service_02_04_img.png" alt="Who can use SMS Bulk Gateways? " />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EOF API SERVICE - SECTION TWO -->
+
+      <!-- TRIAL CTA SECTION -->
+      <section class="asms-cta-trial segment-py-40 bg-light-cyprus">
+        <div class="asms-cta-trial-container container">
+          <div class="segment-heading d-flex flex-column align-items-center justify-content-center gap-3 text-center">
+            <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
+              Want to trial a Bulk SMS Service
+            </h2>
+            <p class="segment-heading-lead text-night text-base font-semibold">
+              Get quick Try sending a text to yourself today to experience how
+              bulk SMS works.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg mt-custom-2">
+              <span class="btn-text">Start your trial</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- EOF TRIAL CTA SECTION -->
+
+      <!-- FAQ SECTION -->
+      <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
+        <div class="asms-faq-container container">
+          <div
+            class="faq-split mx-auto w-100 d-grid align-items-start xl-gap-12 lg-gap-10 md-gap-8 gap-6 grid-cols-28-auto">
+            <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
+              <div class="segment-heading-img mb-custom-3">
+                <img loading="lazy" decoding="async" class="w-100 h-auto" width="80" height="58" class="w-100" src="assets/icons/faq_question.svg" alt="" />
+              </div>
+              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                FAQs
               </h2>
-              <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
+              <p class="segment-heading-lead text-night text-base font-semibold">
+                Get quick answers to your questions about our phone system and
+                services. For more help, contact our support team!
+              </p>
+            </div>
+            <div class="faq-split-accordion accordion" id="accordionAsmsFaq" data-aos="fade-left">
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="true"
+                    aria-controls="collapseOneFaq">
+                    How do I send bulk text messages in Nepal?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFaq" aria-expanded="false"
+                    aria-controls="collapseTwoFaq">
+                    How long can a SMS be?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFaq" aria-expanded="false"
+                    aria-controls="collapseThreeFaq">
+                    Is Bulk SMS compatible with the Nepalese or foreign
+                    language?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFaq" aria-expanded="false"
+                    aria-controls="collapseFourFaq">
+                    What is Dynamic SMS? How to use it?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFaq" aria-expanded="false"
+                    aria-controls="collapseFiveFaq">
+                    Can I have a trial of the services before buying them?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- EOF FAQ SECTION -->
+      </section>
+      <!-- EOF FAQ SECTION -->
+    </main>
 
     <!-- FOOTER -->
     <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
@@ -865,7 +878,7 @@
           <div
             class="footer-split-cta d-flex flex-column align-items-center justify-content-center rounded-20 xl-p-custom-5 p-custom-4 bg-p-green-50">
             <div class="split-cta-icon d-flex align-items-center justify-content-center">
-              <img src="assets/icons/sms_and_cloud.svg" alt="cta sms icon" />
+              <img loading="lazy" decoding="async" class="h-auto" width="80" height="81" src="assets/icons/sms_and_cloud.svg" alt="cta sms icon" />
             </div>
             <h2 class="text-6xl font-semibold text-primary sm-mt-custom-2 mt-custom-1 mb-0 text-center">
               Never Miss an <br />
