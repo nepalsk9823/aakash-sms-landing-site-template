@@ -14,6 +14,11 @@
   <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+  <!-- ⚡️ Preconnects: establish early connections -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <!-- Preconnect to Google Fonts domains for faster DNS lookup and TLS handshake -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -325,12 +330,14 @@
             <span class="btn-text">Try for Free</span>
           </a>
           <button type="button" class="asms-navbar-open-btn icon-btn ms-xl-0 ms-1 d-xl-none icon-28">
-            <img src="assets/icons/menu_dark.svg" alt="menu icon" />
+            <img class="icon-28" src="assets/icons/menu_dark.svg" alt="menu icon" loading="lazy" decoding="async" />
           </button>
         </div>
       </div>
     </header>
     <!-- EOF HEADER -->
+
+    <main>
 
     <!--  INDUSTRY HEALTH SECTION -->
     <section class="asms-ind-hlth-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
@@ -354,7 +361,7 @@
             </div>
           </div>
           <div class="ind-hlth-banner-split-img d-flex align-items-center justify-content-end">
-            <img src="assets/images/industries/industry_health_banner_img.png"
+            <img class="h-auto" src="assets/images/industries/industry_health_banner_img.png" width="634" height="475"
               alt="Transforming Healthcare Communication with Secure SMS Solutions image" fetchpriority="high" />
           </div>
         </div>
@@ -367,7 +374,7 @@
         <div class="ind-split-block-group gap-20 d-grid align-items-start">
           <div class="ind-split-block-item d-grid align-items-center xl-gap-12 lg-gap-10 md-gap-8 gap-6">
             <div class="ind-split-block-item-img d-flex justify-content-center">
-              <img class="w-auto" src="assets/images/industries/industry_01_01_01_block_img.png" alt="Appointment Reminders" />
+              <img class="w-auto h-auto" width="614" height="450" loading="lazy" decoding="async" src="assets/images/industries/industry_01_01_01_block_img.png" alt="Appointment Reminders" />
             </div>
             <div class="ind-split-block-item-content segment-py-40">
               <h3 class="ind-split-block-ttl text-night font-bold text-7xl xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">Appointment Reminders</h3>
@@ -386,7 +393,7 @@
           </div>
           <div class="ind-split-block-item d-grid align-items-center xl-gap-12 lg-gap-10 md-gap-8 gap-6">
             <div class="ind-split-block-item-img d-flex justify-content-center">
-              <img class="w-auto" src="assets/images/industries/industry_01_01_02_block_img.png" alt="Test Results Reminders" />
+              <img class="w-auto h-auto" width="614" height="450" loading="lazy" decoding="async" src="assets/images/industries/industry_01_01_02_block_img.png" alt="Test Results Reminders" />
             </div>
             <div class="ind-split-block-item-content segment-py-40">
               <h3 class="ind-split-block-ttl text-night font-bold text-7xl xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">Test Results Reminders</h3>
@@ -405,7 +412,7 @@
           </div>
           <div class="ind-split-block-item d-grid align-items-center xl-gap-12 lg-gap-10 md-gap-8 gap-6">
             <div class="ind-split-block-item-img d-flex justify-content-center">
-              <img class="w-auto" src="assets/images/industries/industry_01_01_03_block_img.png" alt="Healthcare Alerts" />
+              <img class="w-auto h-auto" width="614" height="450" loading="lazy" decoding="async" src="assets/images/industries/industry_01_01_03_block_img.png" alt="Healthcare Alerts" />
             </div>
             <div class="ind-split-block-item-content segment-py-40">
               <h3 class="ind-split-block-ttl text-night font-bold text-7xl xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">Healthcare Alerts</h3>
@@ -424,7 +431,7 @@
           </div>
           <div class="ind-split-block-item d-grid align-items-center xl-gap-12 lg-gap-10 md-gap-8 gap-6">
             <div class="ind-split-block-item-img d-flex justify-content-center">
-              <img class="w-auto" src="assets/images/industries/industry_01_01_04_block_img.png" alt="Insurance & Billing Updates" />
+              <img class="w-auto h-auto" width="614" height="450" loading="lazy" decoding="async" src="assets/images/industries/industry_01_01_04_block_img.png" alt="Insurance & Billing Updates" />
             </div>
             <div class="ind-split-block-item-content segment-py-40">
               <h3 class="ind-split-block-ttl text-night font-bold text-7xl xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">Insurance & Billing Updates</h3>
@@ -457,7 +464,7 @@
           <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
-                <img class="icon-24" src="assets/icons/message_filled_p_green_700.svg"
+                <img class="icon-24" loading="lazy" decoding="async" src="assets/icons/message_filled_p_green_700.svg"
                   alt="Personalized Messaging icon" />
               </div>
               <h3 class="text-xl text-night font-semibold">Personalized Messaging</h3>
@@ -471,7 +478,7 @@
           <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
-                <img class="icon-24" src="assets/icons/timer_outline_p_green_700.svg" alt="Automated Campaigns icon" />
+                <img class="icon-24" loading="lazy" decoding="async" src="assets/icons/timer_outline_p_green_700.svg" alt="Automated Campaigns icon" />
               </div>
               <h3 class="text-xl text-night font-semibold">Automated Campaigns</h3>
             </div>
@@ -484,7 +491,7 @@
           <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
-                <img class="icon-24" src="assets/icons/signal_outline_p_green_700.svg" alt="Advanced Analytics icon" />
+                <img class="icon-24" loading="lazy" decoding="async" src="assets/icons/signal_outline_p_green_700.svg" alt="Advanced Analytics icon" />
               </div>
               <h3 class="text-xl text-night font-semibold">Advanced Analytics</h3>
             </div>
@@ -498,7 +505,7 @@
           <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
-                <img class="icon-24" src="assets/icons/users_outline_p_green_700.svg" alt="Segmented Targeting icon" />
+                <img class="icon-24" loading="lazy" decoding="async" src="assets/icons/users_outline_p_green_700.svg" alt="Segmented Targeting icon" />
               </div>
               <h3 class="text-xl text-night font-semibold">Segmented Targeting</h3>
             </div>
@@ -511,7 +518,7 @@
           <div class="card-item card border-0 p-custom-4 d-flex flex-column gap-3 align-items-start shadow-default h-100">
             <div class="card-head d-flex flex-column gap-3">
               <div class="card-icon icon-24">
-                <img class="icon-24" src="assets/icons/network_wired_outline_p_green_700.svg"
+                <img class="icon-24" loading="lazy" decoding="async" src="assets/icons/network_wired_outline_p_green_700.svg"
                   alt="Two-Way SMS Communication icon" />
               </div>
               <h3 class="text-xl text-night font-semibold">Two-Way SMS Communication</h3>
@@ -792,6 +799,7 @@
       </div>
     </section>
     <!-- EOF FAQ SECTION -->
+    </main>
 
     <!-- FOOTER -->
     <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
