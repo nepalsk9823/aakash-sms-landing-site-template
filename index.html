@@ -32,29 +32,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet" />
   </noscript>
-  <!-- FOOT AWESOME ICON CDN (async load to prevent render-blocking) -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-  </noscript>
-  <!-- Bootstrap CSS (async load) -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-  </noscript>
+  <!-- FOOT AWESOME ICON CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
   <!-- NORMALIZE CSS -->
   <link rel="stylesheet" href="assets/sass/vendor/normalize.css" />
-  <!-- SWIPER CSS (async load) -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  </noscript>
+  <!-- SWIPER SLIDER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
-  <!-- IMAGE PRELOADING (Improve LCP)  -->
+  <!-- IMAGE PRELOADING  -->
   <link rel="preload" as="image" href="assets/images/home/home_banner_img.webp" fetchpriority="high" />
 </head>
 
@@ -401,9 +393,8 @@
               </div>
             </div>
             <div class="home-banner-split-img">
-              <img class="h-auto" src="assets/images/home/home_banner_img.webp"
-                srcset="assets/images/home/home_banner_img_480.webp 480w, assets/images/home/home_banner_img.webp 1024w"
-                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 662px" width="379" height="378"
+              <img class="h-auto" src="assets/images/home/home_banner_img.webp" srcset="assets/images/home/home_banner_img_480.webp 480w, assets/images/home/home_banner_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 662px" width="379"
+              height="378"
                 alt="home banner image" fetchpriority="high" />
             </div>
           </div>
@@ -419,24 +410,19 @@
                 <ul
                   class="rating-stars d-flex align-items-center justify-content-start mb-custom-2 list-unstyled gap-1">
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
-                      alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
-                      alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
-                      alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
-                      alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
-                      alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
                   </li>
                 </ul>
                 <span class="text-night text-lg font-semibold">4.9 star</span>
@@ -521,9 +507,7 @@
               </div>
             </div>
             <div class="sms-gateway-split-img">
-              <img class="h-auto" src="assets/images/home/online_sms_gateway_img.webp"
-                srcset="assets/images/home/online_sms_gateway_img_480.webp 480w, assets/images/home/online_sms_gateway_img.webp 1024w"
-                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 652px" loading="lazy" decoding="async"
+              <img class="h-auto" src="assets/images/home/online_sms_gateway_img.webp" srcset="assets/images/home/online_sms_gateway_img_480.webp 480w, assets/images/home/online_sms_gateway_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 652px" loading="lazy" decoding="async"
                 width="652" height="530" alt="online sms gateway image" />
             </div>
           </div>
@@ -599,9 +583,7 @@
                   Online SMS Service Features
                 </h2>
               </div>
-              <img class="h-auto" src="assets/images/home/sms_service_features_img.webp"
-                srcset="assets/images/home/sms_service_features_img_480.webp 480w, assets/images/home/sms_service_features_img.webp 1024w"
-                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 450px" width="450" height="461"
+              <img class="h-auto" src="assets/images/home/sms_service_features_img.webp" srcset="assets/images/home/sms_service_features_img_480.webp 480w, assets/images/home/sms_service_features_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 450px" width="450" height="461"
                 alt="online sms service features image" loading="lazy" decoding="async" />
             </div>
             <div class="sms-features-split-content">
@@ -1044,10 +1026,8 @@
                   </div>
                 </div>
               </div>
-              <img class="h-auto" src="assets/images/home/engage_your_audience_img.webp"
-                srcset="assets/images/home/engage_your_audience_img_480.webp 480w, assets/images/home/engage_your_audience_img.webp 1024w"
-                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 566px" width="566" height="376"
-                alt="online sms service features image" loading="lazy" decoding="async" />
+              <img class="h-auto" src="assets/images/home/engage_your_audience_img.webp" srcset="assets/images/home/engage_your_audience_img_480.webp 480w, assets/images/home/engage_your_audience_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 566px"
+                width="566" height="376" alt="online sms service features image" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -1326,10 +1306,7 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_1.webp"
-                        srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w"
-                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
-                        alt="customer image" />
+                        src="assets/images/home/customer_1.webp" srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Dr.Sneha Sharma</span>
@@ -1346,10 +1323,7 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_2.webp"
-                        srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w"
-                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
-                        alt="customer image" />
+                        src="assets/images/home/customer_2.webp" srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Rajesh Shrestha</span>
@@ -1366,10 +1340,7 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_3.webp"
-                        srcset="assets/images/home/customer_3_480.webp 480w, assets/images/home/customer_3.webp 1024w"
-                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
-                        alt="customer image" />
+                        src="assets/images/home/customer_3.webp" srcset="assets/images/home/customer_3_480.webp 480w, assets/images/home/customer_3.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Rajesh Shrestha</span>
@@ -1386,10 +1357,7 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_4.webp"
-                        srcset="assets/images/home/customer_4_480.webp 480w, assets/images/home/customer_4.webp 1024w"
-                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
-                        alt="customer image" />
+                        src="assets/images/home/customer_4.webp" srcset="assets/images/home/customer_4_480.webp 480w, assets/images/home/customer_4.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Sneha Sharma</span>
@@ -1405,10 +1373,7 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_1.webp"
-                        srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w"
-                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
-                        alt="customer image" />
+                        src="assets/images/home/customer_1.webp" srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Anjali Adhikari</span>
@@ -1425,10 +1390,7 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_2.webp"
-                        srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w"
-                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
-                        alt="customer image" />
+                        src="assets/images/home/customer_2.webp" srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Santosh Thapa</span>
@@ -1457,8 +1419,7 @@
               <div class="industries-split-img overflow-hidden rounded-28 overflow-hidden" data-aos="fade-right">
                 <img class="h-auto" src="assets/images/home/support_industry_img.webp"
                   srcset="assets/images/home/support_industry_img_480.webp 480w, assets/images/home/support_industry_img.webp 1024w"
-                  sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 642px" width="642" height="620"
-                  alt="support industry image" loading="lazy" decoding="async" />
+                  sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 642px" width="642" height="620" alt="support industry image" loading="lazy" decoding="async" />
               </div>
               <div class="accordion industries-split-accordion" id="supportIndustryAccordion" data-aos="fade-left">
                 <div class="accordion-item border-0">
