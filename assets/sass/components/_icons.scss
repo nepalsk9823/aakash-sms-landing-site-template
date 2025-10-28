@@ -10,41 +10,45 @@
     justify-content: center;
 }
 
-$icon-sizes: (60, 52, 40, 36, 32, 28, 24, 20, 16, 18, 12);
+$icon-sizes: (60, 52, 40, 36, 32, 28, 24, 20, 18, 16, 12);
 
 @each $size in $icon-sizes {
     .icon-#{$size} {
-        @include box($size + px, $size + px);
-        min-width: $size + px;
-        min-height: $size + px;
+        @include box(#{$size}px, #{$size}px);
+        min-width: #{$size}px;
+        min-height: #{$size}px;
         @extend %icon-common;
 
         @include breakpoint-down(md) {
+            $new-size: $size;
             @if $size >= 36 {
-                width: #{$size - 4}px;
-                height: #{$size - 4}px;
-                min-width: #{$size - 4}px;
-                min-height: #{$size - 4}px;
+                $new-size: $size - 4;
+            } @else if $size < 16 {
+                $new-size: $size; // 👈 no reduction for tiny icons
             } @else {
-                width: #{$size - 2}px;
-                height: #{$size - 2}px;
-                min-width: #{$size - 2}px;
-                min-height: #{$size - 2}px;
+                $new-size: $size - 2;
             }
+
+            width: #{$new-size}px;
+            height: #{$new-size}px;
+            min-width: #{$new-size}px;
+            min-height: #{$new-size}px;
         }
 
         @include breakpoint-down(xs) {
+            $new-size: $size;
             @if $size >= 36 {
-                width: #{$size - 8}px;
-                height: #{$size - 8}px;
-                min-width: #{$size - 8}px;
-                min-height: #{$size - 8}px;
+                $new-size: $size - 8;
+            } @else if $size < 16 {
+                $new-size: $size; // 👈 again, no reduction for very small ones
             } @else {
-                width: #{$size - 4}px;
-                height: #{$size - 4}px;
-                min-width: #{$size - 4}px;
-                min-height: #{$size - 4}px;
+                $new-size: $size - 4;
             }
+
+            width: #{$new-size}px;
+            height: #{$new-size}px;
+            min-width: #{$new-size}px;
+            min-height: #{$new-size}px;
         }
     }
 }

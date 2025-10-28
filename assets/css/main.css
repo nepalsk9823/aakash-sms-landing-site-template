@@ -25587,7 +25587,7 @@ input[type=button].btn-block {
   opacity: 0;
 }
 
-.icon-12, .icon-18, .icon-16, .icon-20, .icon-24, .icon-28, .icon-32, .icon-36, .icon-40, .icon-52, .icon-60 {
+.icon-12, .icon-16, .icon-18, .icon-20, .icon-24, .icon-28, .icon-32, .icon-36, .icon-40, .icon-52, .icon-60 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -25777,29 +25777,6 @@ input[type=button].btn-block {
   }
 }
 
-.icon-16 {
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-@media (max-width: 767.98px) {
-  .icon-16 {
-    width: 14px;
-    height: 14px;
-    min-width: 14px;
-    min-height: 14px;
-  }
-}
-@media (max-width: 479.98px) {
-  .icon-16 {
-    width: 12px;
-    height: 12px;
-    min-width: 12px;
-    min-height: 12px;
-  }
-}
-
 .icon-18 {
   width: 18px;
   height: 18px;
@@ -25823,6 +25800,29 @@ input[type=button].btn-block {
   }
 }
 
+.icon-16 {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+@media (max-width: 767.98px) {
+  .icon-16 {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    min-height: 14px;
+  }
+}
+@media (max-width: 479.98px) {
+  .icon-16 {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+  }
+}
+
 .icon-12 {
   width: 12px;
   height: 12px;
@@ -25831,18 +25831,18 @@ input[type=button].btn-block {
 }
 @media (max-width: 767.98px) {
   .icon-12 {
-    width: 10px;
-    height: 10px;
-    min-width: 10px;
-    min-height: 10px;
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
   }
 }
 @media (max-width: 479.98px) {
   .icon-12 {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    min-height: 8px;
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
   }
 }
 
