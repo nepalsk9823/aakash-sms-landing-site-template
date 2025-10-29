@@ -364,7 +364,7 @@
                 <div
                   class="calc-tool-split-box xl-p-custom-10 lg-p-custom-8 xs-p-custom-5 p-custom-4 d-grid align-items-start xl-gap-5 gap-4">
                   <form class="calc-tool-input form-custom">
-                    <textarea class="form-control p-custom-5 bg-white"
+                    <textarea id="smsInput" class="form-control p-custom-5 bg-white"
                       placeholder="Type your SMS content here..."></textarea>
                   </form>
                   <div
@@ -382,19 +382,19 @@
                       class="calc-tool-info d-md-grid d-flex flex-wrap md-grid-cols-2 xl-gap-y-3 lg-gap-y-2 gap-y-1 gap-x-3">
                       <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
                         <span class="text-night font-semibold text-base text-nowrap">Encoding: </span>
-                        <span class="text-primary font-semibold text-base">7 bit</span>
+                        <span class="text-primary font-semibold text-base" id="smsEncoding">7 bit</span>
                       </div>
                       <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
                         <span class="text-night font-semibold text-base text-nowrap">SMS Count: </span>
-                        <span class="text-primary font-semibold text-base">1</span>
+                        <span class="text-primary font-semibold text-base" id="smsCount">1</span>
                       </div>
                       <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
                         <span class="text-night font-semibold text-base text-nowrap">Length: </span>
-                        <span class="text-primary font-semibold text-base">0</span>
+                        <span class="text-primary font-semibold text-base" id="smsLength">0</span>
                       </div>
                       <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
                         <span class="text-night font-semibold text-base text-nowrap">Remaining: </span>
-                        <span class="text-primary font-semibold text-base">160</span>
+                        <span class="text-primary font-semibold text-base" id="smsRemaining">160</span>
                       </div>
                     </div>
                   </div>
@@ -983,6 +983,34 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- CUSTOM JS -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const smsInput = document.getElementById('smsInput');
+    const encodingEl = document.getElementById("smsEncoding");
+    const smsCountEl = document.getElementById("smsCount");
+    const lengthEl = document.getElementById("smsLength");
+    const remainingEl = document.getElementById("smsRemaining");
+
+    // GSM 7-bit character set regex (basic approximation)
+    const gsm7bit =
+      /^[A-Za-z0-9 @£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞ!\"#¤%&'()*+,\-./:;<=>?¡ÄÖÑÜ§¿äöñüà^{}\[~\]|€]*$/;
+
+    smsInput.addEventListener('input', () => {
+      const text = smsInput.value;
+      const length = text.length;
+      const isGsm7 = gsm7bit.test(text);
+
+      const perSmsLimit = isGsm7 ? 160 : 70;
+      const encoding = isGsm7 ? '7 bit' : 'Unicode';
+
+      const smsCount = Math.ceil(length / perSmsLimit) || 1;
+      const remaining = perSmsLimit - (length % perSmsLimit || perSmsLimit);
+
+      encodingEl.textContent = encoding;
+      smsCountEl.textContent = smsCount;
+      lengthEl.textContent = length;
+      remainingEl.textContent = remaining;
+    });
+  </script>
 </body>
 
 </html>
