@@ -44,11 +44,41 @@ $z-index-header: 1000;
               }
             }
           }
+
+          &-item{
+            &.active{
+              .menu-link{
+                &-text{
+                  @include breakpoint-up(xl){
+                    color: color("primary");
+                  }
+                }
+              }
+            }
+          }
         }
       }
 
       &-open-btn{
         filter: invert(1) brightness(100);
+      }
+    }
+  }
+
+  .asms-navbar {
+    &-menu-wrapper {
+      .asms-menu {
+        &-item{
+          &.active{
+            .menu-link{
+              &-text{
+                @include breakpoint-up(xl){
+                  color: color("primary");
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

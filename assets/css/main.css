@@ -26392,8 +26392,18 @@ input:-webkit-autofill {
     color: #ffffff;
   }
 }
+@media (min-width: 1200px) {
+  .asms-inverted-header:not(.asms-header-fixed) .asms-navbar-menu-wrapper .asms-menu-item.active .menu-link-text {
+    color: #3bb24a;
+  }
+}
 .asms-inverted-header:not(.asms-header-fixed) .asms-navbar-open-btn {
   filter: invert(1) brightness(100);
+}
+@media (min-width: 1200px) {
+  .asms-inverted-header .asms-navbar-menu-wrapper .asms-menu-item.active .menu-link-text {
+    color: #3bb24a;
+  }
 }
 
 .asms-navbar {
