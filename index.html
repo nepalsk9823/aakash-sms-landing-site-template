@@ -81,7 +81,7 @@
             </button>
           </div>
           <ul
-            class="asms-navbar-menu-body flex-1 list-unstyled d-flex flex-column flex-xl-row align-items-xl-center align-items-start gap-5 xl-py-custom-0 lg-py-custom-4 py-custom-3">
+            class="asms-navbar-menu-body flex-1 list-unstyled d-flex flex-column flex-xl-row align-items-xl-center align-items-start gap-5 xl-py-custom-0 lg-py-custom-4 py-custom-3" role="navigation" aria-label="Main Navigation">>
             <li class="asms-menu-item">
               <a href="index.html" class="asms-menu-link active">
                 <span class="menu-link-text font-semibold text-base default-transition">Home</span>
@@ -555,23 +555,28 @@
               <form action="" class="form-custom">
                 <div class="form-elem-group gap-3">
                   <div class="form-elem">
+                    <label for="full-name" class="sr-only"></label>
                     <input type="text" class="form-control form-control-underline bg-white" placeholder="full name"
-                      name="" id="" />
+                      name="full-name" id="full-name" />
                   </div>
                   <div class="form-elem">
-                    <input type="email" class="form-control form-control-underline bg-white" placeholder="email" name=""
-                      id="" />
+                    <label for="email" class="sr-only"></label>
+                    <input type="email" class="form-control form-control-underline bg-white" placeholder="email" name="email"
+                      id="email" />
                   </div>
                   <div class="form-elem">
-                    <input type="tel" class="form-control form-control-underline bg-white" placeholder="phone" name=""
-                      id="" />
+                    <label for="phone" class="sr-only"></label>
+                    <input type="tel" class="form-control form-control-underline bg-white" placeholder="phone" name="phone"
+                      id="phone" />
                   </div>
                   <div class="form-elem">
+                    <label for="subject" class="sr-only"></label>
                     <input type="text" class="form-control form-control-underline bg-white" placeholder="subject"
-                      name="" id="" />
+                      name="subject" id="subject" />
                   </div>
                   <div class="form-elem">
-                    <textarea class="form-control form-control-underline bg-white" placeholder="message" name="" id=""
+                    <label for="message" class="sr-only"></label>
+                    <textarea class="form-control form-control-underline bg-white" placeholder="message" name="message" id="message"
                       cols="30" rows="10"></textarea>
                   </div>
                 </div>
@@ -1997,7 +2002,7 @@
                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="true"
                     aria-controls="collapseOneFaq">
                     How do I send bulk text messages in Nepal?
-                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                    <span class="icon-24 accordion-button-icon rounded-8" role="presentation"></span>
                   </button>
                 </h2>
                 <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAsmsFaq">
@@ -2046,7 +2051,7 @@
                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFaq" aria-expanded="false"
                     aria-controls="collapseTwoFaq">
                     How long can a SMS be?
-                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                    <span class="icon-24 accordion-button-icon rounded-8" role="presentation"></span>
                   </button>
                 </h2>
                 <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
@@ -2096,7 +2101,7 @@
                     aria-controls="collapseThreeFaq">
                     Is Bulk SMS compatible with the Nepalese or foreign
                     language?
-                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                    <span class="icon-24 accordion-button-icon rounded-8" role="presentation"></span>
                   </button>
                 </h2>
                 <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
@@ -2145,7 +2150,7 @@
                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFaq" aria-expanded="false"
                     aria-controls="collapseFourFaq">
                     What is Dynamic SMS? How to use it?
-                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                    <span class="icon-24 accordion-button-icon rounded-8" role="presentation"></span>
                   </button>
                 </h2>
                 <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
@@ -2194,7 +2199,7 @@
                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFaq" aria-expanded="false"
                     aria-controls="collapseFiveFaq">
                     Can I have a trial of the services before buying them?
-                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                    <span class="icon-24 accordion-button-icon rounded-8" role="presentation"></span>
                   </button>
                 </h2>
                 <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">

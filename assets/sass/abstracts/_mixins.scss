@@ -320,6 +320,10 @@
   }
 }
 
+.sr-only{
+  @include sr-only();
+}
+
 // Hide element scrollbar
 // Usage:
 // @include hideScrollBar;
