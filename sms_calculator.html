@@ -5,16 +5,23 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Aakash SMS - SMS Calculator</title>
-  <meta name="description" content="AakashSMS is Nepal's leading bulk SMS service provider offering reliable, fast, and affordable SMS solutions for businesses, schools, and organizations. Send promotional, transactional, and OTP messages instantly to any network across Nepal." />
+  <meta name="description"
+    content="AakashSMS is Nepal's leading bulk SMS service provider offering reliable, fast, and affordable SMS solutions for businesses, schools, and organizations. Send promotional, transactional, and OTP messages instantly to any network across Nepal." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="AakashSMS, bulk SMS Nepal, SMS gateway Nepal, SMS service provider, send bulk SMS, OTP SMS Nepal, promotional SMS, transactional SMS, business messaging Nepal, SMS marketing Nepal, SMS API Nepal" />
-  
+  <meta name="keywords"
+    content="AakashSMS, bulk SMS Nepal, SMS gateway Nepal, SMS service provider, send bulk SMS, OTP SMS Nepal, promotional SMS, transactional SMS, business messaging Nepal, SMS marketing Nepal, SMS API Nepal" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+  <!-- ⚡️ Preconnects: establish early connections -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <!-- Preconnect to Google Fonts domains for faster DNS lookup and TLS handshake -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,8 +56,10 @@
       <div class="asms-navbar-overlay w-100 h-100 position-fixed start-0 top-0 default-transition"></div>
       <div class="asms-navbar container d-flex align-items-center justify-content-between xl-gap-4 lg-gap-3 gap-2">
         <a href="index.html" class="asms-logo d-inline-flex align-items-center">
-          <img class="logo-default h-auto" src="assets/images/site/logo_default.svg" width="198" height="72" alt="Aakash SMS brand logo" />
-          <img class="logo-white d-none h-auto" src="assets/images/site/logo_white.svg" width="198" height="72" alt="Aakash SMS brand white logo" />
+          <img class="logo-default h-auto" src="assets/images/site/logo_default.svg" width="198" height="72"
+            alt="Aakash SMS brand logo" />
+          <img class="logo-white d-none h-auto" src="assets/images/site/logo_white.svg" width="198" height="72"
+            alt="Aakash SMS brand white logo" />
         </a>
         <div class="asms-navbar-menu-wrapper d-flex flex-column">
           <div
@@ -293,7 +302,8 @@
               </a>
             </li>
           </ul>
-          <div class="contacts-block-social d-flex justify-content-center gap-2 flex-wrap align-items-center d-xl-none pt-custom-2 border-t-grey-1-1">
+          <div
+            class="contacts-block-social d-flex justify-content-center gap-2 flex-wrap align-items-center d-xl-none pt-custom-2 border-t-grey-1-1">
             <a href="#" class="contacts-social-link default-transition icon-32">
               <img class="icon-20" src="assets/icons/facebook_night_icon.svg" alt="facebook icon" />
             </a>
@@ -332,431 +342,439 @@
     </header>
     <!-- EOF HEADER -->
 
-    <!--  INDUSTRY EDUCATION SECTION -->
-    <section
-      class="asms-sms-calc-banner asms-banner asms-inverted-banner page-top-spacing d-flex align-items-center position-relative">
-      <div class="container asms-sms-calc-banner-container segment-pt-80 segment-pb-100">
-        <div class="sms-calc-banner d-flex flex-column align-items-center xl-gap-10 lg-gap-8 md-gap-6 gap-4">
-          <div class="sms-calc-banner-content text-center mx-w-900">
-            <h1
-              class="sms-calc-banner-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
-              SMS Length Calculator
-            </h1>
-            <div class="sms-calc-banner-text content-stylings text-lg font-semibold">
-              <p>Use our SMS Length Calculator to efficiently measure character counts, message segments, and Unicode
-                characters for SMS campaigns, helping you stay within standard limits and prevent additional costs.
+    <main>
+      <!--  INDUSTRY EDUCATION SECTION -->
+      <section
+        class="asms-sms-calc-banner asms-banner asms-inverted-banner page-top-spacing d-flex align-items-center position-relative">
+        <div class="container asms-sms-calc-banner-container segment-pt-80 segment-pb-100">
+          <div class="sms-calc-banner d-flex flex-column align-items-center xl-gap-10 lg-gap-8 md-gap-6 gap-4">
+            <div class="sms-calc-banner-content text-center mx-w-900">
+              <h1
+                class="sms-calc-banner-ttl text-8xl font-bold xl-mb-custom-8 lg-mb-custom-7 md-mb-custom-6 sm-mb-custom-5 xs-mb-custom-4 mb-custom-3 mt-0 leading-extra-tight">
+                SMS Length Calculator
+              </h1>
+              <div class="sms-calc-banner-text content-stylings text-lg font-semibold">
+                <p>Use our SMS Length Calculator to efficiently measure character counts, message segments, and Unicode
+                  characters for SMS campaigns, helping you stay within standard limits and prevent additional costs.
+                </p>
+              </div>
+            </div>
+            <div class="sms-calc-banner-tool segment-py-40 w-100 mx-auto">
+              <div class="calc-tool-split bg-white rounded-16 d-grid align-items-start">
+                <div
+                  class="calc-tool-split-box xl-p-custom-10 lg-p-custom-8 xs-p-custom-5 p-custom-4 d-grid align-items-start xl-gap-5 gap-4">
+                  <form class="calc-tool-input form-custom">
+                    <textarea class="form-control p-custom-5 bg-white"
+                      placeholder="Type your SMS content here..."></textarea>
+                  </form>
+                  <div
+                    class="calc-tool-misc d-flex flex-md-row flex-column align-items-start lg-gap-5 md-gap-4 sm-gap-3 gap-2 justify-content-between">
+                    <div class="calc-tool-action">
+                      <a href="#" class="btn btn-link btn-link-p-green-700 p-0 h-auto">
+                        <span class="btn-icon">
+                          <img src="assets/icons/clipboard_list_filled_p_green_700.svg"
+                            alt="clipboard list filled icon" />
+                        </span>
+                        <span class="btn-text">Insert a template</span>
+                      </a>
+                    </div>
+                    <div
+                      class="calc-tool-info d-md-grid d-flex flex-wrap md-grid-cols-2 xl-gap-y-3 lg-gap-y-2 gap-y-1 gap-x-3">
+                      <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
+                        <span class="text-night font-semibold text-base text-nowrap">Encoding: </span>
+                        <span class="text-primary font-semibold text-base">7 bit</span>
+                      </div>
+                      <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
+                        <span class="text-night font-semibold text-base text-nowrap">SMS Count: </span>
+                        <span class="text-primary font-semibold text-base">1</span>
+                      </div>
+                      <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
+                        <span class="text-night font-semibold text-base text-nowrap">Length: </span>
+                        <span class="text-primary font-semibold text-base">0</span>
+                      </div>
+                      <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
+                        <span class="text-night font-semibold text-base text-nowrap">Remaining: </span>
+                        <span class="text-primary font-semibold text-base">160</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc-tool-split-note pe-custom-5 xs-pb-custom-5 pb-custom-4 xs-ps-custom-5 ps-custom-4">
+                  <p
+                    class="font-bold text-night text-lg sm-p-custom-5 xs-p-custom-4 p-custom-3 rounded-8 bg-p-green-50">
+                    Note: <span class="text-gray font-semibold text-base">Note:SMS messages longer than 160 characters
+                      (or
+                      70 for
+                      Unicode) are split into multiple parts.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EOF INDUSTRY EDUCATION SECTION -->
+
+      <section class="asms-double-col-segment segment-py-100">
+        <div class="asms-double-col-segment-container container">
+          <div
+            class="double-col-segment-split-item d-grid align-items-center grid-cols-45-auto xl-gap-12 lg-gap-10 md-gap-8 gap-6">
+            <div class="double-col-segment-split-content">
+              <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
+                <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                  SMS Length Calculator
+                </h2>
+              </div>
+              <div class="content-stylings text-night text-lg">
+                <p>Easily check character counts, message parts, and unicode characters for SMS campaigns. Ensure your
+                  texts fit within standard limits and avoid </p>
+                <ul>
+                  <li>Accurate character count detection</li>
+                  <li>Identifies message segmentation</li>
+                  <li>Supports Unicode and GSM encoding</li>
+                  <li>Helps prevent unnecessary costs</li>
+                </ul>
+              </div>
+            </div>
+            <div class="double-col-segment-split-img">
+              <img class="h-auto" src="assets/images/misc/sms_calc_double_col_01_img.png" width="500" height="520"
+                loading="lazy" decoding="async" alt="SMS Length Calculator" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="asms-double-col-segment segment-py-100 bg-light-cyprus">
+        <div class="asms-double-col-segment-container container">
+          <div
+            class="double-col-segment-split-item d-grid align-items-center grid-cols-45-auto xl-gap-12 lg-gap-10 md-gap-8 gap-6">
+            <div class="double-col-segment-split-content">
+              <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
+                <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                  How to Use the SMS Length Calculator
+                </h2>
+              </div>
+              <div class="content-stylings text-night text-lg">
+                <p>Our SMS Length Calculator is an easy-to-use tool that helps you analyze your text message by counting
+                  characters, identifying character types, estimating costs, and more. Follow these simple steps to get
+                  started:</p>
+              </div>
+              <ul class="segment-steps-list list-unstyled mt-custom-5 d-grid align-items-start gap-4">
+                <li class="steps-item d-grid align-items-start gap-1">
+                  <span class="steps-item-count text-p-green-700 font-bold text-lg">Step 1:</span>
+                  <div class="steps-item-text font-semibold text-night text-lg">Enter your message by typing it in or
+                    pasting it. You can also select from pre-made templates for convenience.</div>
+                </li>
+                <li class="steps-item d-grid align-items-start gap-1">
+                  <span class="steps-item-count text-p-green-700 font-bold text-lg">Step 2:</span>
+                  <div class="steps-item-text font-semibold text-night text-lg">You can see the length, sms count and
+                    remaining at the end of the sms field.</div>
+                </li>
+              </ul>
+            </div>
+            <div class="double-col-segment-split-img">
+              <img class="h-auto" src="assets/images/misc/sms_calc_double_col_02_img.png" width="702" height="520"
+                loading="lazy" decoding="async" alt="How to Use the SMS Length Calculator" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="asms-double-col-segment segment-py-100">
+        <div class="asms-double-col-segment-container container">
+          <div
+            class="double-col-segment-split-item d-grid align-items-center grid-cols-40-auto xl-gap-12 lg-gap-10 md-gap-8 gap-6">
+            <div class="double-col-segment-split-img">
+              <img class="h-auto" src="assets/images/misc/sms_calc_double_col_03_img.png" width="545" height="520"
+                loading="lazy" decoding="async" alt="Why to Use the SMS Length Calculator" />
+            </div>
+            <div class="double-col-segment-split-content">
+              <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
+                <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                  Why to Use the SMS Length Calculator
+                </h2>
+              </div>
+              <div class="content-stylings text-night text-lg">
+                <ul>
+                  <li>Instantly check the total character count in your SMS.</li>
+                  <li>Determine how many message segments your text will be split into.</li>
+                  <li>Identify GSM characters, Unicode characters, and GSM symbols that require Unicode encoding.</li>
+                  <li>Estimate the cost of sending your SMS.</li>
+                  <li>Optimize your text by adjusting characters to minimize segmentation and extra charges.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRIAL CTA SECTION -->
+      <section class="asms-cta-trial segment-py-60 bg-light-cyprus">
+        <div class="asms-cta-trial-container container">
+          <div
+            class="segment-heading d-flex flex-column align-items-center justify-content-center gap-3 text-center mx-w-850">
+            <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
+              Want to trial a Bulk SMS Service
+            </h2>
+            <p class="segment-heading-lead text-night text-base font-semibold mx-w-390">Try sending a text to yourself
+              today to experience how bulk SMS works.</p>
+            <a href="#" class="btn btn-primary btn-lg mt-custom-2">
+              <span class="btn-text">Start your trial</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- EOF TRIAL CTA SECTION -->
+
+      <!-- FAQ SECTION -->
+      <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
+        <div class="asms-faq-container container">
+          <div
+            class="faq-split mx-auto w-100 d-grid align-items-start xl-gap-12 lg-gap-10 md-gap-8 gap-6 grid-cols-28-auto">
+            <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
+              <div class="segment-heading-img mb-custom-3">
+                <img loading="lazy" decoding="async" class="w-100 h-auto" width="80" height="58" class="w-100"
+                  src="assets/icons/faq_question.svg" alt="" />
+              </div>
+              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
+                FAQs
+              </h2>
+              <p class="segment-heading-lead text-night text-base font-semibold">
+                Get quick answers to your questions about our phone system and
+                services. For more help, contact our support team!
               </p>
             </div>
-          </div>
-          <div class="sms-calc-banner-tool segment-py-40 w-100 mx-auto">
-            <div class="calc-tool-split bg-white rounded-16 d-grid align-items-start">
+            <div class="faq-split-accordion accordion" id="accordionAsmsFaq" data-aos="fade-left">
               <div
-                class="calc-tool-split-box xl-p-custom-10 lg-p-custom-8 xs-p-custom-5 p-custom-4 d-grid align-items-start xl-gap-5 gap-4">
-                <form class="calc-tool-input form-custom">
-                  <textarea class="form-control p-custom-5 bg-white"
-                    placeholder="Type your SMS content here..."></textarea>
-                </form>
-                <div
-                  class="calc-tool-misc d-flex flex-md-row flex-column align-items-start lg-gap-5 md-gap-4 sm-gap-3 gap-2 justify-content-between">
-                  <div class="calc-tool-action">
-                    <a href="#" class="btn btn-link btn-link-p-green-700 p-0 h-auto">
-                      <span class="btn-icon">
-                        <img src="assets/icons/clipboard_list_filled_p_green_700.svg"
-                          alt="clipboard list filled icon" />
-                      </span>
-                      <span class="btn-text">Insert a template</span>
-                    </a>
-                  </div>
-                  <div
-                    class="calc-tool-info d-md-grid d-flex flex-wrap md-grid-cols-2 xl-gap-y-3 lg-gap-y-2 gap-y-1 gap-x-3">
-                    <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
-                      <span class="text-night font-semibold text-base text-nowrap">Encoding: </span>
-                      <span class="text-primary font-semibold text-base">7 bit</span>
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="true"
+                    aria-controls="collapseOneFaq">
+                    How do I send bulk text messages in Nepal?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
                     </div>
-                    <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
-                      <span class="text-night font-semibold text-base text-nowrap">SMS Count: </span>
-                      <span class="text-primary font-semibold text-base">1</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFaq" aria-expanded="false"
+                    aria-controls="collapseTwoFaq">
+                    How long can a SMS be?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
                     </div>
-                    <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
-                      <span class="text-night font-semibold text-base text-nowrap">Length: </span>
-                      <span class="text-primary font-semibold text-base">0</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFaq" aria-expanded="false"
+                    aria-controls="collapseThreeFaq">
+                    Is Bulk SMS compatible with the Nepalese or foreign
+                    language?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
                     </div>
-                    <div class="d-inline-flex flex-wrap align-items-center justify-content-start gap-3">
-                      <span class="text-night font-semibold text-base text-nowrap">Remaining: </span>
-                      <span class="text-primary font-semibold text-base">160</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFaq" aria-expanded="false"
+                    aria-controls="collapseFourFaq">
+                    What is Dynamic SMS? How to use it?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                      <ol>
+                        <li>
+                          <strong>Create an Account</strong> – Sign up on the
+                          Aakash SMS platform and log in to your dashboard.
+                        </li>
+                        <li>
+                          <strong>Upload Contacts</strong> – Add your recipient
+                          list by uploading a CSV/Excel file or entering numbers
+                          directly.
+                        </li>
+                        <li>
+                          <strong>Compose Your Message</strong> – Write your SMS
+                          content with the required information, ensuring it
+                          fits within the character limit.
+                        </li>
+                        <li>
+                          <strong>Choose Sender ID</strong> – Select or apply
+                          for a custom sender ID (if applicable) to represent
+                          your brand.
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="calc-tool-split-note pe-custom-5 xs-pb-custom-5 pb-custom-4 xs-ps-custom-5 ps-custom-4">
-                <p class="font-bold text-night text-lg sm-p-custom-5 xs-p-custom-4 p-custom-3 rounded-8 bg-p-green-50">
-                  Note: <span class="text-gray font-semibold text-base">Note:SMS messages longer than 160 characters (or
-                    70 for
-                    Unicode) are split into multiple parts.</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- EOF INDUSTRY EDUCATION SECTION -->
-
-    <section class="asms-double-col-segment segment-py-100">
-      <div class="asms-double-col-segment-container container">
-        <div
-          class="double-col-segment-split-item d-grid align-items-center grid-cols-45-auto xl-gap-12 lg-gap-10 md-gap-8 gap-6">
-          <div class="double-col-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
-              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-                SMS Length Calculator
-              </h2>
-            </div>
-            <div class="content-stylings text-night text-lg">
-              <p>Easily check character counts, message parts, and unicode characters for SMS campaigns. Ensure your
-                texts fit within standard limits and avoid </p>
-              <ul>
-                <li>Accurate character count detection</li>
-                <li>Identifies message segmentation</li>
-                <li>Supports Unicode and GSM encoding</li>
-                <li>Helps prevent unnecessary costs</li>
-              </ul>
-            </div>
-          </div>
-          <div class="double-col-segment-split-img">
-            <img src="assets/images/misc/sms_calc_double_col_01_img.png" alt="SMS Length Calculator" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="asms-double-col-segment segment-py-100 bg-light-cyprus">
-      <div class="asms-double-col-segment-container container">
-        <div
-          class="double-col-segment-split-item d-grid align-items-center grid-cols-45-auto xl-gap-12 lg-gap-10 md-gap-8 gap-6">
-          <div class="double-col-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
-              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-                How to Use the SMS Length Calculator
-              </h2>
-            </div>
-            <div class="content-stylings text-night text-lg">
-              <p>Our SMS Length Calculator is an easy-to-use tool that helps you analyze your text message by counting
-                characters, identifying character types, estimating costs, and more. Follow these simple steps to get
-                started:</p>
-            </div>
-            <ul class="segment-steps-list list-unstyled mt-custom-5 d-grid align-items-start gap-4">
-              <li class="steps-item d-grid align-items-start gap-1">
-                <span class="steps-item-count text-p-green-700 font-bold text-lg">Step 1:</span>
-                <div class="steps-item-text font-semibold text-night text-lg">Enter your message by typing it in or
-                  pasting it. You can also select from pre-made templates for convenience.</div>
-              </li>
-              <li class="steps-item d-grid align-items-start gap-1">
-                <span class="steps-item-count text-p-green-700 font-bold text-lg">Step 2:</span>
-                <div class="steps-item-text font-semibold text-night text-lg">You can see the length, sms count and
-                  remaining at the end of the sms field.</div>
-              </li>
-            </ul>
-          </div>
-          <div class="double-col-segment-split-img">
-            <img src="assets/images/misc/sms_calc_double_col_02_img.png" alt="How to Use the SMS Length Calculator" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="asms-double-col-segment segment-py-100">
-      <div class="asms-double-col-segment-container container">
-        <div
-          class="double-col-segment-split-item d-grid align-items-center grid-cols-40-auto xl-gap-12 lg-gap-10 md-gap-8 gap-6">
-          <div class="double-col-segment-split-img">
-            <img src="assets/images/misc/sms_calc_double_col_03_img.png" alt="Why to Use the SMS Length Calculator" />
-          </div>
-          <div class="double-col-segment-split-content">
-            <div class="segment-heading d-flex align-items-start gap-3 xl-mb-custom-5 lg-mb-custom-4 mb-custom-3">
-              <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-                Why to Use the SMS Length Calculator
-              </h2>
-            </div>
-            <div class="content-stylings text-night text-lg">
-              <ul>
-                <li>Instantly check the total character count in your SMS.</li>
-                <li>Determine how many message segments your text will be split into.</li>
-                <li>Identify GSM characters, Unicode characters, and GSM symbols that require Unicode encoding.</li>
-                <li>Estimate the cost of sending your SMS.</li>
-                <li>Optimize your text by adjusting characters to minimize segmentation and extra charges.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRIAL CTA SECTION -->
-    <section class="asms-cta-trial segment-py-60 bg-light-cyprus">
-      <div class="asms-cta-trial-container container">
-        <div
-          class="segment-heading d-flex flex-column align-items-center justify-content-center gap-3 text-center mx-w-850">
-          <h2 class="segment-heading-ttl text-5xl font-bold text-night my-0">
-            Want to trial a Bulk SMS Service
-          </h2>
-          <p class="segment-heading-lead text-night text-base font-semibold mx-w-390">Try sending a text to yourself
-            today to experience how bulk SMS works.</p>
-          <a href="#" class="btn btn-primary btn-lg mt-custom-2">
-            <span class="btn-text">Start your trial</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- EOF TRIAL CTA SECTION -->
-
-    <!-- FAQ SECTION -->
-    <section class="asms-faq segment-py-100 bg-white overflow-x-hidden">
-      <div class="asms-faq-container container">
-        <div
-          class="faq-split mx-auto w-100 d-grid align-items-start xl-gap-12 lg-gap-10 md-gap-8 gap-6 grid-cols-28-auto">
-          <div class="segment-heading d-flex flex-column align-items-start justify-content-center gap-3 text-start">
-            <div class="segment-heading-img mb-custom-3">
-              <img loading="lazy" decoding="async" class="w-100 h-auto" width="80" height="58" class="w-100" src="assets/icons/faq_question.svg" alt="" />
-            </div>
-            <h2 class="segment-heading-ttl text-7xl font-bold text-night my-0">
-              FAQs
-            </h2>
-            <p class="segment-heading-lead text-night text-base font-semibold">
-              Get quick answers to your questions about our phone system and
-              services. For more help, contact our support team!
-            </p>
-          </div>
-          <div class="faq-split-accordion accordion" id="accordionAsmsFaq" data-aos="fade-left">
-            <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="true"
-                  aria-controls="collapseOneFaq">
-                  How do I send bulk text messages in Nepal?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseOneFaq" class="accordion-collapse collapse show" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFaq" aria-expanded="false"
-                  aria-controls="collapseTwoFaq">
-                  How long can a SMS be?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseTwoFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFaq" aria-expanded="false"
-                  aria-controls="collapseThreeFaq">
-                  Is Bulk SMS compatible with the Nepalese or foreign
-                  language?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseThreeFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFaq" aria-expanded="false"
-                  aria-controls="collapseFourFaq">
-                  What is Dynamic SMS? How to use it?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseFourFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
-                    <ol>
-                      <li>
-                        <strong>Create an Account</strong> – Sign up on the
-                        Aakash SMS platform and log in to your dashboard.
-                      </li>
-                      <li>
-                        <strong>Upload Contacts</strong> – Add your recipient
-                        list by uploading a CSV/Excel file or entering numbers
-                        directly.
-                      </li>
-                      <li>
-                        <strong>Compose Your Message</strong> – Write your SMS
-                        content with the required information, ensuring it
-                        fits within the character limit.
-                      </li>
-                      <li>
-                        <strong>Choose Sender ID</strong> – Select or apply
-                        for a custom sender ID (if applicable) to represent
-                        your brand.
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFaq" aria-expanded="false"
-                  aria-controls="collapseFiveFaq">
-                  Can I have a trial of the services before buying them?
-                  <span class="icon-24 accordion-button-icon rounded-8"></span>
-                </button>
-              </h2>
-              <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
-                <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
-                  <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
-                    <p>
-                      Sending bulk text messages in Nepal is simple and
-                      convenient with Aakash SMS. Our platform is designed to
-                      help businesses, organizations, and individuals reach
-                      thousands of people instantly through a reliable SMS
-                      gateway. Whether you’re promoting a product, sending
-                      notifications, or sharing important updates, you can
-                      easily manage your campaigns online with just a few
-                      clicks.
-                    </p>
+              <div
+                class="accordion-item xl-px-custom-5 px-custom-4 py-custom-6 border-0 rounded-0 bg-white rounded-20 shadow-default">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button shadow-none bg-transparent text-2xl text-night font-semibold -tracking-04 p-0 border-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFaq" aria-expanded="false"
+                    aria-controls="collapseFiveFaq">
+                    Can I have a trial of the services before buying them?
+                    <span class="icon-24 accordion-button-icon rounded-8"></span>
+                  </button>
+                </h2>
+                <div id="collapseFiveFaq" class="accordion-collapse collapse" data-bs-parent="#accordionAsmsFaq">
+                  <div class="accordion-body px-0 pb-0 lg-pt-custom-4 sm-pt-custom-2 pt-custom-1">
+                    <div class="content-stylings text-base font-semibold text-gray scrollbar-y pe-custom-2">
+                      <p>
+                        Sending bulk text messages in Nepal is simple and
+                        convenient with Aakash SMS. Our platform is designed to
+                        help businesses, organizations, and individuals reach
+                        thousands of people instantly through a reliable SMS
+                        gateway. Whether you’re promoting a product, sending
+                        notifications, or sharing important updates, you can
+                        easily manage your campaigns online with just a few
+                        clicks.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- EOF FAQ SECTION -->
+      </section>
+      <!-- EOF FAQ SECTION -->
+    </main>
 
     <!-- FOOTER -->
     <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
@@ -765,7 +783,8 @@
           <div
             class="footer-split-cta d-flex flex-column align-items-center justify-content-center rounded-20 xl-p-custom-5 p-custom-4 bg-p-green-50">
             <div class="split-cta-icon d-flex align-items-center justify-content-center">
-              <img loading="lazy" decoding="async" class="h-auto" width="80" height="81" src="assets/icons/sms_and_cloud.svg" alt="cta sms icon" />
+              <img loading="lazy" decoding="async" class="h-auto" width="80" height="81"
+                src="assets/icons/sms_and_cloud.svg" alt="cta sms icon" />
             </div>
             <h2 class="text-6xl font-semibold text-primary sm-mt-custom-2 mt-custom-1 mb-0 text-center">
               Never Miss an <br />
