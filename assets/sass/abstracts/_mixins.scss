@@ -320,7 +320,7 @@
   }
 }
 
-.sr-only{
+.sr-only, .visually-hidden{
   @include sr-only();
 }
 

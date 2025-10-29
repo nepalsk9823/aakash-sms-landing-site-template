@@ -40,7 +40,7 @@
  * Usage
    @include max-width(600px);
  */
-.sr-only {
+.sr-only, .visually-hidden {
   position: absolute;
   width: 1px !important;
   height: 1px !important;
