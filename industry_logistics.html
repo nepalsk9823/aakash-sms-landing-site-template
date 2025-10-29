@@ -52,6 +52,12 @@
 </head>
 
 <body>
+  <!-- Accessible Skip Links -->
+  <div class="skip-links-container">
+    <a href="#main-menu" class="skip-link">Skip to menu</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer" class="skip-link">Skip to footer</a>
+  </div>
   <div class="asms-page-wrapper">
     <!-- HEADER -->
     <header class="asms-header">
@@ -63,7 +69,7 @@
           <img class="logo-white d-none h-auto" src="assets/images/site/logo_white.svg" width="198" height="72"
             alt="Aakash SMS brand white logo" />
         </a>
-        <div class="asms-navbar-menu-wrapper d-flex flex-column">
+        <nav id="main-menu" class="asms-navbar-menu-wrapper d-flex flex-column" aria-label="Main Navigation">
           <div
             class="asms-navbar-menu-head d-xl-none d-flex align-items-center justify-content-between gap-3 mb-custom-4">
             <a href="index.html" class="asms-navbar-menu-logo d-inline-flex align-items-center">
@@ -255,7 +261,7 @@
                     </ul>
                   </div>
                   <div class="asms-submenu-block">
-                    <a href="#"
+                    <a href="/"
                       class="card-item card border-0 d-flex flex-column justify-content-start bg-grey-1 p-custom-3 rounded-20 gap-5">
                       <div class="card-img rounded-16 overflow-hidden">
                         <img src="assets/images/blogs/blog_img3.png"
@@ -306,34 +312,34 @@
           </ul>
           <div
             class="contacts-block-social d-flex justify-content-center gap-2 flex-wrap align-items-center d-xl-none pt-custom-2 border-t-grey-1-1">
-            <a href="#" class="contacts-social-link default-transition icon-32">
+            <a href="/" class="contacts-social-link default-transition icon-32">
               <img class="icon-20" src="assets/icons/facebook_night_icon.svg" alt="facebook icon" />
             </a>
-            <a href="#" class="contacts-social-link default-transition icon-32">
+            <a href="/" class="contacts-social-link default-transition icon-32">
               <img class="icon-18" src="assets/icons/instagram_night_icon.svg" alt="instagram icon" />
             </a>
-            <a href="#" class="contacts-social-link default-transition icon-32">
+            <a href="/" class="contacts-social-link default-transition icon-32">
               <img class="icon-20" src="assets/icons/linkedin_night_icon.svg" alt="linkedin icon" />
             </a>
-            <a href="#" class="contacts-social-link default-transition icon-32">
+            <a href="/" class="contacts-social-link default-transition icon-32">
               <img class="icon-20" src="assets/icons/youtube_night_icon.svg" alt="youtube icon" />
             </a>
-            <a href="#" class="contacts-social-link default-transition icon-32">
+            <a href="/" class="contacts-social-link default-transition icon-32">
               <img class="icon-24" src="assets/icons/pinterest_night_icon.svg" alt="pinterest icon" />
             </a>
-            <a href="#" class="contacts-social-link default-transition icon-32">
+            <a href="/" class="contacts-social-link default-transition icon-32">
               <img class="icon-16" src="assets/icons/x_night_icon.svg" alt="x twitter icon" />
             </a>
           </div>
-        </div>
+        </nav>
         <div class="asms-navbar-btns d-inline-flex align-items-center gap-2">
-          <a href="#" class="btn btn-base btn-link btn-link-primary">
+          <a href="/" class="btn btn-base btn-link btn-link-primary">
             <span class="btn-text d-none d-sm-inline">Sign In</span>
             <span class="btn-icon">
               <img class="icon-12" src="assets/icons/sign_in_primary_icon.svg" alt="sign in icon" />
             </span>
           </a>
-          <a href="#" class="btn btn-base btn-primary">
+          <a href="/" class="btn btn-base btn-primary">
             <span class="btn-text">Try for Free</span>
           </a>
           <button type="button" class="asms-navbar-open-btn icon-btn ms-xl-0 ms-1 d-xl-none icon-28">
@@ -344,7 +350,7 @@
     </header>
     <!-- EOF HEADER -->
 
-    <main>
+    <main id="main-content" role="main">
       <!--  INDUSTRY EDUCATION SECTION -->
       <section class="asms-ind-logstx-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
         <div class="container asms-ind-logstx-banner-container segment-pt-80 segment-pb-100">
@@ -366,7 +372,7 @@
               </div>
               <div
                 class="ind-logstx-banner-split-btns d-flex align-items-center justify-content-start gap-3 xl-mt-custom-8 lg-mt-custom-7 md-mt-custom-6 mt-custom-5">
-                <a href="#" class="btn btn-primary btn-lg">
+                <a href="/" class="btn btn-primary btn-lg">
                   <span class="btn-text">Try for Free</span>
                 </a>
               </div>
@@ -600,7 +606,7 @@
               Try sending a text to yourself today to experience how bulk SMS
               works.
             </p>
-            <a href="#" class="btn btn-primary btn-lg mt-custom-2">
+            <a href="/" class="btn btn-primary btn-lg mt-custom-2">
               <span class="btn-text">Start your trial</span>
             </a>
           </div>
@@ -860,7 +866,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
+    <footer id="footer" class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
       <div class="asms-footer-container container">
         <div class="footer-split d-grid align-items-stretch bg-white xl-p-custom-5 p-custom-4 position-relative">
           <div
@@ -877,7 +883,7 @@
             </h2>
             <div
               class="splits-cta-btns w-100 d-flex flex-lg-row flex-column justify-content-center gap-2 lg-mt-custom-5 sm-mt-custom-4 mt-custom-3">
-              <a href="#" class="btn btn-lg btn-primary flex-1">
+              <a href="/" class="btn btn-lg btn-primary flex-1">
                 <span class="btn-text">Try for Free</span>
               </a>
               <a href="contact_us.html" class="btn btn-lg btn-white-night-grey-2 flex-1">
@@ -920,19 +926,19 @@
                 </p>
                 <ul class="links-list d-flex flex-column align-items-start gap-1 gap-0 list-unstyled">
                   <li>
-                    <a href="" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a>
+                    <a href="/" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Documentation</a>
+                    <a href="/" class="text-gray text-sm font-semibold -tracking-03">Documentation</a>
                   </li>
                 </ul>
                 <ul
                   class="links-list d-flex flex-column align-items-start gap-1 gap-0 list-unstyled xl-mt-custom-7 lg-mt-custom-6 mt-custom-5">
                   <li>
-                    <a href="#" class="text-night text-base font-semibold -tracking-03">Pricing</a>
+                    <a href="/" class="text-night text-base font-semibold -tracking-03">Pricing</a>
                   </li>
                   <li>
-                    <a href="#" class="text-night text-base font-semibold -tracking-03">About</a>
+                    <a href="/" class="text-night text-base font-semibold -tracking-03">About</a>
                   </li>
                   <li>
                     <a href="contact_us.html" class="text-night text-base font-semibold -tracking-03">Contact</a>
@@ -948,10 +954,10 @@
                     <a href="index.html" class="text-gray text-sm font-semibold -tracking-03">Home</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Login</a>
+                    <a href="/" class="text-gray text-sm font-semibold -tracking-03">Login</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Industries</a>
+                    <a href="/" class="text-gray text-sm font-semibold -tracking-03">Industries</a>
                   </li>
                   <li>
                     <a href="faq.html" class="text-gray text-sm font-semibold -tracking-03">FAQ</a>
@@ -960,10 +966,10 @@
                     <a href="blogs.html" class="text-gray text-sm font-semibold -tracking-03">Blog</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Services</a>
+                    <a href="/" class="text-gray text-sm font-semibold -tracking-03">Services</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a>
+                    <a href="/" class="text-gray text-sm font-semibold -tracking-03">Exam Results</a>
                   </li>
                 </ul>
               </div>
@@ -987,22 +993,22 @@
                 </a>
               </div>
               <div class="contacts-block-social d-flex flex-wrap align-items-center">
-                <a href="#" class="contacts-social-link default-transition icon-40">
+                <a href="/" class="contacts-social-link default-transition icon-40">
                   <img class="icon-20" src="assets/icons/facebook_night_icon.svg" alt="facebook icon" />
                 </a>
-                <a href="#" class="contacts-social-link default-transition icon-40">
+                <a href="/" class="contacts-social-link default-transition icon-40">
                   <img class="icon-18" src="assets/icons/instagram_night_icon.svg" alt="instagram icon" />
                 </a>
-                <a href="#" class="contacts-social-link default-transition icon-40">
+                <a href="/" class="contacts-social-link default-transition icon-40">
                   <img class="icon-20" src="assets/icons/linkedin_night_icon.svg" alt="linkedin icon" />
                 </a>
-                <a href="#" class="contacts-social-link default-transition icon-40">
+                <a href="/" class="contacts-social-link default-transition icon-40">
                   <img class="icon-20" src="assets/icons/youtube_night_icon.svg" alt="youtube icon" />
                 </a>
-                <a href="#" class="contacts-social-link default-transition icon-40">
+                <a href="/" class="contacts-social-link default-transition icon-40">
                   <img class="icon-24" src="assets/icons/pinterest_night_icon.svg" alt="pinterest icon" />
                 </a>
-                <a href="#" class="contacts-social-link default-transition icon-40">
+                <a href="/" class="contacts-social-link default-transition icon-40">
                   <img class="icon-16" src="assets/icons/x_night_icon.svg" alt="x twitter icon" />
                 </a>
               </div>
@@ -1026,22 +1032,22 @@
                   </p>
                 </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
-                  <a href="#" class="text-white text-xs font-semibold default-transition">Terms & Conditions</a>
+                  <a href="/" class="text-white text-xs font-semibold default-transition">Terms & Conditions</a>
                 </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
-                  <a href="#" class="text-white text-xs font-semibold default-transition">Privacy Policy</a>
+                  <a href="/" class="text-white text-xs font-semibold default-transition">Privacy Policy</a>
                 </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
-                  <a href="#" class="text-white text-xs font-semibold default-transition">Refund Policy</a>
+                  <a href="/" class="text-white text-xs font-semibold default-transition">Refund Policy</a>
                 </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
-                  <a href="#" class="text-white text-xs font-semibold default-transition">Cookies</a>
+                  <a href="/" class="text-white text-xs font-semibold default-transition">Cookies</a>
                 </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
-                  <a href="#" class="text-white text-xs font-semibold default-transition">Ncell - Terms & Conditions</a>
+                  <a href="/" class="text-white text-xs font-semibold default-transition">Ncell - Terms & Conditions</a>
                 </li>
                 <li class="legal-link-item d-inline-flex align-items-center">
-                  <a href="#" class="text-white text-xs font-semibold default-transition">NTC - Terms & Conditions</a>
+                  <a href="/" class="text-white text-xs font-semibold default-transition">NTC - Terms & Conditions</a>
                 </li>
               </ul>
             </nav>
