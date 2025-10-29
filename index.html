@@ -52,6 +52,12 @@
 
 <body>
   <div class="asms-page-wrapper">
+    <!-- Accessible Skip Links -->
+    <div class="skip-links-container">
+      <a href="#main-menu" class="skip-link">Skip to menu</a>
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#footer" class="skip-link">Skip to footer</a>
+    </div>
     <!-- HEADER -->
     <header class="asms-header">
       <div class="asms-navbar-overlay w-100 h-100 position-fixed start-0 top-0 default-transition"></div>
@@ -62,7 +68,7 @@
           <img class="logo-white d-none h-auto" src="assets/images/site/logo_white.svg" width="198" height="72"
             alt="Aakash SMS brand white logo" />
         </a>
-        <div class="asms-navbar-menu-wrapper d-flex flex-column">
+        <nav id="main-menu" class="asms-navbar-menu-wrapper d-flex flex-column">
           <div
             class="asms-navbar-menu-head d-xl-none d-flex align-items-center justify-content-between gap-3 mb-custom-4">
             <a href="index.html" class="asms-navbar-menu-logo d-inline-flex align-items-center">
@@ -345,7 +351,7 @@
                 alt="x twitter icon" />
             </a>
           </div>
-        </div>
+        </nav>
         <div class="asms-navbar-btns d-inline-flex align-items-center gap-2">
           <a href="/" class="btn btn-base btn-link btn-link-primary">
             <span class="btn-text d-none d-sm-inline">Sign In</span>
@@ -364,7 +370,7 @@
     </header>
     <!-- EOF HEADER -->
 
-    <main>
+    <main id="main-content">
       <!-- HOME BANNER SECTION -->
       <section class="asms-home-banner asms-banner page-top-spacing d-flex align-items-center position-relative">
         <div class="container asms-home-banner-container segment-pt-80 segment-pb-140">
@@ -393,8 +399,9 @@
               </div>
             </div>
             <div class="home-banner-split-img">
-              <img class="h-auto" src="assets/images/home/home_banner_img.webp" srcset="assets/images/home/home_banner_img_480.webp 480w, assets/images/home/home_banner_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 662px" width="379"
-              height="378"
+              <img class="h-auto" src="assets/images/home/home_banner_img.webp"
+                srcset="assets/images/home/home_banner_img_480.webp 480w, assets/images/home/home_banner_img.webp 1024w"
+                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 662px" width="379" height="378"
                 alt="home banner image" fetchpriority="high" />
             </div>
           </div>
@@ -410,19 +417,24 @@
                 <ul
                   class="rating-stars d-flex align-items-center justify-content-start mb-custom-2 list-unstyled gap-1">
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
+                      alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
+                      alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
+                      alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
+                      alt="star rating icon" />
                   </li>
                   <li class="icon-12">
-                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12" alt="star rating icon" />
+                    <img src="assets/icons/star-filled-yellow-500-icon.svg" width="12" height="12"
+                      alt="star rating icon" />
                   </li>
                 </ul>
                 <span class="text-night text-lg font-semibold">4.9 star</span>
@@ -507,7 +519,9 @@
               </div>
             </div>
             <div class="sms-gateway-split-img">
-              <img class="h-auto" src="assets/images/home/online_sms_gateway_img.webp" srcset="assets/images/home/online_sms_gateway_img_480.webp 480w, assets/images/home/online_sms_gateway_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 652px" loading="lazy" decoding="async"
+              <img class="h-auto" src="assets/images/home/online_sms_gateway_img.webp"
+                srcset="assets/images/home/online_sms_gateway_img_480.webp 480w, assets/images/home/online_sms_gateway_img.webp 1024w"
+                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 652px" loading="lazy" decoding="async"
                 width="652" height="530" alt="online sms gateway image" />
             </div>
           </div>
@@ -583,7 +597,9 @@
                   Online SMS Service Features
                 </h2>
               </div>
-              <img class="h-auto" src="assets/images/home/sms_service_features_img.webp" srcset="assets/images/home/sms_service_features_img_480.webp 480w, assets/images/home/sms_service_features_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 450px" width="450" height="461"
+              <img class="h-auto" src="assets/images/home/sms_service_features_img.webp"
+                srcset="assets/images/home/sms_service_features_img_480.webp 480w, assets/images/home/sms_service_features_img.webp 1024w"
+                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 450px" width="450" height="461"
                 alt="online sms service features image" loading="lazy" decoding="async" />
             </div>
             <div class="sms-features-split-content">
@@ -1026,8 +1042,10 @@
                   </div>
                 </div>
               </div>
-              <img class="h-auto" src="assets/images/home/engage_your_audience_img.webp" srcset="assets/images/home/engage_your_audience_img_480.webp 480w, assets/images/home/engage_your_audience_img.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 566px"
-                width="566" height="376" alt="online sms service features image" loading="lazy" decoding="async" />
+              <img class="h-auto" src="assets/images/home/engage_your_audience_img.webp"
+                srcset="assets/images/home/engage_your_audience_img_480.webp 480w, assets/images/home/engage_your_audience_img.webp 1024w"
+                sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 566px" width="566" height="376"
+                alt="online sms service features image" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -1306,7 +1324,10 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_1.webp" srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
+                        src="assets/images/home/customer_1.webp"
+                        srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w"
+                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
+                        alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Dr.Sneha Sharma</span>
@@ -1323,7 +1344,10 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_2.webp" srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
+                        src="assets/images/home/customer_2.webp"
+                        srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w"
+                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
+                        alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Rajesh Shrestha</span>
@@ -1340,7 +1364,10 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_3.webp" srcset="assets/images/home/customer_3_480.webp 480w, assets/images/home/customer_3.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
+                        src="assets/images/home/customer_3.webp"
+                        srcset="assets/images/home/customer_3_480.webp 480w, assets/images/home/customer_3.webp 1024w"
+                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
+                        alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Rajesh Shrestha</span>
@@ -1357,7 +1384,10 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_4.webp" srcset="assets/images/home/customer_4_480.webp 480w, assets/images/home/customer_4.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
+                        src="assets/images/home/customer_4.webp"
+                        srcset="assets/images/home/customer_4_480.webp 480w, assets/images/home/customer_4.webp 1024w"
+                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
+                        alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Sneha Sharma</span>
@@ -1373,7 +1403,10 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_1.webp" srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
+                        src="assets/images/home/customer_1.webp"
+                        srcset="assets/images/home/customer_1_480.webp 480w, assets/images/home/customer_1.webp 1024w"
+                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
+                        alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Anjali Adhikari</span>
@@ -1390,7 +1423,10 @@
                   <div class="customer-voices-info d-flex align-items-start gap-3">
                     <div class="customer-voices-info-img mt-custom-1 icon-32 overflow-hidden rounded-circle">
                       <img loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover"
-                        src="assets/images/home/customer_2.webp" srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w" sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32" alt="customer image" />
+                        src="assets/images/home/customer_2.webp"
+                        srcset="assets/images/home/customer_2_480.webp 480w, assets/images/home/customer_2.webp 1024w"
+                        sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 32px" width="32" height="32"
+                        alt="customer image" />
                     </div>
                     <div class="customer-voices-info-user d-flex flex-column">
                       <span class="font-bold text-base -tracking-04 text-p-green-700">Santosh Thapa</span>
@@ -1419,7 +1455,8 @@
               <div class="industries-split-img overflow-hidden rounded-28 overflow-hidden" data-aos="fade-right">
                 <img class="h-auto" src="assets/images/home/support_industry_img.webp"
                   srcset="assets/images/home/support_industry_img_480.webp 480w, assets/images/home/support_industry_img.webp 1024w"
-                  sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 642px" width="642" height="620" alt="support industry image" loading="lazy" decoding="async" />
+                  sizes="(max-width: 600px) 40vw, (max-width: 1024px) 60vw, 642px" width="642" height="620"
+                  alt="support industry image" loading="lazy" decoding="async" />
               </div>
               <div class="accordion industries-split-accordion" id="supportIndustryAccordion" data-aos="fade-left">
                 <div class="accordion-item border-0">
@@ -2185,7 +2222,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
+    <footer id="footer" class="asms-footer bg-dark-cyprus segment-pt-60 segment-pb-40">
       <div class="asms-footer-container container">
         <div class="footer-split d-grid align-items-stretch bg-white xl-p-custom-5 p-custom-4 position-relative">
           <div

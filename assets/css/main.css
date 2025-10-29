@@ -27300,6 +27300,38 @@ input:-webkit-autofill {
   }
 }
 
+/* Container for skip links (optional for future styling) */
+.skip-links-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px; /* move completely off-screen */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #000; /* optional for focus state */
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1005;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  left: 10px; /* bring into view when focused */
+  top: 10px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
 .asms-highlight-card-group-segment .cards-list {
   max-width: 1080px;
 }

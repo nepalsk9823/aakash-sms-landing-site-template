@@ -1,7 +1,33 @@
-// CARDS SEGMENT
-.asms-cards-segment {
-  &-container {
-  }
+/* Container for skip links (optional for future styling) */
+.skip-links-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px; /* move completely off-screen */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #000; /* optional for focus state */
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1005;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  left: 10px; /* bring into view when focused */
+  top: 10px;
+  width: auto;
+  height: auto;
+  overflow: visible;
 }
 
 // HIGHLIGHT CARDS SEGMENT
@@ -26,9 +52,9 @@
       }
     }
 
-    &-content{
-      + .double-col-segment-split-img{
-        img{
+    &-content {
+      + .double-col-segment-split-img {
+        img {
           margin-left: auto;
         }
       }
@@ -36,9 +62,8 @@
   }
 }
 
-
-.segment-steps-list{
-  .steps-item{
+.segment-steps-list {
+  .steps-item {
     grid-template-columns: 60px auto;
   }
 }
