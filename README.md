@@ -29,6 +29,6 @@ This template provides all the essential sections — from service listings and 
 ### 1. Clone or Download
 
 ```bash
-git clone https://github.com/yourusername/aakash-sms-landing.git
+git clone https://github.com/nepalsk9823/aakash-sms-landing-site-template.git
 
 Built with ❤️ and code by Prabin for Aakash SMS
