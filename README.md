@@ -30,3 +30,5 @@ This template provides all the essential sections — from service listings and 
 
 ```bash
 git clone https://github.com/yourusername/aakash-sms-landing.git
+
+Built with ❤️ and code by Prabin for Aakash SMS
